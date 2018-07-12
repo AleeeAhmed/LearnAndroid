@@ -5,13 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
     tools:context=".Fragments.Frag_Extras"
-    android:padding="17dp"
-    android:gravity="center_horizontal">
+    android:background="@drawable/back"
+    android:padding="11dp">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="11dp"
+        android:gravity="center_horizontal"
+        android:background="@color/colorBlackTransparent"
+        >
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnColors"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -23,7 +29,7 @@
         android:textStyle="bold" />
 
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnStrings"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -36,7 +42,7 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnGif"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -50,7 +56,7 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnViewPager"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -63,7 +69,7 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnChips"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -77,7 +83,7 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnExpandableTextView"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -91,7 +97,7 @@
         android:textStyle="bold" />
 
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnCall"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -105,7 +111,7 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnSMS"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -119,4 +125,5 @@
         android:textStyle="bold" />
 
 
+</RelativeLayout>
 </RelativeLayout>

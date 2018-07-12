@@ -52,7 +52,7 @@
             android:layout_below="@+id/tvCodeLabel"
             android:src="@drawable/alert_dialog_with_images"
             android:scaleType="fitXY"/>
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoImagesAlertDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

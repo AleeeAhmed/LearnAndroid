@@ -9,7 +9,7 @@
     android:background="@color/colorWhite"
     >
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnCollapsingToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:text="Collapsing Toolbar"
         />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnRefreshOnToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_below="@+id/btnCollapsingToolbar"
         />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/btnSearchOnToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -62,7 +62,7 @@
             android:layout_below="@+id/tvCodeLabel"
             android:src="@drawable/alert_dialog_radio_buttons_image_"
             android:scaleType="fitXY"/>
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoCRadioButtonsAlertDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
             android:src="@drawable/alert_dialog_check_boxes_secondway_image"
             android:scaleType="fitXY"
             />
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoSecondCheckBoxesAlertDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

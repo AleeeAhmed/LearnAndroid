@@ -165,7 +165,7 @@
                 android:contentDescription="@string/app_name"
                 />
 
-            <Button
+            <info.hoang8f.widget.FButton
                 android:id="@+id/btnDemoViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

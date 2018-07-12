@@ -117,7 +117,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoFadeIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoFadeOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -191,7 +191,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoZoomIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -228,7 +228,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoZoomOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -265,7 +265,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoRotate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -302,7 +302,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoMove"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -339,7 +339,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoBounce"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -376,7 +376,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoSlideUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -413,7 +413,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoSlideDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -450,7 +450,7 @@
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoSequential"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

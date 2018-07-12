@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:background="@drawable/back"
+    android:padding="11dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.Frag_SnackBars">
 
-
-    <Button
-        android:id="@+id/btnSimpleSnackBar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
+        android:layout_height="match_parent"
         android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginTop="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Simple Snackbar"
-        />
+        android:background="@color/colorBlackTransparent"
+        >
 
-    <Button
-        android:id="@+id/btnActionSnackBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginTop="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Snackbar Action"
-        android:layout_below="@+id/btnSimpleSnackBar"
-        />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnSimpleSnackBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Simple Snackbar"
+            />
 
-
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnActionSnackBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Snackbar Action"
+            android:layout_below="@+id/btnSimpleSnackBar"
+            />
+    </RelativeLayout>
 </RelativeLayout>

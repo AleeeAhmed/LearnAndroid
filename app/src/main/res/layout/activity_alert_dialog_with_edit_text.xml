@@ -62,7 +62,7 @@
             android:scaleType="fitXY"
             android:contentDescription="@string/app_name"
             />
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoAlertDialogEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
             android:scaleType="fitXY"
             android:contentDescription="@string/app_name"
             />
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemo2AlertDialogEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

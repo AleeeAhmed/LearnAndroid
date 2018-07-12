@@ -6,11 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.Frag_FAB"
     android:padding="11dp"
-    android:background="@color/colorWhite">
+    android:background="@drawable/back">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackTransparent"
+        android:padding="11dp"
+        >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Floating Action Button (FAB) is used to do something on click. Mostly it is seen at Bottom Right corner,"
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <TextView
@@ -38,10 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvDesc"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="7dp"
             />
 
         <ImageView
@@ -51,10 +54,11 @@
             android:layout_below="@+id/tvCodeLabel"
             android:src="@drawable/fab_code"
             android:scaleType="fitXY"
+            android:layout_marginTop="7dp"
             android:contentDescription="@string/app_name"
             />
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoFAB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,7 +88,6 @@
         android:layout_margin="16dp"
         android:src="@drawable/back_arrow"
         app:fabSize="auto"
-        android:backgroundTint="@color/colorBlack"
         />
 
 

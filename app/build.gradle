@@ -95,4 +95,10 @@ dependencies {
     //Folding Lib
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.2'
 
+    //Label on Buttons/Images
+    implementation 'com.github.linger1216:labelview:v1.1.2'
+
+    //Material Design Buttons
+    implementation 'info.hoang8f:fbutton:1.0.5'
+
 }

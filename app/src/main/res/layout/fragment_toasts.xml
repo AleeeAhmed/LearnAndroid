@@ -6,59 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.Frag_Toasts"
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     >
 
-    <Button
-        android:id="@+id/btnSimpleToastMessage"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
+        android:layout_height="match_parent"
         android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Simple Toast Message"
-        android:layout_marginTop="17dp"
-        />
+        android:background="@color/colorBlackTransparent"
+        >
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnSimpleToastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Simple Toast Message"
+            android:layout_marginTop="17dp"
+            />
 
 
-    <Button
-        android:id="@+id/btnColoredToastMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Coloured Toast Message"
-        android:layout_below="@+id/btnSimpleToastMessage"
-        android:layout_marginTop="17dp"
-        />
-
-
-
-    <Button
-        android:id="@+id/btnCustomToastMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Custom Toast Message"
-        android:layout_below="@+id/btnColoredToastMessage"
-        android:layout_marginTop="17dp"
-        />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnColoredToastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Coloured Toast Message"
+            android:layout_below="@+id/btnSimpleToastMessage"
+            android:layout_marginTop="17dp"
+            />
 
 
 
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnCustomToastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Custom Toast Message"
+            android:layout_below="@+id/btnColoredToastMessage"
+            android:layout_marginTop="17dp"
+            />
+
+
+    </RelativeLayout>
 </RelativeLayout>
