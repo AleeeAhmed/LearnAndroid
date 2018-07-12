@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ToolbarSearch">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:background="@color/colorWhite"
+        >
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When you have large amount of data and you want to apply a search. You can try these steps."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Follow these steps to create a menu layout"
+            android:layout_below="@+id/tvStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivCodeSearchButtonToolbarStep1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/popup_menu_gif"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeSearchButtonToolbarStep1"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paste the below code in your menu layout."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeSearchButtonToolbarStep2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/toolbar_search_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeSearchButtonToolbarStep2"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In .java class add this piece of code."
+            android:layout_below="@+id/tvStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeSearchButtonToolbarStep3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/toolbar_search_step2"
+            android:contentDescription="@string/app_name"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For Demo Click on above Search Button"
+            android:layout_below="@+id/ivCodeSearchButtonToolbarStep3"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/colorBlack"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

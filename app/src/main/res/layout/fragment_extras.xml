@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/RL_Extras"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Fragments.Frag_Extras"
+    android:padding="17dp"
+    android:gravity="center_horizontal">
+
+
+    <Button
+        android:id="@+id/btnColors"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Colors"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnStrings"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/btnColors"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Strings"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnGif"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnColors"
+        android:layout_marginTop="11dp"
+        android:layout_alignStart="@+id/btnColors"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="GIF"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewPager"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnStrings"
+        android:layout_alignTop="@+id/btnGif"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="View Pager"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnChips"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGif"
+        android:layout_marginTop="11dp"
+        android:layout_alignStart="@+id/btnColors"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Chips"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnExpandableTextView"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnChips"
+        android:layout_alignStart="@+id/btnStrings"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Expandable TextView"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnExpandableTextView"
+        android:layout_marginTop="11dp"
+        android:layout_alignStart="@+id/btnColors"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Make Call"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSMS"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCall"
+        android:layout_alignStart="@+id/btnStrings"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Send SMS"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ExtrasViewPager">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerAlert"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_above="@+id/indicator"
+        />
+
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightBlue"
+        app:ci_drawable="@drawable/black_square"
+        app:ci_animator="@animator/animator_indicator"
+        app:ci_animator_reverse="@animator/reverse_animator"
+        app:ci_height="4dp"
+        app:ci_margin="6dp"
+        app:ci_width="10dp"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:id="@+id/viewPagerLayout"
+        android:padding="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDescLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ViewPager is used when you are creating Tabs or Images that you want to swipe right or left."
+                android:layout_below="@+id/tvDescLabel"
+                android:textColor="@color/colorBlack"
+                />
+
+            <TextView
+                android:id="@+id/tvCodeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/code"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvDesc"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_1"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvCodeLabel"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvDescStep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add this to xml file"
+                android:layout_below="@+id/tvStep1"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeViewPagerStep1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/tvDescStep1"
+                android:src="@drawable/view_pager_step1"
+                android:contentDescription="@string/app_name"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_2"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/ivCodeViewPagerStep1"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvDescStep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add add this to java file"
+                android:layout_below="@+id/tvStep2"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeViewPagerStep2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/tvDescStep2"
+                android:src="@drawable/view_pager_step2"
+                android:contentDescription="@string/app_name"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_3"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/ivCodeViewPagerStep2"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvDescStep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If you want to add dots at bottom of your view pager, you can do these simple steps"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvStep3"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeViewPagerStep3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/tvDescStep3"
+                android:src="@drawable/view_pager_step3"
+                android:contentDescription="@string/app_name"
+                />
+
+            <Button
+                android:id="@+id/btnDemoViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/ivCodeViewPagerStep3"
+                android:layout_marginTop="17dp"
+                />
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

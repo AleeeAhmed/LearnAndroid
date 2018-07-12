@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/RL_Animations"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_Anim">
+
+
+    <Button
+        android:id="@+id/btnCustomAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Custom Animations"
+        />
+
+
+    <Button
+        android:id="@+id/btnAnimationLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Animations Library"
+        android:layout_below="@+id/btnCustomAnimation"
+        />
+
+
+    <Button
+        android:id="@+id/btnExplosionAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Explosion Animation"
+        android:layout_below="@+id/btnAnimationLibrary"
+        android:layout_marginTop="17dp"
+        />
+
+
+    <Button
+        android:id="@+id/btnFoldingAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Folding Animation"
+        android:layout_below="@+id/btnExplosionAnimation"
+        android:layout_marginTop="17dp"
+        />
+
+</RelativeLayout>

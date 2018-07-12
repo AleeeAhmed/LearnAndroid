@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    >
+
+    <TextView
+        android:id="@+id/tvEP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter password to goto new activity."
+        android:textColor="@color/colorBlack"
+        />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter password..."
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/tvEP"
+        android:maxLength="5"
+        android:inputType="textPassword"
+        />
+
+</RelativeLayout>

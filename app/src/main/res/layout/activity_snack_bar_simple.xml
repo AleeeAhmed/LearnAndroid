@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SnackBarSimple"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SnackBar is similar to Toast message. it is the new form of Toast Message. it is used to display message for short time to user. In snackbar we can also define action that user performs e.g. Undo "
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeSnackBarSimple"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvCodeLabel"
+            android:src="@drawable/snackbar_simple"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_name"
+            />
+
+
+
+        <Button
+            android:id="@+id/btnDemoSnackBarSimple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeSnackBarSimple"
+            android:layout_marginTop="17dp"
+
+            />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

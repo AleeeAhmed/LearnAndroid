@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PopUpMenuToolbar"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="if you want to to have pop up menu on Toolbar, you can apply this code."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Pop up Menu items like this."
+            android:layout_below="@+id/tvCodeLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivCodePopupToolbarStep1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/popup_menu_gif"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add this to menu file."
+            android:layout_below="@+id/ivCodePopupToolbarStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodePopupToolbarStep3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/pop_up_menu_xml"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Then add below code to java file outside onCreate method of Class."
+            android:layout_below="@+id/ivCodePopupToolbarStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodePopupToolbarStep2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/pop_up_menu_toolbar_java"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For demo click on Top Left 3 dots."
+            android:layout_below="@+id/ivCodePopupToolbarStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+
+    </RelativeLayout>
+
+</ScrollView>

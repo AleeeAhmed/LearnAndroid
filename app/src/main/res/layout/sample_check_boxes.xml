@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    >
+
+    <TextView
+        android:id="@+id/tvSelectCities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select cities you have visited last year.."
+        android:textColor="@color/colorBlack"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxRawalpindi"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Rawalpindi"
+        android:layout_below="@+id/tvSelectCities"
+        android:layout_marginTop="7dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxIslamabad"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Islamabad"
+        android:layout_toEndOf="@+id/checkBoxRawalpindi"
+        android:layout_below="@+id/tvSelectCities"
+        android:layout_marginTop="7dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxKarachi"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Karachi"
+        android:layout_below="@+id/checkBoxRawalpindi"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxLahore"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Lahore"
+        android:layout_alignBaseline="@+id/checkBoxKarachi"
+        android:layout_toEndOf="@+id/checkBoxKarachi"
+
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxPeshawar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Peshawar"
+        android:layout_below="@+id/checkBoxKarachi"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxQuetta"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Quetta"
+        android:layout_alignBaseline="@+id/checkBoxPeshawar"
+        android:layout_toEndOf="@+id/checkBoxPeshawar"
+        />
+
+</RelativeLayout>

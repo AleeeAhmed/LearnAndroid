@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AnimationLibrary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:id="@+id/tvAnimationLibLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You can add Animations to your app using this simple AndroidViewAnimations Library"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivAnimationLib"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/tvAnimationLibLabel"
+            android:src="@drawable/animations_lib"
+            android:layout_marginTop="11dp"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoAnimationsLib"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivAnimationLib"
+            android:layout_marginTop="11dp"
+            />
+
+
+    </RelativeLayout>
+
+</ScrollView>

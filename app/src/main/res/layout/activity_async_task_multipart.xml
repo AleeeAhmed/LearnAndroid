@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AsyncTaskMultipart">
+
+    <RelativeLayout
+        android:id="@+id/RL_AsyncTaskMultipart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        >
+
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multipart is used when you want to POST large data."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add the following dependency to app level build.gradle."
+            android:layout_below="@+id/tvStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskMultipartStep1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/background_multipart_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskMultipartStep1"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In .java class you can call multipart like this."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskMultipartStep2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/background_multipart_step2"
+            android:contentDescription="@string/app_name"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PickerGalleryImage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:background="@color/colorWhite"
+        >
+
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Capturing Image from Camera may create problems sometime. but using below code you can easily pick an image from Camera and set it to ImageView."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add this dependency to project level build.gradle. this is required for File Picker Library"
+            android:layout_below="@+id/tvStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeImagePickerGalleryStep1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/image_picker_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeImagePickerGalleryStep1"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add these dependencies to app level build.gradle.."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeImagePickerGalleryStep2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/image_picker_step2"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeImagePickerGalleryStep2"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add this code in .java file.."
+            android:layout_below="@+id/tvStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeImagePickerGalleryStep3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/gallery_image_picker_step1"
+            android:contentDescription="@string/app_name"
+            />
+        <Button
+            android:id="@+id/btnDemoImagePickerGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeImagePickerGalleryStep3"
+            android:layout_marginTop="17dp"
+            />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

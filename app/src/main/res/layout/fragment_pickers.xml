@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/RL_Pickers"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_Pickers"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    >
+
+
+    <Button
+        android:id="@+id/btnGalleryPick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Image From Gallery"
+        android:layout_below="@+id/btnCameraPick"
+        />
+
+    <Button
+        android:id="@+id/btnCameraPick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Image From Camera"
+        android:layout_alignParentTop="true"
+        />
+
+    <Button
+        android:id="@+id/btnFilePick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="File From Gallery"
+        android:layout_below="@+id/btnGalleryPick"
+        />
+
+    <Button
+        android:id="@+id/btnTimePick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Time Picker"
+        android:layout_below="@+id/btnFilePick"
+        />
+
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Date Picker"
+        android:layout_below="@+id/btnTimePick"
+        />
+
+    <Button
+        android:id="@+id/btnColorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Color Picker"
+        android:layout_below="@+id/btnDatePicker"
+        />
+
+</RelativeLayout>

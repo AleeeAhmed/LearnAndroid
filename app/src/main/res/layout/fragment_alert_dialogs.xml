@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/RLAlertDialogs"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_AlertDialogs"
+    android:background="@color/colorWhite"
+    android:padding="17dp"
+    android:gravity="center_horizontal"
+    >
+
+    <Button
+        android:id="@+id/btnSimpleAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Simple Alert Dialog"
+        />
+
+
+    <Button
+        android:id="@+id/btnEditTextAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Alert Dialog with EditText"
+        android:layout_below="@+id/btnSimpleAlertDialog"
+        android:layout_marginTop="17dp"
+        />
+
+
+    <Button
+        android:id="@+id/btnCheckBoxAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Alert Dialog with Check Boxes"
+        android:layout_below="@+id/btnEditTextAlertDialog"
+        android:layout_marginTop="17dp"
+        />
+
+
+    <Button
+        android:id="@+id/btnRadioButtonsAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Alert Dialog with Radio Buttons"
+        android:layout_below="@+id/btnCheckBoxAlertDialog"
+        android:layout_marginTop="17dp"
+        />
+
+
+    <Button
+        android:id="@+id/btnImagesAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="Alert Dialog with Images"
+        android:layout_below="@+id/btnRadioButtonsAlertDialog"
+        android:layout_marginTop="17dp"
+        />
+
+
+</RelativeLayout>

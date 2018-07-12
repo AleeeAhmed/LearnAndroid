@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ToolbarRefresh">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:background="@color/colorWhite"
+        >
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refresh button on toolbar is useful, when you want to refresh any data."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Follow these steps to create a menu layout"
+            android:layout_below="@+id/tvStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivCodeRefreshButtonToolbarStep1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/popup_menu_gif"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeRefreshButtonToolbarStep1"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paste the below code in your menu layout."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeRefreshButtonToolbarStep2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/toolbar_refresh_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeRefreshButtonToolbarStep2"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Same as above you created menu. Now create a layout. and paste the below code."
+            android:layout_below="@+id/tvStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeRefreshButtonToolbarStep3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/toolbar_refresh_step2"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeRefreshButtonToolbarStep3"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In .java class add this piece of code."
+            android:layout_below="@+id/tvStep4"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeRefreshButtonToolbarStep4"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep4"
+            android:src="@drawable/toolbar_refresh_step3_"
+            android:contentDescription="@string/app_name"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For Demo Click on above Refresh Button"
+            android:layout_below="@+id/ivCodeRefreshButtonToolbarStep4"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/colorBlack"
+            />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

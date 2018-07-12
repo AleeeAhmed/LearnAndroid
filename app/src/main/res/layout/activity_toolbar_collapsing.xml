@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ToolbarCollapsing"
+    android:background="@color/colorWhite"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        >
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="if you want to to have pop up menu on any image or button, you can apply this code."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create an Empty Activity. Add below code in Manifest.xml"
+            android:layout_below="@+id/tvStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/collapsing_toolbar_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep1"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In xml file of Activity add CoOrdinate Layout as in below code.."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/collapsing_toolbar_step2"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep2"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add appbar layout as in this code.."
+            android:layout_below="@+id/tvStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/collapsing_toolbar_step3"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_4"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep3"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add this code.."
+            android:layout_below="@+id/tvStep4"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep4"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep4"
+            android:src="@drawable/collapsing_toolbar_step4"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_5"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep4"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add this code.."
+            android:layout_below="@+id/tvStep5"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep5"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep5"
+            android:src="@drawable/collapsing_toolbar_step5"
+            android:contentDescription="@string/app_name"
+            />
+        <TextView
+            android:id="@+id/tvStep6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_6"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep5"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add this code.."
+            android:layout_below="@+id/tvStep6"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep6"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep6"
+            android:src="@drawable/collapsing_toolbar_step6"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_7"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep6"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add this code.."
+            android:layout_below="@+id/tvStep7"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep7"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep7"
+            android:src="@drawable/collapsing_toolbar_step7"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_8"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep7"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add this code.."
+            android:layout_below="@+id/tvStep8"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep8"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep8"
+            android:src="@drawable/collapsing_toolbar_step8"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_9"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep8"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inside Co-Ordinate Layout, Add this code.."
+            android:layout_below="@+id/tvStep9"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeCollapsingToolbarStep9"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep9"
+            android:src="@drawable/collapsing_toolbar_step9"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoCollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeCollapsingToolbarStep9"
+            android:layout_marginTop="17dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

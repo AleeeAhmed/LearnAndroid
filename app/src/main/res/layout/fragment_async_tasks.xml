@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/RL_AsyncTasks"
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_AsyncTasks">
+
+    <TextView
+        android:id="@+id/tvDescLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Async Tasks or Background Tasks are useful when you have any long running task or any task in which you don't want to involve user. So, you execute that task in background and when its done you send back results to your Activity."
+        android:layout_below="@+id/tvDescLabel"
+        android:textColor="@color/colorBlack"
+        />
+
+    <Button
+        android:id="@+id/btnAsyncTaskPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST Method"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_below="@+id/tvDesc"
+        android:layout_marginTop="17dp"
+        />
+
+    <Button
+        android:id="@+id/btnAsyncTaskGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET Method"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnAsyncTaskPost"
+        android:layout_marginTop="17dp"
+        />
+
+    <Button
+        android:id="@+id/btnAsyncTaskMultipart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multipart Method"
+        android:textAllCaps="false"
+        android:padding="11dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnAsyncTaskGet"
+        android:layout_marginTop="17dp"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/RL_MainMenu"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_MainMenu"
+    android:background="@color/colorWhite"
+    android:padding="17dp"
+    >
+
+    <ScrollView
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            >
+
+            <Button
+                android:id="@+id/btnAlertDialogs"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Alert Dialogs"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                />
+
+
+            <Button
+                android:id="@+id/btnToasts"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Toasts"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/btnAlertDialogs"
+                android:layout_alignBaseline="@+id/btnAlertDialogs"
+                android:layout_marginStart="40dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnSnackBar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Snackbar"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/btnAlertDialogs"
+                android:layout_marginTop="17dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnFAB"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="FAB"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_alignStart="@+id/btnToasts"
+                android:layout_alignBaseline="@+id/btnSnackBar"
+                />
+
+
+
+
+            <Button
+                android:id="@+id/btnAsyncTask"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="background Task"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/btnSnackBar"
+                android:layout_marginTop="17dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnExtras"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Extras"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_alignStart="@+id/btnFAB"
+                android:layout_alignBaseline="@+id/btnAsyncTask"
+                />
+
+
+
+
+            <Button
+                android:id="@+id/btnPopUpMenu"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Pop up Menu"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/btnAsyncTask"
+                android:layout_marginTop="17dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnToolbar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Toolbar"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_alignStart="@+id/btnExtras"
+                android:layout_alignBaseline="@+id/btnPopUpMenu"
+                />
+
+            <Button
+                android:id="@+id/btnPickers"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Pickers"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/btnPopUpMenu"
+                android:layout_marginTop="17dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnAnimations"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Animations"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_alignStart="@+id/btnToolbar"
+                android:layout_alignBaseline="@+id/btnPickers"
+                />
+
+            <Button
+                android:id="@+id/btnLists"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Lists"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/btnPickers"
+                android:layout_marginTop="17dp"
+                />
+
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_alignStart="@+id/btnToolbar"
+                android:layout_alignBaseline="@+id/btnLists"
+                />
+
+            <!--
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/tenor"
+                        android:layout_below="@+id/btn1"
+                        android:id="@+id/gifImage"
+                        />-->
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvViewZoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*click on image to zoom it."
+        android:layout_above="@+id/tvCopyCode"
+        />
+
+    <TextView
+        android:id="@+id/tvCopyCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentBottom="true"
+        android:text="*press and hold on image to copy its code."
+
+        />
+
+</RelativeLayout>

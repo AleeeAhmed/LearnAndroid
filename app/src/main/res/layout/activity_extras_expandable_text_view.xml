@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorWhite"
+    android:padding="11dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ExtrasExpandableTextView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/RL_ExpandableTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <at.blogc.android.views.ExpandableTextView
+                android:id="@+id/expandableTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expandable_test"
+                android:maxLines="4"
+                android:lineSpacingExtra="4dp"
+                android:ellipsize="end"
+                android:textColor="@color/colorBlack"
+                app:animation_duration="750"
+                />
+
+            <Button
+                android:id="@+id/button_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="11dp"
+                android:text="Show More"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginTop="11dp"
+                android:drawableEnd="@drawable/expand"
+                android:background="@drawable/black_square"
+                android:layout_below="@+id/expandableTextView"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/RL_ExpandableExplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDescLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expandable TextView is used when you have long text and you want to show just intial text, so that if user want to read more he can toggle b/w more or less."
+                android:layout_below="@+id/tvDescLabel"
+                android:textColor="@color/colorBlack"
+                />
+
+            <TextView
+                android:id="@+id/tvCodeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/code"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvDesc"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_1"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvCodeLabel"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvDescStep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add this to your app level build.gradle"
+                android:layout_below="@+id/tvStep1"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeExpandableTextViewStep1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tvDescStep1"
+                android:src="@drawable/expandable_text_step1"
+                android:contentDescription="@string/app_name"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_2"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/ivCodeExpandableTextViewStep1"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvDescStep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add add this to xml file"
+                android:layout_below="@+id/tvStep2"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeExpandableTextViewStep2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/tvDescStep2"
+                android:src="@drawable/expandable_text_step2"
+                android:contentDescription="@string/app_name"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_3"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_below="@+id/ivCodeExpandableTextViewStep2"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvDescStep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add this in your OnCreate()."
+                android:textStyle="bold"
+                android:layout_below="@+id/tvStep3"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeExpandableTextViewStep3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/tvDescStep3"
+                android:src="@drawable/expandable_text_step3_"
+                android:contentDescription="@string/app_name"
+                />
+
+            <Button
+                android:id="@+id/btnDemoExpandableTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_below="@+id/ivCodeExpandableTextViewStep3"
+                android:layout_marginTop="17dp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

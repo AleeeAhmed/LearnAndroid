@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AsyncTaskPOST">
+
+    <RelativeLayout
+        android:id="@+id/RL_AsyncTasksPOST"
+        android:padding="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="POST method is used to send results to server."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In below image you can see the methods involved during this process."
+            android:layout_below="@+id/tvStep1"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskPostStep1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@+id/tvDescStep1"
+            android:src="@drawable/background_post_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskPostStep1"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We have created an interface so that we implement it in MainClass to get back results."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskPostStep2"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/background_post_step2"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskPostStep2"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="doInBackground method do the main thing, this method runs in a background and do the job."
+            android:layout_below="@+id/tvStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskPostStep3"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/background_post_step3"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_4"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskPostStep3"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="onPostExecute method is called when doInBackground method has completed its work. It is used to send results back to MainClass."
+            android:layout_below="@+id/tvStep4"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskPostStep4"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep4"
+            android:src="@drawable/background_post_step4"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_5"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskPostStep4"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In .java class do like this."
+            android:layout_below="@+id/tvStep5"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskPostStep5"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@+id/tvDescStep5"
+            android:src="@drawable/background_post_step5_"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Code of BackgroundProcessPOST."
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskPostStep5"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create the new java class and paste the code."
+            android:layout_below="@+id/tvStep6"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskPostStep6"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep6"
+            android:src="@drawable/background_post_step6_"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <Button
+            android:id="@+id/btnCopyCodeAsyncTaskPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy Code"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskPostStep6"
+            android:layout_marginTop="17dp"
+            />
+
+
+    </RelativeLayout>
+</ScrollView>

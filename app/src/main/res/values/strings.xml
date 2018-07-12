@@ -1,0 +1,2545 @@
+<resources>
+
+    <string name="app_name">Learn Android</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Learn Android</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_exit">Exit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="code">Code:</string>
+    <string name="first_way">First Way:</string>
+    <string name="second_way">Second Way:</string>
+    <string name="description">Description:</string>
+    <string name="copy_code">Click Copy Code button at bottom to copy full code. Thanks</string>
+    <string name="nothing_here"><![CDATA[Nothing to be copied..!! Just watch & do it yourself.]]></string>
+    <string name="expandable_test">Ward Cunningham, Inventor of the Wiki.webm Interview with Ward Cunningham, inventor of the wiki. A wiki (/ˈwɪki/ (About this sound listen) WIK-ee) is a website on which users collaboratively modify content and structure directly from the web browser. In a typical wiki, text is written using a simplified markup language and often edited with the help of a rich-text editor.[1]    . A wiki is run using wiki software, otherwise known as a wiki engine. A wiki engine is a type of content management system, but it differs from most other such systems, including blog software, in that the content is created without any defined owner or leader, and wikis have little implicit structure, allowing structure to emerge according to the needs of the users.[2] There are dozens of different wiki engines in use, both standalone and part of other software, such as bug tracking systems. Some wiki engines are open source, whereas others are proprietary. Some permit control over different functions (levels of access); for example, editing rights may permit changing, adding or removing material. Others may permit access without enforcing access control. Other rules may be imposed to organize content. The online encyclopedia project Wikipedia is by far the most popular wiki-based website, and is one of the most widely viewed sites of any kind in the world, having been ranked in the top ten since 2007.[3] Wikipedia is not a single wiki but rather a collection of hundreds of wikis, one for each language. There are tens of thousands of other wikis in use, both public and private, including wikis functioning as knowledge management resources, notetaking tools, community websites and intranets. The English-language Wikipedia has the largest collection of articles; as of September 2016, it had over five million articles. Ward Cunningham, the developer of the first wiki software, WikiWikiWeb, originally described it as "the simplest online database that could possibly work".[4] "Wiki" (pronounced [ˈwiki][note 1]) is a Hawaiian word meaning "quick</string>
+
+    <string name="step_1">Step 1:</string>
+    <string name="step_2">Step 2:</string>
+    <string name="step_3">Step 3:</string>
+    <string name="step_4">Step 4:</string>
+    <string name="step_5">Step 5:</string>
+    <string name="step_6">Step 6:</string>
+    <string name="step_7">Step 7:</string>
+    <string name="step_8">Step 8:</string>
+    <string name="step_9">Step 9:</string>
+    <string name="step_10">Step 10:</string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Codes of Alert Dialogs-->
+
+    <string name="simple_alert_dialog">
+        AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogSimple.this); //MainActivity.this(for Activity)
+                                                                                                    // or getActivity(for Fragment)\n\n
+        dialog.setCancelable(true);\n
+        dialog.setTitle("Title Of Dialog");\n
+        dialog.setMessage("Message will be added here..");\n
+                dialog.setIcon(R.drawable.logo);\n
+
+                dialog.setPositiveButton("First", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        Toast.makeText(AlertDialogSimple.this, "you have clicked first button", Toast.LENGTH_SHORT).show();\n
+                    }\n
+                });\n\n
+
+                dialog.setNegativeButton("Second", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        Toast.makeText(AlertDialogSimple.this, "you have clicked second button", Toast.LENGTH_SHORT).show();\n
+                    }\n
+                });\n\n
+
+                dialog.setNeutralButton("Third", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        Toast.makeText(AlertDialogSimple.this, "you have clicked third button", Toast.LENGTH_SHORT).show();\n
+                    }\n
+                });\n\n
+
+                dialog.show();\n\n</string>
+
+    <string name="check_box_alert_dialog_first">
+                final String[] cities = {"Rawalpindi", "Islamabad","Karachi", "Lahore","Peshawar", "Quetta"}; //checkboxes values\n\n
+                final ArrayList&lt;String&gt; checkedItems = new ArrayList&lt;&gt;();   //checkboxes that you select, will be stored in arraylist\n\n
+
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogWithCheckBoxes.this); //MainActivity.this(for Activity)
+                                                                                                    // or getActivity(for Fragment)\n\n
+
+                dialog.setCancelable(true); //true->click anywhere on screen will hide alert dialog..\n\n
+                dialog.setTitle("Select cities");\n
+                //dialog.setIcon(R.drawable.logo);\n
+
+                dialog.setMultiChoiceItems(cities, null, new DialogInterface.OnMultiChoiceClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {\n\n
+                        if (isChecked) {\n
+                            checkedItems.add(cities[which]); //item added to arraylist\n
+                        } else {\n
+                            checkedItems.remove(cities[which]); //item removed from array list\n
+                        }\n
+                    }\n
+                });\n\n
+
+                dialog.setPositiveButton("Select", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        StringBuilder stringBuilder = new StringBuilder();\n
+                        for (String item : checkedItems) {\n
+                            stringBuilder.append(item).append(", ");\n
+                        }\n
+                        Toast.makeText(AlertDialogWithCheckBoxes.this, "You have selected: "+stringBuilder, Toast.LENGTH_SHORT).show();\n
+                    }\n
+                });\n\n
+
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n
+                        Toast.makeText(AlertDialogWithCheckBoxes.this, "cancelled..", Toast.LENGTH_SHORT).show();\n
+                    }\n
+                });\n\n
+
+
+                dialog.show();\n
+    </string>
+    <string name="check_box_alert_dialog_second">
+                final ArrayList&lt;String> checkedItems = new ArrayList&lt;>();   //checkboxes that you select, will be stored in arraylist\n\n
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogWithCheckBoxes.this); //MainActivity.this(for Activity)\n
+                                                                                                  \t\t\t  // or getActivity(for Fragment)\n\n
+                dialog.setCancelable(false); //false->click anywhere on screen will not hide alert dialog.\n
+                dialog.setTitle("Select cities");\n\n
+                View mView = getLayoutInflater().inflate(R.layout.sample_check_boxes, null);\n\n
+                final CheckBox cbRwp = mView.findViewById(R.id.checkBoxRawalpindi);\n
+                final CheckBox cbIsb = mView.findViewById(R.id.checkBoxIslamabad);\n
+                final CheckBox cbKhi = mView.findViewById(R.id.checkBoxKarachi);\n
+                final CheckBox cbLhr = mView.findViewById(R.id.checkBoxLahore);\n
+                final CheckBox cbPhwr = mView.findViewById(R.id.checkBoxPeshawar);\n
+                final CheckBox cbQta = mView.findViewById(R.id.checkBoxQuetta);\n\n
+
+                dialog.setView(mView);\n\n
+
+                cbRwp.setOnClickListener(new View.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(View v) {\n\n
+                        if (cbRwp.isChecked()) {\n
+                            checkedItems.add("Rawalpindi");\n\n
+                        } else {\n\n
+                            checkedItems.remove("Rawalpindi");\n
+                        }\n
+                    }\n
+                });\n\n
+                cbIsb.setOnClickListener(new View.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(View v) {\n\n
+                        if (cbIsb.isChecked()) {\n\n
+                            checkedItems.add("Islamabad");\n
+                        } else {\n
+                            checkedItems.remove("Islamabad");\n
+                        }\n
+                    }\n
+                });\n\n
+                cbLhr.setOnClickListener(new View.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(View v) {\n\n
+                        if (cbLhr.isChecked()) {\n
+                            checkedItems.add("Lahore");\n
+                        } else {\n
+                            checkedItems.remove("Lahore");\n
+                        }\n
+                    }\n
+                });\n\n
+
+                cbKhi.setOnClickListener(new View.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(View v) {\n\n
+                        if (cbKhi.isChecked()) {\n\n
+                            checkedItems.add("Karachi");\n
+                        } else {\n\n
+                            checkedItems.remove("Karachi");\n\n
+                        }\n
+                    }\n
+                });\n\n
+                cbPhwr.setOnClickListener(new View.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(View v) {\n\n
+                        if (cbPhwr.isChecked()) {\n
+                            checkedItems.add("Peshawar");\n\n
+                        } else {\n\n
+                            checkedItems.remove("Peshawar");\n\n
+                        }\n
+                    }\n
+                });\n\n
+                cbQta.setOnClickListener(new View.OnClickListener() {\n\n
+                    @Override\n
+                        if (cbQta.isChecked()) {\n\n
+                            checkedItems.add("Quetta");\n
+                        } else {\n
+                            checkedItems.remove("Quetta");\n\n
+                        }\n\n
+                    }\n
+                });\n\n
+
+                dialog.setPositiveButton("Select", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        StringBuilder stringBuilder = new StringBuilder();\n\n
+                        for (String item : checkedItems) {\n
+                            stringBuilder.append(item).append(", ");\n
+                        }
+                        Toast.makeText(AlertDialogWithCheckBoxes.this, "You have selected: "+stringBuilder, Toast.LENGTH_SHORT).show();\n\n                   }
+                });\n\n
+
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        Toast.makeText(AlertDialogWithCheckBoxes.this, "cancelled..", Toast.LENGTH_SHORT).show();\n\n
+                    }\n
+                });\n\n
+
+
+                dialog.show();\n\n\n
+
+        /*res/layout/sample_check_boxes.xml*/\n\n
+
+        &lt;?xml version="1.0" encoding="utf-8"?>\n
+        &lt;RelativeLayout\n
+            xmlns:android="http://schemas.android.com/apk/res/android"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="match_parent"\n
+            android:padding="11dp"\n
+            android:background="@color/colorWhite"\n\n
+            >\n\n
+
+    &lt;TextView\n
+        android:id="@+id/tvSelectCities"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:text="Select cities you have visited last year.."\n
+        android:textColor="@color/colorBlack"\n
+        />\n\n
+
+    &lt;CheckBox\n
+        android:id="@+id/checkBoxRawalpindi"\n
+        android:layout_width="150dp"\n
+        android:layout_height="wrap_content"\n
+        android:text="Rawalpindi"\n
+        android:layout_below="@+id/tvSelectCities"\n
+        android:layout_marginTop="7dp"\n
+        />\n\n
+
+    &lt;CheckBox\n
+        android:id="@+id/checkBoxIslamabad"\n
+        android:layout_width="150dp"\n
+        android:layout_height="wrap_content"\n
+        android:text="Islamabad"\n
+        android:layout_toEndOf="@+id/checkBoxRawalpindi"\n
+        android:layout_below="@+id/tvSelectCities"\n
+        android:layout_marginTop="7dp"\n
+        />\n\n
+
+    &lt;CheckBox\n
+        android:id="@+id/checkBoxKarachi"\n
+        android:layout_width="150dp"\n
+        android:layout_height="wrap_content"\n
+        android:text="Karachi"\n
+        android:layout_below="@+id/checkBoxRawalpindi"\n
+        />\n\n
+
+   &lt;CheckBox\n
+        android:id="@+id/checkBoxLahore"\n
+        android:layout_width="150dp"\n
+        android:layout_height="wrap_content"\n
+        android:text="Lahore"\n
+        android:layout_alignBaseline="@+id/checkBoxKarachi"\n
+        android:layout_toEndOf="@+id/checkBoxKarachi"\n
+        />\n\n
+
+    &lt;CheckBox\n
+        android:id="@+id/checkBoxPeshawar"\n
+        android:layout_width="150dp"\n
+        android:layout_height="wrap_content"\n
+        android:text="Peshawar"\n
+        android:layout_below="@+id/checkBoxKarachi"\n
+        />\n\n
+
+    &lt;CheckBox
+        android:id="@+id/checkBoxQuetta"\n
+        android:layout_width="150dp"\n
+        android:layout_height="wrap_content"\n
+        android:text="Quetta"\n
+        android:layout_alignBaseline="@+id/checkBoxPeshawar"\n
+        android:layout_toEndOf="@+id/checkBoxPeshawar"\n
+        />\n\n
+
+&lt;/RelativeLayout>\n\n
+
+</string>
+
+    <string name="edittext_alert_dialog_first">
+                AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogWithEditText.this);\n
+                dialog.setTitle("Password");\n
+                dialog.setMessage("Enter Password");\n
+
+                final EditText input = new EditText(AlertDialogWithEditText.this); //creating custom editText\n
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT ); //setting its width(layout_width) and height(layout_height)\n\n
+                input.setLayoutParams(lp); //attaching with editText\n\n
+                dialog.setView(input); //setting view to AlertDialog\n
+                dialog.setIcon(R.drawable.logo); // setting up AlertDialog Icon\n
+
+                //positive button(OK) click listener,\n
+                dialog.setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {\n
+                            public void onClick(DialogInterface dialog, int which) {\n
+                                String password = input.getText().toString();\n
+                                Toast.makeText(AlertDialogWithEditText.this ,
+                                        "your password is "+password, Toast.LENGTH_SHORT).show();\n
+                            }\n
+                        });\n\n
+                dialog.setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {\n
+                            public void onClick(DialogInterface dialog, int which) {\n
+                                dialog.cancel();\n
+                            }\n
+                        });\n\n
+
+                dialog.show(); //finally Showing the alert dialog,\n
+
+</string>
+    <string name="edittext_alert_dialog_second"><![CDATA[
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogWithEditText.this);\n
+                dialog.setTitle("Password");\n
+                View mView = getLayoutInflater().inflate(R.layout.sample_edittext, null);\n
+                final EditText editText = mView.findViewById(R.id.etPassword);\n
+                dialog.setView(mView);\n\n
+
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        String password = editText.getText().toString();\n
+                        Toast.makeText(getApplicationContext(), "your password is " + password, Toast.LENGTH_SHORT).show();\n
+                    }\n
+                });\n\n
+
+                dialog.show();\n\n\n
+
+
+                /* res/layout/sample_edittext.xml */\n\n
+         <?xml version="1.0" encoding="utf-8"?> \n
+
+        <RelativeLayout\n
+            xmlns:android="http://schemas.android.com/apk/res/android"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="match_parent"\n
+            android:padding="11dp"\n
+            android:background="@color/colorWhite"\n
+            >\n\n
+
+    <TextView\n
+        android:id="@+id/tvEP"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:text="Enter password to goto new activity."\n
+        android:textColor="@color/colorBlack"\n
+        />\n\n
+
+    <EditText\n
+        android:id="@+id/etPassword"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:hint="Enter password…"\n
+        android:textColor="@color/colorBlack"\n
+        android:layout_below="@+id/tvEP"\n
+        android:maxLength="5"\n
+        android:inputType="textPassword"\n
+        />\n\n
+
+</RelativeLayout>\n\n
+
+
+    ]]></string>
+
+    <string name="radio_buttons_alert_dialog"><![CDATA[
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogWithRadioButtons.this);\n
+                dialog.setTitle("Gender");\n
+                View mView = getLayoutInflater().inflate(R.layout.sample_radio_buttons, null);\n
+                final RadioButton rbMale = mView.findViewById(R.id.rbMale);\n
+                final RadioButton rbFeMale = mView.findViewById(R.id.rbFemale);\n
+                dialog.setView(mView);\n\n
+
+                dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {\n
+                    @Override\n
+                    public void onClick(DialogInterface dialog, int which) {\n\n
+                        if (rbMale.isChecked()) {\n
+                            Toast.makeText(getApplicationContext(), "you are " +
+                                    rbMale.getText().toString(), Toast.LENGTH_SHORT).show();\n
+                        } else {\n\n
+                            Toast.makeText(getApplicationContext(), "you are " +
+                                    rbFeMale.getText().toString() , Toast.LENGTH_SHORT).show();\n
+                        }\n
+                    }\n
+                });\n\n
+
+                dialog.show(); //finally Showing the alert dialog,\n\n
+
+
+                /* res/layout/sample_radio_buttons.xml */\n\n
+
+         <?xml version="1.0" encoding="utf-8"?> \n
+        <RelativeLayout\n
+            xmlns:android="http://schemas.android.com/apk/res/android"\n
+            android:layout_width="match_parent"\n
+            android:layout_height="match_parent"\n
+            android:padding="11dp"\n
+            android:background="@color/colorWhite"\n
+            >\n\n
+
+    <TextView\n
+        android:id="@+id/tvRB"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:text="Select your gender.."\n
+        android:textColor="@color/colorBlack"\n
+        />\n\n
+    <RadioGroup\n
+        android:id="@+id/rgSample"\n
+        android:layout_width="match_parent"\n
+        android:layout_height="wrap_content"\n
+        android:layout_below="@+id/tvRB"\n
+        android:layout_marginTop="5dp"\n
+        >\n\n
+
+        <RadioButton\n
+            android:id="@+id/rbMale"\n
+            android:layout_width="wrap_content"\n
+            android:layout_height="wrap_content"\n
+            android:text="Male"\n
+            android:checked="true"\n
+            />\n\n
+
+        <RadioButton\n
+            android:id="@+id/rbFemale"\n
+            android:layout_width="wrap_content"\n
+            android:layout_height="wrap_content"\n
+            android:text="Female" />\n\n
+
+    </RadioGroup>\n\n
+
+</RelativeLayout>\n\n
+
+    ]]></string>
+
+    <string name="images_alert_dialog">
+
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(AlertDialogWithImages.this); \n
+                dialog.setTitle("Images"); \n
+                View mView = getLayoutInflater().inflate(R.layout.sample_images_alert_dialog, null); \n
+                //ImageView ivFirst = mView.findViewById(R.id.ivFirstImageAlertDialog); \n
+                //ImageView ivSecond = mView.findViewById(R.id.ivSecondImageAlertDialog); \n
+                dialog.setView(mView); \n
+                dialog.setPositiveButton("Close", null); \n \n
+/*
+                ivSecond.setOnClickListener(new View.OnClickListener() { \n
+                    @Override \n
+                    public void onClick(View v) { \n
+
+                    } \n
+                }); \n
+*/ \n \n
+                dialog.show(); \n
+
+        <![CDATA[
+
+    <RelativeLayout \n
+        android:layout_width="match_parent" \n
+        android:layout_height="wrap_content"> \n \n
+
+        <ImageView \n
+            android:id="@+id/ivFirstImageAlertDialog" \n
+            android:layout_width="match_parent" \n
+            android:layout_height="250dp" \n
+            android:src="@drawable/parrot" \n
+            android:scaleType="fitCenter" \n
+            android:contentDescription="@string/app_name" \n
+            /> \n \n
+
+
+        <ImageView \n
+            android:id="@+id/ivSecondImageAlertDialog" \n
+            android:layout_width="match_parent" \n
+            android:layout_height="250dp" \n
+            android:src="@drawable/flower" \n
+            android:scaleType="fitCenter" \n
+            android:contentDescription="@string/app_name" \n
+            android:layout_below="@+id/ivFirstImageAlertDialog" \n
+            android:layout_marginTop="7dp" \n
+            /> \n \n
+    </RelativeLayout> \n \n
+
+    ]]>
+
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Codes of Toasts-->
+
+    <string name="simple_toast">
+                        Toast.makeText ( \n
+                        ToastMessageSimple.this, //class name where you\'re using Toast     \n
+                        "Login Successfully",  // Message that you want to display in Toast  \n
+                        Toast.LENGTH_LONG   // Duration it will be shown on screen (Toast.LENGTH_SHORT)  \n
+                ) .show();  \n\n
+    </string>
+    <string name="colored_toast">
+                Toast toast = Toast.makeText(ToastMessageColored.this, "This is advanced toast", Toast.LENGTH_LONG); \n
+                View view = toast.getView(); // getting Toast view \n
+                TextView view1 = view.findViewById(android.R.id.message); //custom textView \n
+                view1.setTextColor(Color.WHITE);       //changing text color of toast \n
+                view1.setPadding(11, 11, 11, 11); //setting inside padding \n
+                view1.setTextSize(15f);     // text size for toast \n
+                view.setBackgroundResource(android.R.color.holo_green_dark); //setting background color for toast \n
+                toast.show();   // finally show the toast \n \n
+
+    </string>
+    <string name="image_toast">
+
+                LayoutInflater inflaterr = getLayoutInflater(); \n
+                View view = inflaterr.inflate(R.layout.sample_toast,  // xml layout to be displayed in Toast \n
+                        (ViewGroup) findViewById(R.id.custom_toast_container)); // Layout Name \n \n
+
+                TextView text = (TextView) view.findViewById(R.id.text); \n
+                text.setText("Here is Custom Toast with Image"); \n
+
+                Toast toast = new Toast(ToastMessageCustomImage.this); \n
+                toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 20, 20); // you can change the position from here
+                 \n \ntoast.setDuration(Toast.LENGTH_LONG); // increase decrese time duration of display on screen \n
+                toast.setView(view); // setting xml layout to toast \n
+                toast.show(); \n \n
+    </string>
+    <string name="position_toast">
+        <![CDATA[
+
+                Toast toast = new Toast(ToastMessageCustomPosition.this); //intializing \n
+
+                View view = getLayoutInflater().inflate(R.layout.sample_toast_pos,  // xml layout to be displayed in Toast
+                        (ViewGroup) findViewById(R.id.custom_toast_container_position)); // Layout Name \n\n
+
+                TextView text = (TextView) view.findViewById(R.id.toast_text); \n
+                text.setText("Here is Custom Toast"); \n
+                //Three arguments are passed in below line. \n
+                //First shows the position, where it will be displayed, 2nd is X-Axis 3rd is Y-Axis \n
+                //Negative X value will move message to Left, -ve Y value will move towards Top \n
+                toast.setGravity(Gravity.CENTER, -50, 200); \n \n
+
+                //toast.setGravity(Gravity.BOTTOM, 120, 200); \n
+                // toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, -120, 200); you can add two value to position like this
+                 \n// toast.setGravity(Gravity.CENTRE, -20, -20); \n
+                //toast.setGravity(Gravity.END | Gravity.TOP, 0, 0); \n
+
+                toast.setDuration(Toast.LENGTH_LONG); // duration it displayed on screen \n
+                toast.setView(view); \n \n
+
+                toast.show();
+                 \n \n
+
+               /*res/layout/sample_toast_pos.xml*/ \n \n
+
+               <?xml version="1.0" encoding="utf-8"?> \n
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" \n
+                    android:id="@+id/custom_toast_container_position" \n
+                    android:orientation="horizontal" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="wrap_content" \n
+                    android:padding="8dp" \n
+                    android:background="#f7ea751c" \n
+                    > \n \n
+                    <TextView android:id="@+id/toast_text" \n
+                        android:layout_width="wrap_content" \n
+                        android:layout_height="wrap_content" \n
+                        android:textColor="#FFF" \n
+                        android:textSize="15sp" \n
+                        /> \n \n
+                </LinearLayout> \n \n
+
+    ]]>
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Codes of SnackBar-->
+
+    <string name="simple_snackbar">
+
+                Snackbar.make( \n
+                        view,  // 1st argument is to provide View \n
+                        "Hello !!  I'm SnackBar  ", // Text to be displayed at bottom \n
+                        Snackbar.LENGTH_LONG). //Time period you want snackbar to be visible to user \n
+                        show();     // finally showing the Snackbar.. \n \n
+
+    </string>
+    <string name="action_snackbar">
+
+                Snackbar.make(  \n
+                        view,  \n
+                        "Hello !! I'm Snackbar with Undo Option.", //Text to be displayed in SnackBar  \n
+                        Snackbar.LENGTH_LONG  \n
+                ).setAction(  \n
+                        "Undo",    //Text of Action  \n
+                        new View.OnClickListener() {     //When you click on action(Undo) then this method is called  \n
+                                                         // you can do anything inside this method  \n
+                            @Override  \n
+                            public void onClick(View v) {  \n  \n
+                                Toast.makeText(  \n
+                                        SnackBarAction.this,  \n
+                                        "Snackbar Undo Clicked",  \n
+                                        Toast.LENGTH_SHORT).show();  \n  \n
+                            }  \n
+                        }  \n
+                ).setActionTextColor(   //change the color of text of action  \n
+                        getResources().getColor(R.color.colorAccent)  \n
+                ).  \n
+                show();  \n  \n
+
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Floating Action Button-->
+    <string name="fab_code">
+
+        FloatingActionButton fab = view.findViewById(R.id.fabBack); \n \n
+
+        fab.setOnClickListener(new View.OnClickListener() { \n
+            @Override \n
+            public void onClick(View v) { \n \n
+                Toast.makeText(getActivity(), "FAB clicked..", Toast.LENGTH_SHORT).show(); \n \n
+            } \n
+        }); \n \n
+
+        /*Add below in xml file, where you need <b>fab</b>*/  \n \n
+
+        <![CDATA[
+
+    <android.support.design.widget.FloatingActionButton \n
+        android:id="@+id/fabBack" \n
+        android:layout_width="wrap_content" \n
+        android:layout_height="wrap_content" \n
+        android:layout_alignParentEnd="true" \n
+        android:layout_alignParentBottom="true" \n
+        android:layout_margin="16dp" \n
+        android:src="@drawable/back_arrow" \n
+        app:fabSize="auto" \n
+        android:backgroundTint="@color/colorBlack" \n
+        /> \n \n
+
+
+      ]]></string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--GIF Texts-->
+    <string name="gif_step_1">
+    //Load GIF\n
+    implementation \'pl.droidsonroids.gif:android-gif-drawable:1.2.12\'
+    </string>
+    <string name="gif_step_2">
+        <![CDATA[
+
+        <pl.droidsonroids.gif.GifImageView \n
+            android:layout_width="match_parent" \n
+            android:layout_height="200dp" \n
+            android:src="@drawable/tenor" \n
+            android:layout_below="@+id/btn1" \n
+            android:id="@+id/gifImage" \n
+            /> \n \n
+
+        ]]>
+    </string>
+    <string name="gif_step_3">
+                <![CDATA[
+
+        GifImageView gifImageView = view.findViewById(R.id.gifImage); \n\n
+        gifImageView.setImageResource(R.drawable.tenor);\n\n
+        gifImageView.setOnClickListener(new View.OnClickListener() {    \n
+            @Override\n
+            public void onClick(View v) {\n\n
+                Toast.makeText(getActivity(), "Gif Clicked !! ", Toast.LENGTH_SHORT).show();    \n\n
+            }\n
+        });\n\n
+
+        ]]>
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Pop up Menu Button Code-->
+    <string name="pop_up_menu_xml_string">
+        <![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>      \n
+        <menu xmlns:android="http://schemas.android.com/apk/res/android">      \n      \n
+
+            <item      \n
+                android:id="@+id/changePassword"      \n
+                android:title="Change Password"     \n
+                app:showAsAction="never"/>      \n      \n
+
+            <item      \n
+                android:id="@+id/logout"      \n
+                android:title="Logout"      \n
+                app:showAsAction="never"/>      \n \n
+
+        </menu>      \n
+
+        ]]>
+    </string>
+    <string name="pop_up_menu_java_string">
+
+        //Add this in OnClick of any button or image
+
+        <![CDATA[
+                PopupMenu popupMenu = new PopupMenu(PopUpMenuButtonImage.this, btnDemo);    \n
+                popupMenu.getMenuInflater().inflate(R.menu.activity_home_drawer, popupMenu.getMenu());    \n    \n
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {    \n
+                    @Override    \n
+                    public boolean onMenuItemClick(MenuItem item) {    \n
+                        if (item.getItemId() == R.id.changePassword) {    \n    \n
+                            Toast.makeText(PopUpMenuButtonImage.this,
+                                    "Change Password Clicked..", Toast.LENGTH_SHORT).show();    \n
+                            return true;    \n
+                        }    \n    \n
+                        if (item.getItemId() == R.id.logout) {    \n
+                            Toast.makeText(PopUpMenuButtonImage.this,
+                                    "Logout Clicked", Toast.LENGTH_SHORT).show();    \n
+                            return true;    \n
+                        }    \n    \n
+                        return false;    \n
+                    }    \n
+                });    \n
+        ]]>
+    </string>
+
+    <!--Pop up Menu Toolbar Code-->
+    <string name="pop_up_menu_toolbar_java_string">
+        <![CDATA[
+    \@Override  \n
+    public boolean onCreateOptionsMenu(Menu menu) {  \n  \n
+        getMenuInflater().inflate(R.menu.sample_menu, menu);  \n
+        return true;  \n  \n
+    }  \n  \n
+    \@Override  \n
+    public boolean onOptionsItemSelected(MenuItem item) {  \n  \n
+        int id = item.getItemId();  \n
+        if (id == R.id.changePassword) {  \n  \n
+            Toast.makeText(this, "Change Password Clicked", Toast.LENGTH_SHORT).show();  \n
+            return true;  \n
+        }  \n  \n
+        if (id == R.id.logout) {  \n
+            Toast.makeText(this, "Logout Clicked", Toast.LENGTH_SHORT).show();  \n
+            return true;  \n
+        }  \n  \n
+        return false;  \n  \n
+    }  \n
+        ]]>
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Collapsing Toolbar Code-->
+    <string name="collapsing_toolbar_step1">
+        <![CDATA[
+
+            /* add this to your activity in Manifest.xml */ \n\n
+                android:theme="@style/AppTheme.NoActionBar"\n\n
+
+            /* add this style to your res/values/styles.xml */\n\n
+                <style name="AppTheme.NoActionBar">\n
+                    <item name="windowActionBar">false</item>\n
+                    <item name="windowNoTitle">true</item>\n
+                </style>\n
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step2">
+        <![CDATA[
+
+            <?xml version="1.0" encoding="utf-8"?>  \n
+            <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"  \n
+                xmlns:app="http://schemas.android.com/apk/res-auto"  \n
+                xmlns:tools="http://schemas.android.com/tools"  \n
+                android:id="@+id/appbar_layout_activity"  \n
+                android:layout_width="match_parent"  \n
+                android:layout_height="match_parent"  \n
+                android:fitsSystemWindows="true"  \n
+                tools:context=".yourActivityName">  \n  \n
+
+                    \.\.\.  \n
+                    //write code here  \n
+                    \.\.\.  \n  \n
+
+            </android.support.design.widget.CoordinatorLayout>  \n
+
+
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step3">
+           <![CDATA[
+
+                <android.support.design.widget.AppBarLayout \n
+                    android:id="@+id/appbar" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="wrap_content"> \n \n
+
+
+                </android.support.design.widget.AppBarLayout> \n
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step4">
+        <![CDATA[
+
+        <android.support.design.widget.CollapsingToolbarLayout \n
+            android:id="@+id/collapsing_toolbar" \n
+            android:layout_width="match_parent" \n
+            android:layout_height="match_parent" \n
+            android:fitsSystemWindows="true" \n
+            app:contentScrim="?attr/colorPrimary" \n
+            app:expandedTitleMarginEnd="64dp" \n
+            app:expandedTitleMarginStart="48dp" \n
+            app:expandedTitleTextAppearance="@android:color/transparent" \n
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"> \n \n
+
+
+        </android.support.design.widget.CollapsingToolbarLayout> \n
+
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step5">
+        <![CDATA[
+
+                <ImageView \n
+                    android:id="@+id/imageView" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="match_parent" \n
+                    android:fitsSystemWindows="true" \n
+                    android:scaleType="centerCrop" \n
+                    app:layout_collapseMode="parallax" /> \n \n
+
+
+            <android.support.v7.widget.Toolbar \n
+                android:id="@+id/z_toolbar" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="?attr/actionBarSize" \n
+                app:layout_collapseMode="pin"/> \n \n
+
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step6">
+        <![CDATA[
+    <android.support.v4.widget.NestedScrollView \n
+        android:layout_width="match_parent" \n
+        android:layout_height="match_parent" \n
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"> \n \n
+
+    </android.support.v4.widget.NestedScrollView> \n \n \n
+
+
+    <android.support.design.widget.FloatingActionButton \n
+        android:id="@+id/fab" \n
+        android:layout_width="wrap_content" \n
+        android:layout_height="wrap_content" \n
+        android:layout_margin="16dp" \n
+        app:layout_anchor="@id/app_bar" \n
+        app:layout_anchorGravity="bottom|end" \n
+        app:srcCompat="@android:drawable/ic_dialog_info" /> \n \n
+
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step7">
+        <![CDATA[
+    <LinearLayout \n
+        android:layout_width="match_parent" \n
+        android:layout_height="match_parent" \n
+        android:orientation="vertical" \n
+        android:paddingTop="10dp"> \n \n
+
+         <TextView \n
+            android:layout_width="match_parent" \n
+            android:layout_height="wrap_content" \n
+            android:text="Lorem ipsum" \n
+            android:textSize="20sp" /> \n \n
+
+        <TextView \n
+            android:layout_width="match_parent" \n
+            android:layout_height="wrap_content" \n
+            android:text="@string/text_content" \n
+            android:textSize="18sp" /> \n \n
+
+    </LinearLayout> \n
+
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step8">
+        <![CDATA[
+
+            <android.support.v7.widget.CardView \n
+                android:layout_width="match_parent" \n
+                android:layout_height="wrap_content" \n
+                android:layout_marginTop="24dp" \n
+                app:cardElevation="@dimen/spacing_medium" \n
+                app:cardUseCompatPadding="true"> \n \n
+
+                /* add you linear or relative layout here,, */ \n \n
+
+            </android.support.v7.widget.CardView> \n
+
+        ]]>
+    </string>
+    <string name="collapsing_toolbar_step9">
+
+         final Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar); \n
+        setSupportActionBar(mToolbar); \n \n
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab); \n \n
+        fab.setOnClickListener(new View.OnClickListener() { \n
+            @Override \n
+            public void onClick(View view) { \n \n
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show(); \n
+            } \n
+        }); \n
+
+
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Refresh Button on Toolbar-->
+    <string name="refresh_toolbar_step1">
+        <![CDATA[
+            <?xml version="1.0" encoding="utf-8"?>  \n
+            <menu xmlns:app="http://schemas.android.com/apk/res-auto"  \n
+                xmlns:android="http://schemas.android.com/apk/res/android" >  \n  \n
+
+            <item  \n
+                android:id="@+id/menu_refresh"  \n
+                android:title="Refresh"  \n
+                android:icon="@drawable/menu_refresh"  \n
+                app:showAsAction="always"  \n
+                />  \n  \n
+
+            </menu>  \n
+        ]]>
+
+    </string>
+    <string name="refresh_toolbar_step2">
+        <![CDATA[
+            <?xml version="1.0" encoding="utf-8"?>  \n
+            <ProgressBar  \n
+                xmlns:android="http://schemas.android.com/apk/res/android"  \n
+                android:id="@+id/progressBarSample"  \n
+                android:layout_width="wrap_content"  \n
+                android:layout_height="wrap_content"  \n
+                />  \n
+        ]]>
+
+    </string>
+    <string name="refresh_toolbar_step3">
+        <![CDATA[
+    \@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.sample_refresh, menu);
+        return true;
+    }
+
+    \@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+                case R.id.menu_refresh:
+                Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
+                menuItem = item;
+                menuItem.setActionView(R.layout.sample_progress_bar);
+                menuItem.expandActionView();
+                new TestTask().execute();
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+
+    private class TestTask extends AsyncTask<String, Void, String> {
+
+        \@Override
+        protected String doInBackground(String\.\.\. params) {
+            // Do something
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        \@Override
+        protected void onPostExecute(String result) {
+            menuItem.collapseActionView();
+            menuItem.setActionView(null);
+            Toast.makeText(ToolbarRefresh.this, "Refreshed", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    ]]>
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Refresh Button on Toolbar-->
+    <string name="search_toolbar_step1">
+        <![CDATA[
+            <?xml version="1.0" encoding="utf-8"?>  \n
+                <menu xmlns:app="http://schemas.android.com/apk/res-auto"  \n
+                    xmlns:android="http://schemas.android.com/apk/res/android" >  \n  \n
+
+                <item  \n
+                    android:id="@+id/menu_search"  \n
+                    android:title="Search"  \n
+                    android:icon="@drawable/menu_search"  \n
+                    app:showAsAction="always"  \n
+                    app:actionViewClass="android.support.v7.widget.SearchView"  \n
+                    />  \n
+                  \n
+                </menu>  \n
+        ]]>
+
+    </string>
+    <string name="search_toolbar_step2">
+        <![CDATA[
+
+               \@Override   \n
+                public boolean onCreateOptionsMenu( Menu menu) {   \n
+                    getMenuInflater().inflate( R.menu.sample_search, menu);   \n
+
+                    final MenuItem myActionMenuItem = menu.findItem( R.id.menu_search);   \n
+                    searchView = (SearchView) myActionMenuItem.getActionView();   \n   \n
+
+                    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {   \n
+                        \@Override   \n
+                        public boolean onQueryTextSubmit(String searchText) {   \n
+                            Toast.makeText(ToolbarSearch.this, "SearchText: " + searchText,
+                                                                                    Toast.LENGTH_SHORT).show();    \n  \n
+                            if( !searchView.isIconified()) {   \n
+                                searchView.setIconified(true);   \n
+                            }   \n
+                            myActionMenuItem.collapseActionView();   \n
+                            return false;   \n
+                        }   \n   \n
+                        \@Override   \n
+                        public boolean onQueryTextChange(String searchText) {   \n
+                            //use this method if you want to search character by character.   \n
+
+                            /* Toast.makeText(ToolbarSearch.this,
+                                    "Search: " + searchText, Toast.LENGTH_SHORT).show();
+                                    */   \n   \n
+                            return false;   \n
+                        }   \n
+                    });   \n
+                    return true;   \n
+                }   \n
+
+
+                ]]>
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Pick File from gallery-->
+    <string name="pick_file_step1">
+        <![CDATA[
+
+            dependencies {
+                //file picker library   \n
+                implementation \'com.nbsp:library:1.8\' \n
+                //storage library for file to byte and string conversion \n
+                implementation \'com.snatik:storage:2.1.0\' \n\n
+            }
+
+        ]]>
+    </string>
+    <string name="pick_file_step2">
+        <![CDATA[
+
+            allprojects { \n
+                repositories { \n
+                    maven { \n
+                        url  "http://dl.bintray.com/lukaville/maven" \n
+                    } \n
+                } \n
+            } \n
+
+        ]]>
+    </string>
+    <string name="pick_file_step3">
+
+    //call this method on Button Click to Open File Picker  \n
+    private void checkPermissionsAndOpenFilePicker() {  \n  \n
+        String permission = Manifest.permission.READ_EXTERNAL_STORAGE;  \n
+        if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {  \n
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {  \n
+                Toast.makeText(this, "Allow external storage reading", Toast.LENGTH_SHORT).show();  \n
+            } else {  \n
+                ActivityCompat.requestPermissions(this, new String[]{permission}, PERMISSIONS_REQUEST_CODE);  \n
+            }  \n
+        } else {  \n
+            openFilePicker();  \n
+        }  \n
+    }  \n  \n
+
+    @Override  \n
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[], @NonNull int[] grantResults) {  \n  \n
+        switch (requestCode) {  \n
+            case PERMISSIONS_REQUEST_CODE: {  \n
+                if (grantResults.length > 0
+                        &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {  \n
+                    openFilePicker();  \n
+                } else {  \n
+                    Toast.makeText(this, "Allow external storage reading", Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            }  \n
+        }  \n
+    }  \n  \n
+
+    private void openFilePicker() {  \n
+        //below code will open File Picker  \n
+        new MaterialFilePicker()  \n
+                .withActivity(this)  \n
+                .withRequestCode(FILE_PICKER_REQUEST_CODE)  \n
+                .withHiddenFiles(true)  \n
+                .withTitle("Pick up text file")  \n
+                .start();  \n
+    }  \n  \n
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)  \n
+    @Override  \n
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {  \n
+        super.onActivityResult(requestCode, resultCode, data);  \n  \n
+
+        if (requestCode == FILE_PICKER_REQUEST_CODE &amp;&amp; resultCode == RESULT_OK) {  \n
+            String path = data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH);  \n
+            if (path != null) {  \n
+                try {  \n
+                    Storage storage = new Storage(getApplicationContext());  \n
+                    String content = storage.readTextFile(path); //data inside file  \n
+                    byte[] bytes = storage.readFile(path); // converted to bytes to convert file to base-64 string
+                      \nString value = Base64.encodeToString(bytes, Base64.DEFAULT); //base-64 string  \n
+                    Toast.makeText(this, "Picked file: " + path, Toast.LENGTH_LONG).show();  \n
+  \n
+                } catch (Exception e) {  \n
+                    Toast.makeText(this, "Exception: "+ e.getMessage(), Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            }  \n
+        }  \n
+    }  \n
+
+
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Pick Image from Camera-->
+    <string name="pick_image_step1">
+
+        allprojects { \n
+            repositories { \n
+                maven { url "https://jitpack.io" } \n
+            } \n
+        } \n
+
+    </string>
+    <string name="pick_image_step2">
+
+        dependencies {      \n
+            implementation \'com.github.esafirm.android-image-picker:imagepicker:1.13.1\'      \n
+            implementation \'com.github.esafirm.android-image-picker:rximagepicker:1.13.1\'      \n
+            implementation \'com.github.bumptech.glide:glide:4.5.0\'      \n
+        }      \n
+
+    </string>
+    <string name="pick_image_step3">
+
+        //call this line to Open camera (may need permissions) \n
+        ImagePicker.cameraOnly().start(ImagePickerCamera.this);\n
+
+    </string>
+    <string name="pick_image_step4">
+
+    \@Override      \n
+        protected void onActivityResult(int requestCode, final int resultCode, Intent data) {      \n
+
+            if (ImagePicker.shouldHandle(requestCode, resultCode, data)) {      \n      \n
+
+                Image image = ImagePicker.getFirstImageOrNull(data); // selecting single image      \n
+                imageView.setImageURI(Uri.parse(image.getPath()));  // setting image to ImageView      \n      \n
+
+            }      \n
+            super.onActivityResult(requestCode, resultCode, data);      \n
+        }      \n
+
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Pick Image from Gallery-->
+    <string name="pick_gallery_image_step1">
+
+        allprojects { \n
+            repositories { \n
+                maven { url "https://jitpack.io" } \n
+            } \n
+        } \n
+
+    </string>
+    <string name="pick_gallery_image_step2">
+
+        dependencies {      \n
+            implementation \'com.github.esafirm.android-image-picker:imagepicker:1.13.1\'      \n
+            implementation \'com.github.esafirm.android-image-picker:rximagepicker:1.13.1\'      \n
+            implementation \'com.github.bumptech.glide:glide:4.5.0\'      \n
+        }      \n
+
+    </string>
+    <string name="pick_gallery_image_step3">
+
+          <![CDATA[
+
+    private void OpenGallery() {        \n
+            ImagePicker.create(this)       \n
+                    .folderMode(true)        \n
+                    .toolbarFolderTitle("Gallery")       \n
+                    .toolbarImageTitle("Tap to select")        \n
+                    .multi() // or  .single()       \n
+                    .limit(10) // max images can be selected        \n
+                    .showCamera(true)       \n
+                    .imageDirectory("LearnAndroid Images") // directory name for captured image       \n
+                    .start();       \n
+        }       \n       \n
+
+        @Override       \n
+        protected void onActivityResult(int requestCode, final int resultCode, Intent data) {       \n
+            if (ImagePicker.shouldHandle(requestCode, resultCode, data)) {       \n
+                List<Image> images = ImagePicker.getImages(data);       \n      \n
+                
+            for (Image image : images) {      \n
+                ImageView imageView = new ImageView(this); //creating custom view      \n
+                imageView.setImageURI(Uri.parse(image.getPath())); //setting image to imagView      \n
+                imageView.setLayoutParams(new LayoutParams(      
+                        LayoutParams.MATCH_PARENT, 700)); //setting image size      \n
+                imageView.setPadding(0,11,0,11); //adding padding       \n
+                linearLayout.addView(imageView);          \n      \n
+            }      \n
+                   \n  
+            }       \n
+            super.onActivityResult(requestCode, resultCode, data);       \n
+        }       \n
+
+        ]]>
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Pick Color-->
+    <string name="pick_color_step1">
+        jcenter() //add this to Project Level build.gradle \n \n
+        //Color picker Library \n
+        implementation 'com.pes.materialcolorpicker:library:1.2.0' //add this to App Level build.gradle \n
+    </string>
+    <string name="pick_color_step2">
+
+
+    int red = 0, green = 0 , blue = 0, alpha = 255; \n
+            final ColorPicker colorPicker =
+                    new ColorPicker(PickerColor.this, alpha,red, green, blue);     \n     \n
+
+            colorPicker.show();     \n     \n
+
+
+            colorPicker.setCallback(new ColorPickerCallback() {     \n
+                @Override     \n
+                public void onColorChosen(@ColorInt int color) {     \n
+
+                    Button button = findViewById(R.id.aaa);     \n
+                    button.setBackgroundColor(color);   //setting selected color as buttons background     \n     \n
+                        alpha = colorPicker.getAlpha();     \n
+                        red = colorPicker.getRed();    \n
+                        green = colorPicker.getGreen();    \n
+                        blue = colorPicker.getBlue();    \n    \n
+                    colorPicker.dismiss();     \n
+                }     \n
+            });     \n
+     \n
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Pick Date-->
+    <string name="pick_date_step1">
+
+
+    private void PickDate() { \n
+        // Get Current Date \n
+        final Calendar c = Calendar.getInstance(); \n
+        c.set(2016,3,26); \n
+        mYear = c.get(Calendar.YEAR); \n
+        mMonth = c.get(Calendar.MONTH); \n
+        mDay = c.get(Calendar.DAY_OF_MONTH); \n \n
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, \n
+                new DatePickerDialog.OnDateSetListener() { \n
+                    @Override \n
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) { \n \n
+                        btnDemo.setText(new StringBuilder()
+                                .append(dayOfMonth).append("-")
+                                .append(monthOfYear+1).append("-")
+                                .append( year)
+                        ); \n
+                    } \n
+                }, mYear, mMonth, mDay); \n
+        datePickerDialog.show(); \n
+    } \n \n
+
+
+    </string>
+    <string name="pick_date_step2">
+
+        //R.style.DatePicker \n\n\n
+        <![CDATA[
+            <style name="DatePicker" parent="Theme.AppCompat.Light.Dialog">     \n
+                <item name="colorAccent">#65b312</item>   \n
+                <item name="colorControlActivated">#33691e</item>   \n
+                <item name="android:selectableItemBackgroundBorderless" tools:ignore="NewApi">@color/colorLightBlue</item>
+      \n        <item name="colorControlHighlight">#1da479</item>   \n
+            </style>   \n   \n
+
+        ]]>
+
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Pick Time-->
+    <string name="pick_time_step1">
+
+           \n
+    private void PickTime() {   \n
+        // Get Current Time   \n
+        final Calendar c = Calendar.getInstance();   \n
+        int mHour = c.get(Calendar.HOUR_OF_DAY);   \n
+        int mMinute = c.get(Calendar.MINUTE);   \n   \n
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, R.style.DatePicker,   \n
+                new TimePickerDialog.OnTimeSetListener() {   \n
+                    @Override   \n
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {   \n
+                        button.setText(hourOfDay + ":" + minute);   \n
+                    }   \n   \n
+                }, mHour, mMinute, false);   \n
+        timePickerDialog.show();   \n   \n
+    }   \n
+
+    </string>
+    <string name="pick_time_step2">
+
+                //R.style.TimePicker \n\n\n
+        <![CDATA[
+            <style name="TimePicker" parent="Theme.AppCompat.Light.Dialog">     \n
+                <item name="colorAccent">#65b312</item>   \n
+                <item name="colorControlActivated">#33691e</item>   \n
+            </style>   \n   \n
+
+        ]]>
+
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--Animations-->
+    <string name="animation_apply">
+        Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);\n
+        btnFAB.startAnimation(animation);
+
+    </string>
+    <string name="animation_fade_in"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>    \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n   \n
+
+            <alpha   \n
+                android:interpolator="@android:anim/accelerate_interpolator"   \n
+                android:duration="2000"   \n
+                android:fromAlpha="0.0"   \n
+                android:toAlpha="1.0"   \n
+                android:fromYDelta="0%p"   \n
+                android:toYDelta="100%p"   \n
+                />   \n   \n
+        </set>   \n
+
+        ]]></string>
+    <string name="animation_fade_out"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n
+            <alpha   \n
+                android:duration="1500"   \n
+                android:fromAlpha="1.0"   \n
+                android:interpolator="@android:anim/accelerate_interpolator"   \n
+                android:toAlpha="0.0"   \n
+                />   \n   \n
+        </set>   \n
+
+        ]]></string>
+    <string name="animation_zoom_in"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n   \n
+            <scale   \n
+                xmlns:android="http://schemas.android.com/apk/res/android"   \n
+                android:duration="1000"   \n
+                android:fromXScale="0"   \n
+                android:fromYScale="0"   \n
+                android:pivotX="50%"   \n
+                android:pivotY="50%"   \n
+                android:toXScale="1"   \n
+                android:toYScale="1" />   \n   \n
+
+        </set>   \n
+
+
+        ]]></string>
+    <string name="animation_zoom_out"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n   \n
+            <scale   \n
+                xmlns:android="http://schemas.android.com/apk/res/android"   \n
+                android:duration="1500"   \n
+                android:fromXScale="1.2"   \n
+                android:fromYScale="1.2"   \n
+                android:pivotX="50%"   \n
+                android:pivotY="50%"   \n
+                android:toXScale="1"   \n
+                android:toYScale="1" />   \n   \n
+        </set>   \n
+
+        ]]></string>
+    <string name="animation_slide_up"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n
+            <scale   \n
+                android:duration="1000"   \n
+                android:fromXScale="1.0"   \n
+                android:fromYScale="1.0"   \n
+                android:interpolator="@android:anim/linear_interpolator"   \n
+                android:toXScale="1.0"   \n
+                android:toYScale="0.0" />   \n   \n
+        </set>   \n
+
+        ]]></string>
+    <string name="animation_slide_down"><![CDATA[
+
+            <?xml version="1.0" encoding="utf-8"?>   \n
+            <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+                android:fillAfter="true"   \n
+                >   \n   \n
+                <scale   \n
+                    android:interpolator="@android:anim/linear_interpolator"   \n
+                    android:duration="1500"   \n
+                    android:fromXScale="1.0"   \n
+                    android:fromYScale="0.0"   \n
+                    android:toXScale="1.0"   \n
+                    android:toYScale="1.0"   \n
+                    />   \n   \n
+
+            </set>   \n
+
+        ]]></string>
+    <string name="animation_rotate"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n   \n
+            <rotate   \n
+                android:fromDegrees="0"   \n
+                android:toDegrees="360"   \n
+                android:pivotX="50%"   \n
+                android:pivotY="50%"   \n
+                android:duration="1000"   \n
+                android:repeatMode="restart"   \n
+                android:repeatCount="0"   \n
+                android:interpolator="@android:anim/cycle_interpolator"/>   \n   \n
+        </set>   \n
+
+        ]]></string>
+    <string name="animation_move"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            >   \n   \n
+            <translate   \n
+                android:interpolator="@android:anim/linear_interpolator"   \n
+                android:fromXDelta="100%p"   \n
+                android:toXDelta="0%p"   \n
+                android:duration="1000"   \n
+                />   \n   \n
+        </set>   \n
+
+        ]]></string>
+    <string name="animation_bounce"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>   \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"   \n
+            android:fillAfter="true"   \n
+            android:interpolator="@android:anim/bounce_interpolator"   \n
+            >   \n   \n
+            <scale   \n
+                android:duration="1000"   \n
+                android:fromXScale="1.0"   \n
+                android:fromYScale="0.0"   \n
+                android:toXScale="1.0"   \n
+                android:toYScale="1.0" />   \n   \n
+        </set>   \n
+
+
+        ]]></string>
+    <string name="animation_sequential"><![CDATA[
+
+        <?xml version="1.0" encoding="utf-8"?>  \n
+        <set xmlns:android="http://schemas.android.com/apk/res/android"  \n
+            android:fillAfter="true"  \n
+            android:interpolator="@android:anim/linear_interpolator"  \n
+            >  \n  \n
+
+            <translate  \n
+                android:duration="800"  \n
+                android:fillAfter="true"  \n
+                android:fromXDelta="0%p"  \n
+                android:startOffset="300"  \n
+                android:toXDelta="75%p" />  \n  \n
+            <translate  \n
+                android:duration="800"  \n
+                android:fillAfter="true"  \n
+                android:fromYDelta="0%p"  \n
+                android:startOffset="1100"  \n
+                android:toYDelta="70%p" />  \n  \n
+            <translate  \n
+                android:duration="800"  \n
+                android:fillAfter="true"  \n
+                android:fromXDelta="0%p"  \n
+                android:startOffset="1900"  \n
+                android:toXDelta="-75%p" />  \n  \n
+            <translate  \n
+                android:duration="800"  \n
+                android:fillAfter="true"  \n
+                android:fromYDelta="0%p"  \n
+                android:startOffset="2700"  \n
+                android:toYDelta="-70%p" />  \n  \n
+
+            <rotate  \n
+                android:duration="1000"  \n
+                android:fromDegrees="0"  \n
+                android:interpolator="@android:anim/cycle_interpolator"  \n
+                android:pivotX="50%"  \n
+                android:pivotY="50%"  \n
+                android:startOffset="3800"  \n
+                android:repeatCount="infinite"  \n
+                android:repeatMode="restart"  \n
+                android:toDegrees="360" />  \n  \n
+
+        </set>  \n
+
+
+        ]]></string>
+    <string name="animation_lib"><![CDATA[
+
+            //Animation Library Dependencies    \n
+            implementation \'com.daimajia.easing:library:2.0@aar\'    \n
+            implementation \'com.daimajia.androidanimations:library:2.3@aar\'    \n    \n    \n
+
+            //Animation Lib Java     \n
+            YoYo.with(Techniques.Tada)    \n
+                .duration(1000)    \n
+                .repeat(2)    \n
+                .playOn(btnAnimationLib);    \n
+
+
+        ]]></string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Background Tasks-->
+    <string name="background_post_step1"><![CDATA[
+
+    /*  Create a new class and paste the below code */ \n\n\n
+
+        package com.ali.learnandroid.Utils; \n \n
+
+        import android.os.AsyncTask; \n
+        import java.io.BufferedReader; \n
+        import java.io.BufferedWriter; \n
+        import java.io.InputStream; \n
+        import java.io.InputStreamReader; \n
+        import java.io.OutputStream; \n
+        import java.io.OutputStreamWriter; \n
+        import java.net.HttpURLConnection; \n
+        import java.net.URL; \n \n \n
+
+        public class BackgroundProcessPOST extends AsyncTask<Void, String, String> { \n \n
+
+            private String url, data; \n
+            private AsyncResponse mListener;  \n \n
+
+            public interface AsyncResponse { \n
+                void resultsFromBackgroundTask(String results); //to send back results to MainActivity \n
+                void exceptionFromBackgroundTask(String exception); //to send back exception to MainActivity \n
+            } \n \n
+
+            //Constructor to initialize variables \n
+            public BackgroundProcessPOST(String url , String data , AsyncResponse  listener) { \n
+                this.url = url; \n
+                this.data = data; \n
+                this.mListener = listener; \n
+            } \n \n
+
+            //Doing Background work here \n
+            \@Override \n
+            protected String doInBackground(Void\.\.\. voids) { \n
+                try { \n
+                    URL url = new URL(this.url); //setting url \n \n
+                    HttpURLConnection connection =
+                            (HttpURLConnection) url.openConnection(); //opening connection to url \n \n
+
+                    connection.setRequestMethod("POST");    //setting request method \n
+
+                    OutputStream outputStream = connection.getOutputStream(); \n
+                    BufferedWriter bufferedWriter = new BufferedWriter
+                            (new OutputStreamWriter(outputStream, "UTF-8")); \n
+                    bufferedWriter.write(data); \n
+                    bufferedWriter.flush(); \n
+                    bufferedWriter.close(); \n
+                    outputStream.close(); \n
+         \n
+                    InputStream inputStream; \n
+                    int code = connection.getResponseCode(); // receiving code to check \n
+                                                           \t \t  // data posted successfully or not \n
+                    if (code == HttpURLConnection.HTTP_OK) { \n
+                        inputStream = connection.getInputStream(); //if code=200 means data is OK
+                                                                  // we can receive response \n
+                    } else { \n
+                        inputStream = connection.getErrorStream();  // data not sent successfully, \n
+                    } \n \n
+
+                    BufferedReader bufferedReader = new BufferedReader
+                            (new InputStreamReader(inputStream)); \n
+                    StringBuilder builder = new StringBuilder(); \n
+                    String line = ""; \n
+                    while ((line = bufferedReader.readLine()) != null) { \n
+                        builder.append(line).append("\n"); \n
+                    } \n
+                    return builder.toString(); \n
+                } catch (Exception e) { \n
+                    return "Exception: " + e.getMessage(); \n
+                } \n
+            } \n \n
+
+            //This method receives results from background and send them to MainActivity(UI) \n
+            @Override \n
+            protected void onPostExecute(String result) { \n
+                super.onPostExecute(result); \n
+                if (result.contains("Exception")) { \n
+                    mListener.exceptionFromBackgroundTask(result); //sending exception to MainActivity \n
+                } else { \n
+                    mListener.resultsFromBackgroundTask(result); //sending result to MainActivity \n
+                } \n
+            } \n
+         \n
+        } \n
+
+    ]]></string>
+    <string name="background_get_step1"><![CDATA[
+
+    /*  Create a new class and paste the below code */ \n\n\n
+
+        package com.ali.learnandroid.Utils; \n \n
+
+        import android.os.AsyncTask; \n
+        import java.io.BufferedReader; \n
+        import java.io.InputStream; \n
+        import java.io.InputStreamReader; \n
+        import java.net.HttpURLConnection; \n
+        import java.net.URL; \n \n \n
+
+        public class BackgroundProcessGET extends AsyncTask<Void, String, String> { \n \n
+
+            private String url; \n
+            private AsyncResponse mListener;  \n \n
+
+            public interface AsyncResponse { \n
+                void resultsFromBackgroundTask(String results); //to send back results to MainActivity \n
+                void exceptionFromBackgroundTask(String exception); //to send back exception to MainActivity \n
+            } \n \n
+
+            //Constructor to initialize variables \n
+            public BackgroundProcessGET(String url, AsyncResponse  listener) { \n
+                this.url = url; \n
+                this.mListener = listener; \n
+            } \n \n
+
+            //Doing Background work here \n
+            \@Override \n
+            protected String doInBackground(Void\.\.\. voids) { \n
+                try { \n
+                    URL url = new URL(this.url); //setting url \n \n
+                    HttpURLConnection connection =
+                            (HttpURLConnection) url.openConnection(); //opening connection to url \n \n
+
+                    connection.setRequestMethod("GET");    //setting request method \n
+         \n
+                    InputStream inputStream; \n
+                    int code = connection.getResponseCode(); // receiving code to check \n
+                                                           \t \t  // data posted successfully or not \n
+                    if (code == HttpURLConnection.HTTP_OK) { \n
+                        inputStream = connection.getInputStream(); //if code=200 means data is OK
+                                                                  // we can receive response \n
+                    } else { \n
+                        inputStream = connection.getErrorStream();  // data not sent successfully, \n
+                    } \n \n
+
+                    BufferedReader bufferedReader = new BufferedReader
+                            (new InputStreamReader(inputStream)); \n
+                    StringBuilder builder = new StringBuilder(); \n
+                    String line = ""; \n
+                    while ((line = bufferedReader.readLine()) != null) { \n
+                        builder.append(line).append("\n"); \n
+                    } \n
+                    return builder.toString(); \n
+                } catch (Exception e) { \n
+                    return "Exception: " + e.getMessage(); \n
+                } \n
+            } \n \n
+
+            //This method receives results from background and send them to MainActivity(UI) \n
+            @Override \n
+            protected void onPostExecute(String result) { \n
+                super.onPostExecute(result); \n
+                if (result.contains("Exception")) { \n
+                    mListener.exceptionFromBackgroundTask(result); //sending exception to MainActivity \n
+                } else { \n
+                    mListener.resultsFromBackgroundTask(result); //sending result to MainActivity \n
+                } \n
+            } \n
+         \n
+        } \n
+
+    ]]></string>
+    <string name="background_multipart_step1">
+
+    //Multipart \n
+    implementation "net.gotev:uploadservice:3.4.2"\n\n
+    </string>
+    <string name="background_multipart_step2">
+
+    public void uploadMultipart(final Context context) {    \n
+        try {  \n
+            String uploadId =  \n
+                    new MultipartUploadRequest(context, "your URL here")  \n
+                            .addFileToUpload("data.getData() here", "your param name")  \n
+                            .addArrayParameter("parameter name", "item1","item2") \n
+                            .addParameter("parameter name", "param value")        \n
+                            .setNotificationConfig(new UploadNotificationConfig())  \n
+                            .setMaxRetries(2)  \n
+                            .startUpload();  \n
+  \n
+        } catch (Exception exc) {  \n
+            Toast.makeText(context, "Exception: "+exc.getMessage(), Toast.LENGTH_SHORT).show();  \n
+        }  \n
+    }  \n
+
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Chips Extras-->
+    <string name="chips_step1">
+        implementation \'com.robertlevonyan.view:MaterialChipView:1.2.4\'
+    </string>
+    <string name="chips_step2">
+        <![CDATA[
+
+            <com.robertlevonyan.views.chip.Chip \n
+                android:id="@+id/chip2" \n
+                android:layout_width="wrap_content" \n
+                android:layout_height="wrap_content" \n
+                android:layout_marginTop="11dp" \n
+                app:mcv_backgroundColor="@color/colorBlack" \n
+                app:mcv_textColor="@color/colorWhite" \n
+                app:mcv_iconTextBackgroundColor="@color/colorAccent" \n
+                app:mcv_closable="true" \n
+                app:mcv_hasIcon="true" \n
+                app:mcv_chipIcon="@drawable/logo" \n
+                app:mcv_strokeSize="2dp" \n
+                app:mcv_strokeColor="@color/colorAccent" \n
+                app:mcv_closeColor="@color/colorWhite" \n
+                app:mcv_selectable="true" \n
+                app:mcv_selectedTextColor="@color/colorLightBlue" \n
+                app:mcv_selectedBackgroundColor="@color/colorPrimaryDark" \n
+                app:mcv_selectedCloseColor="#0fff00" \n
+                /> \n
+
+
+        ]]>
+    </string>
+    <string name="chips_step3">
+
+        final Chip chip = findViewById(R.id.chip2);  \n  \n
+
+            chip.setOnChipClickListener(new OnChipClickListener() {  \n
+                @Override  \n
+                public void onChipClick(View v) {  \n
+                    Toast.makeText(ExtrasGridView.this, chip.getChipText()+" clicked", Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            });  \n
+            chip.setOnCloseClickListener(new OnCloseClickListener() {  \n
+                @Override  \n
+                public void onCloseClick(View v) {  \n
+                    Toast.makeText(ExtrasGridView.this, "Closed..", Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            });  \n  \n
+            chip.setOnIconClickListener(new OnIconClickListener() {  \n
+                @Override  \n
+                public void onIconClick(View v) {  \n
+                    Toast.makeText(ExtrasGridView.this, "Icon..", Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            });  \n  \n
+            chip.setOnSelectClickListener(new OnSelectClickListener() {  \n
+                @Override  \n
+                public void onSelectClick(View v, boolean selected) {  \n
+                    Toast.makeText(ExtrasGridView.this, "Selected..", Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            });  \n  \n
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--RecyclerView-->
+    <string name="recycler_view_step1">
+        \n\n
+    implementation(\'com.android.support:recyclerview-v7:27.1.1\')\n
+
+    </string>
+    <string name="recycler_view_step2">
+        <![CDATA[
+        \n\n
+                <android.support.v7.widget.RecyclerView   \n
+                    android:id="@+id/recycler_view"  \n
+                    android:layout_width="match_parent"  \n
+                    android:layout_height="wrap_content"  \n
+                    android:scrollbars="vertical"  \n
+                    />  \n
+  \n
+        ]]>
+    </string>
+    <string name="recycler_view_step3">
+        <![CDATA[
+
+            <?xml version="1.0" encoding="utf-8"?>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  \n
+                android:layout_width="match_parent" \n
+                android:layout_height="wrap_content" \n
+                xmlns:app="http://schemas.android.com/apk/res-auto" \n
+                android:background="?android:attr/selectableItemBackground" \n
+                android:clickable="true" \n
+                android:focusable="true" \n
+                android:orientation="vertical" \n
+                android:padding="7dp"> \n \n
+
+                <de.hdodenhof.circleimageview.CircleImageView \n
+                    android:id="@+id/imgProfileRow" \n
+                    android:layout_width="60dp" \n
+                    android:layout_height="60dp" \n
+                    app:civ_border_color="@color/colorBlack" \n
+                    app:civ_border_width="1dp" \n
+                    android:src="@drawable/logo" \n
+                    /> \n \n
+
+                <TextView \n
+                    android:id="@+id/tvNameRow" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="wrap_content" \n
+                    android:layout_alignParentTop="true" \n
+                    android:textSize="16sp" \n
+                    android:text="Name" \n
+                    android:textStyle="bold" \n
+                    android:layout_marginStart="7dp" \n
+                    android:layout_toEndOf="@+id/imgProfileRow" \n
+                    android:layout_toStartOf="@id/tvJobRow" \n
+                    android:textColor="@color/colorBlack"/> \n \n
+
+                <TextView \n
+                    android:id="@+id/tvAgeRow" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="wrap_content" \n
+                    android:text="Age" \n
+                    android:layout_below="@id/tvNameRow" \n
+                    android:layout_toEndOf="@+id/imgProfileRow" \n
+                    android:layout_marginStart="7dp" \n
+                    android:layout_marginTop="7dp" \n
+                    /> \n \n
+
+                <TextView \n
+                    android:id="@+id/tvJobRow" \n
+                    android:layout_width="wrap_content" \n
+                    android:layout_height="wrap_content" \n
+                    android:layout_alignParentEnd="true" \n
+                    android:text="Job" \n
+                     /> \n \n
+
+            </RelativeLayout> \n \n
+
+        ]]>
+    </string>
+    <string name="recycler_view_step4">
+
+        public class RecyclerRowData {  \n
+            private String imgProfile, Name, Age, Job; \n \n
+
+            public RecyclerRowData(String imgProfile, String name, String age, String job) { \n
+                this.imgProfile = imgProfile; \n
+                Name = name; \n
+                Age = age; \n
+                Job = job; \n \n
+            } \n
+
+            public String getImgProfile() { \n
+                return imgProfile; \n
+            } \n
+
+            public String getName() { \n
+                return Name; \n
+            } \n \n
+
+            public String getAge() { \n
+                return Age; \n
+            } \n \n
+
+            public String getJob() { \n
+                return Job; \n
+            } \n \n
+        } \n
+
+    </string>
+    <string name="recycler_view_step5">
+<![CDATA[
+
+            import android.support.annotation.NonNull;  \n
+            import android.support.v7.widget.RecyclerView; \n
+            import android.view.LayoutInflater; \n
+            import android.view.View; \n
+            import android.view.ViewGroup; \n
+            import android.widget.ImageView; \n
+            import android.widget.TextView; \n
+            import com.ali.learnandroid.Models.RecyclerRowData; \n
+            import java.util.ArrayList; \n \n
+
+            public class MyAdapterExtrasRecyclerView extends RecyclerView.Adapter<MyAdapterExtrasRecyclerView.MyViewHolder> { \n
+
+                private ArrayList<RecyclerRowData> arrayList; \n
+                ItemClickListener listener; \n \n
+
+                public interface ItemClickListener{ \n
+                    void itemClicked(View view, int position); \n
+                } \n \n
+
+
+                public class MyViewHolder extends RecyclerView.ViewHolder { \n
+                    private TextView tvName, tvAge, tvJob; \n
+                    private ImageView imgProfile; \n \n
+
+                    public MyViewHolder(View view)  { \n
+                        super(view); \n
+                        tvName =  view.findViewById(R.id.tvNameRow); \n
+                        tvAge =  view.findViewById(R.id.tvAgeRow); \n
+                        tvJob =  view.findViewById(R.id.tvJobRow); \n
+                        imgProfile =  view.findViewById(R.id.imgProfileRow); \n \n
+
+                        view.setOnClickListener(new View.OnClickListener() { \n
+                            @Override \n
+                            public void onClick(View v) { \n
+                                if (listener != null) { \n
+                                    listener.itemClicked(v, getAdapterPosition()); \n
+                                } \n \n
+                            } \n
+                        }); \n
+                    } \n
+                } \n \n
+
+                public MyAdapterExtrasRecyclerView(ArrayList<RecyclerRowData> arrayList1, ItemClickListener clickListener) { \n
+                    listener = clickListener; \n
+                    arrayList = arrayList1; \n
+                } \n
+
+                @NonNull \n
+                @Override \n
+                public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { \n \n
+
+                    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_row, parent, false); \n
+                    return new MyViewHolder(view); \n
+                } \n \n
+
+                @Override \n
+                public void onBindViewHolder(@NonNull MyViewHolder holder, int position) { \n
+                    holder.tvName.setText(arrayList.get(position).getName()); \n
+                    holder.tvAge.setText(arrayList.get(position).getAge()); \n \n
+                    holder.tvJob.setText(arrayList.get(position).getJob()); \n
+                } \n \n
+
+                @Override \n
+                public int getItemCount() { \n
+                    return arrayList.size(); \n
+                } \n \n
+            } \n
+        ]]>
+    </string>
+    <string name="recycler_view_step6">
+
+   \ @Override  \n
+    public void OnCreate(Bundle savedInstanceState) { \n \n
+
+        super.onCreate(savedInstanceState); \n
+        setContentView(R.layout.activity_recycler_view); \n
+       RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view); \n \n
+
+            dataArrayList.add(new RecyclerRowData("url_of_image", "Ali", "23", "Android Dev")); \n
+            dataArrayList.add(new RecyclerRowData("url_of_image", "Ammar", "24", "IOS Dev")); \n
+            dataArrayList.add(new RecyclerRowData("url_of_image", "Ab Hadi", "23", "Web Dev")); \n
+            dataArrayList.add(new RecyclerRowData("url_of_image", "Fazal", "23", "Java Dev")); \n
+
+             adapter = new MyAdapterExtrasRecyclerView(dataArrayList, this); \n
+             RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(ExtrasRecyclerView.this);//or.. (ExtrasRecyclerView.this, LinearLayoutManager.HORIZONTAL, false) \n
+             recyclerView.setLayoutManager(layoutManager1); \n
+             recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL)); \n
+             recyclerView.setAdapter(adapter); \n \n
+
+    } \n
+
+           \ @Override \n
+            public void itemClicked(View view, int position) { \n
+                Toast.makeText(this, "you clicked "+ dataArrayList.get(position).getName(), Toast.LENGTH_SHORT).show(); \n
+            } \n
+}
+    </string>
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--ListView-->
+    <string name="list_view_step2">
+        <![CDATA[
+        \n\n
+
+            <ListView  \n
+                android:id="@+id/listView" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="wrap_content" \n
+                android:dividerHeight="1dp" \n
+                android:divider="@color/colorBlack" \n
+                tools:listitem="@layout/recycler_row" \n
+                android:listSelector="@color/colorLightBlue" \n \n
+                /> \n
+ \n
+  \n
+        ]]>
+    </string>
+    <string name="list_view_step4">
+
+        public class ListRowData {  \n
+            private String imgProfile, Name, Age, Job; \n \n
+
+            public ListRowData(String imgProfile, String name, String age, String job) { \n
+                this.imgProfile = imgProfile; \n
+                Name = name; \n
+                Age = age; \n
+                Job = job; \n \n
+            } \n
+
+            public String getImgProfile() { \n
+                return imgProfile; \n
+            } \n
+
+            public String getName() { \n
+                return Name; \n
+            } \n \n
+
+            public String getAge() { \n
+                return Age; \n
+            } \n \n
+
+            public String getJob() { \n
+                return Job; \n
+            } \n \n
+        } \n
+
+    </string>
+    <string name="list_view_step5">
+<![CDATA[
+
+        import android.content.Context; \n
+        import android.net.Uri; \n
+        import android.view.LayoutInflater; \n
+        import android.view.View; \n
+        import android.view.ViewGroup; \n
+        import android.widget.BaseAdapter; \n
+        import android.widget.ImageView; \n
+        import android.widget.TextView; \n
+        import android.widget.Toast; \n
+        import com.squareup.picasso.Picasso; \n
+        import java.util.ArrayList; \n \n
+
+        public class MyAdapterListView extends BaseAdapter { \n
+            private LayoutInflater inflater; \n
+            private Context context; \n
+            private ArrayList<ListRowData> arrayList; \n \n
+
+            public MyAdapterListView(Context context, ArrayList<ListRowData> arrayList) { \n
+                this.inflater = LayoutInflater.from(context); \n
+                this.arrayList = arrayList; \n
+                this.context = context; \n
+            } \n \n
+
+            @Override \n
+            public int getCount() { \n
+                return arrayList.size(); \n
+            } \n \n
+
+            @Override \n
+            public Object getItem(int position) { \n
+                return arrayList.get(position); \n
+            } \n \n
+
+            @Override \n
+            public long getItemId(int position) { \n
+                return position; \n
+            } \n \n
+
+            @Override \n
+            public View getView(final int position, View convertView, ViewGroup parent) { \n
+                ViewHolder holder; \n
+                if (convertView == null) { \n
+                    convertView = inflater.inflate(R.layout.recycler_row, null); \n
+                    holder = new ViewHolder(); \n \n
+
+                    holder.ivProfile = convertView.findViewById(R.id.imgProfileRow); \n
+                    holder.tvName = convertView.findViewById(R.id.tvNameRow); \n
+                    holder.tvAge = convertView.findViewById(R.id.tvAgeRow); \n
+                    holder.tvJob = convertView.findViewById(R.id.tvJobRow); \n \n
+                    convertView.setTag(holder); \n
+                } else { \n
+                    holder = (ViewHolder) convertView.getTag() ; \n
+                } \n
+         \n
+                holder.tvName.setText(arrayList.get(position).getName()); \n
+                holder.tvAge.setText(arrayList.get(position).getAge()); \n
+                holder.tvJob.setText(arrayList.get(position).getJob()); \n
+                holder.ivProfile.setImageURI(Uri.parse(arrayList.get(position).getImgProfile())); \n
+                //OR \n \n
+                Picasso. \n
+                        get(). \n
+                        load(arrayList.get(position).getImgProfile()). \n
+                        fit().error(R.drawable.logo). \n
+                        into(holder.ivProfile); \n \n
+
+                convertView.setOnClickListener(new View.OnClickListener() { \n
+                    @Override \n
+                    public void onClick(View v) { \n \n
+                        Toast.makeText(context, "you have clicked "+arrayList.get(position).getName(), Toast.LENGTH_SHORT).show(); \n \n
+                    } \n
+                }); \n
+
+                return convertView; \n \n
+            }
+ \n
+            class ViewHolder{ \n
+                TextView tvName, tvAge, tvJob; \n
+                ImageView ivProfile; \n
+            } \n
+        } \n
+
+        ]]>
+    </string>
+    <string name="list_view_step6">
+
+   \ @Override  \n
+    public void OnCreate(Bundle savedInstanceState) { \n \n
+
+        super.onCreate(savedInstanceState); \n
+        setContentView(R.layout.activity_list_view); \n \n \n
+
+            dataArrayList.add(new ListRowData("url_of_image", "Ali", "23", "Android Dev")); \n
+            dataArrayList.add(new ListRowData("url_of_image", "Ammar", "24", "IOS Dev")); \n
+            dataArrayList.add(new ListRowData("url_of_image", "Ab Hadi", "23", "Web Dev")); \n
+            dataArrayList.add(new ListRowData("url_of_image", "Fazal", "23", "Java Dev")); \n \n
+
+            listView = mView.findViewById(R.id.listView); \n
+            adapter = new MyAdapterListView(ExtrasListView.this, dataArrayList); \n
+            listView.setAdapter(adapter); \n \n
+    } \n
+
+}
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--View pager-->
+    <string name="view_pager_step1">
+        <![CDATA[
+            <android.support.v4.view.ViewPager \n
+                android:id="@+id/viewpagerAlert" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="match_parent" \n
+            /> \n \n
+        ]]>
+    </string>
+    <string name="view_pager_step2">
+               \@Override \n
+                protected void onCreate(Bundle savedInstanceState) { \n
+                    super.onCreate(savedInstanceState); \n
+                    setContentView(R.layout.activity_extras_view_pager); \n
+                    viewPager = findViewById(R.id.viewpagerAlert); \n
+                    viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager())); \n
+                } \n \n
+
+                private class MyPagerAdapter extends FragmentStatePagerAdapter { \n \n
+                    MyPagerAdapter(FragmentManager fm) { super(fm); } \n \n
+
+                    @Override \n
+                    public Fragment getItem(int pos) { \n
+                        switch(pos) { \n
+                            case 0: \n
+                                return new Frag_AlertDialogs(); \n
+                            case 1: \n
+                                return new Frag_Animations(); \n
+                            case 2: \n
+                                return new Frag_AsyncTasks(); \n
+                            case 3: \n
+                                return new Frag_FAB(); \n
+                            default: \n
+                                return new Frag_MainMenu(); \n
+                        } \n
+                    } \n \n
+                    @Override \n
+                    public int getCount() { return 4; } \n
+                } \n \n
+
+    </string>
+    <string name="view_pager_step3">
+
+        <![CDATA[
+
+            //Add this in app level build.gradle \n
+            implementation \'me.relex:circleindicator:1.2.2@aar\' \n \n
+
+            //Add this to your ViewPager xml file \n
+            <me.relex.circleindicator.CircleIndicator \n
+                android:id="@+id/indicator" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="48dp" \n
+                android:layout_alignParentBottom="true" \n
+                android:background="@color/colorLightBlue" \n
+                app:ci_drawable="@drawable/black_square" \n
+                app:ci_animator="@animator/animator_indicator" \n
+                app:ci_animator_reverse="@animator/reverse_animator" \n
+                app:ci_height="4dp" \n
+                app:ci_margin="6dp" \n
+                app:ci_width="10dp" \n
+                /> \n \n
+
+                    // Add this to java file below ViewPager     \n
+                indicator = findViewById(R.id.indicator); \n
+                indicator.setViewPager(viewPager); \n \n
+        ]]>
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Expandable TextView-->
+    <string name="expandable_textview_step1">
+            //Expandable Text  \n
+            implementation \'at.blogc:expandabletextview:1.0.5\' \n
+    </string>
+    <string name="expandable_textview_step2">
+        <![CDATA[
+
+        <RelativeLayout \n
+            android:id="@+id/RL_ExpandableTextView" \n
+            android:layout_width="match_parent" \n
+            android:layout_height="wrap_content" \n
+            > \n \n
+
+            <at.blogc.android.views.ExpandableTextView \n
+                android:id="@+id/expandableTextView" \n
+                android:layout_width="wrap_content" \n
+                android:layout_height="wrap_content" \n
+                android:text="@string/expandable_test" \n
+                android:maxLines="4" \n
+                android:lineSpacingExtra="4dp" \n
+                android:ellipsize="end" \n
+                android:textColor="@color/colorBlack" \n
+                app:animation_duration="750" \n
+                /> \n \n
+
+            <Button \n
+                android:id="@+id/button_toggle" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="wrap_content" \n
+                android:padding="11dp" \n
+                android:text="Show More" \n
+                android:textAllCaps="false" \n
+                android:textColor="@color/colorWhite" \n
+                android:textStyle="bold" \n
+                android:textSize="17sp" \n
+                android:layout_marginTop="11dp" \n
+                android:drawableEnd="@drawable/expand" \n
+                android:background="@color/colorBlack" \n
+                android:layout_below="@+id/expandableTextView" \n
+                /> \n
+ \n
+        </RelativeLayout> \n
+
+        ]]>
+    </string>
+    <string name="expandable_textview_step3">
+
+    \@Override \n
+    protected void onCreate(Bundle savedInstanceState) { \n
+        super.onCreate(savedInstanceState); \n
+        setContentView(R.layout.activity_extras_expandable_text_view); \n \n
+
+
+        final ExpandableTextView expandableTextView =  findViewById(R.id.expandableTextView); \n
+        Button buttonToggle =  findViewById(R.id.button_toggle); \n \n
+
+        buttonToggle.setOnClickListener(new View.OnClickListener() \n
+        { \n
+                @Override \n
+                public void onClick(final View v) \n
+                { \n \n
+                    AnimationDrawable imgC = (AnimationDrawable) getResources().getDrawable( R.drawable.collapse ); \n
+                    AnimationDrawable imgE = (AnimationDrawable) getResources().getDrawable( R.drawable.expand ); \n \n
+                    imgC.setBounds( 0, 0, 100, 100 ); \n
+                    imgE.setBounds( 0, 0, 100, 100 ); \n \n
+                    buttonToggle.setCompoundDrawables( \n
+                            null,
+                            null,
+                            expandableTextView.isExpanded() ?
+                                    imgC :
+                                    imgE, \n
+                            null); \n \n
+                    if (expandableTextView.isExpanded()) { \n
+                        imgC.start(); \n
+                    } else { \n
+                        imgE.start(); \n
+                    } \n \n
+                    expandableTextView.toggle(); \n
+                } \n
+            }); \n
+        } \n \n
+
+        //R.drawable.expand.xml \n \n
+
+        <![CDATA[
+            <?xml version="1.0" encoding="utf-8"?> \n
+            <animation-list xmlns:android="http://schemas.android.com/apk/res/android" \n
+                android:oneshot="true" > \n \n
+
+                <item android:drawable="@drawable/arrow_drop_down_" \n
+                    android:duration="50" /> \n \n
+
+                <item android:drawable="@drawable/arrow_drop_left" \n
+                    android:duration="50" /> \n \n
+
+               <item android:drawable="@drawable/arrow_drop_up_" \n
+                   android:duration="50" /> \n \n
+
+            </animation-list> \n \n
+
+            ]]>
+
+        //R.drawable.collapse.xml \n \n
+
+        <![CDATA[
+            <?xml version="1.0" encoding="utf-8"?> \n
+            <animation-list xmlns:android="http://schemas.android.com/apk/res/android" \n
+                android:oneshot="true" > \n
+
+                <item android:drawable="@drawable/arrow_drop_up_"
+                    android:duration="50" /> \n \n
+
+                <item android:drawable="@drawable/arrow_drop_left"
+                    android:duration="50" /> \n \n
+
+               <item android:drawable="@drawable/arrow_drop_down_"
+                   android:duration="50" /> \n \n
+
+            </animation-list> \n
+
+            ]]>
+
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Folding Animation-->
+    <string name="folding_step1">
+          implementation \'com.ramotion.foldingcell:folding-cell:1.2.2\' \n
+    </string>
+    <string name="folding_step2">
+        <![CDATA[
+        <ScrollView \n
+        android:layout_width="match_parent" \n
+        android:layout_height="wrap_content"> \n \n
+        <RelativeLayout \n
+            android:id="@+id/RL_FoldingCell" \n
+            android:layout_width="match_parent" \n
+            android:layout_height="wrap_content" \n
+            android:visibility="gone" \n
+            > \n \n
+
+            <com.ramotion.foldingcell.FoldingCell \n
+                android:id="@+id/folding" \n
+                android:layout_marginTop="11dp" \n
+                android:clipChildren="false" \n
+                android:clipToPadding="false" \n
+                folding-cell:animationDuration="4500" \n
+                folding-cell:backSideColor="@color/colorBlack" \n
+                folding-cell:cameraHeight="30" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="wrap_content" \n
+                android:layout_below="@+id/tvFoldingInfo"> \n \n
+
+                <RelativeLayout \n
+                    android:visibility="gone" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="wrap_content"> \n \n \n
+
+                        \<!\-\-Add you views here\-\-\> \n \n
+
+                </RelativeLayout> \n \n \n
+
+                <include layout="@layout/fragment_lists" /> \n \n \n
+
+            </com.ramotion.foldingcell.FoldingCell> \n \n
+
+        </RelativeLayout> \n
+    </ScrollView> \n
+
+        ]]>
+    </string>
+    <string name="folding_step3">
+
+        \@Override \n
+        protected void onCreate(Bundle savedInstanceState) { \n
+        super.onCreate(savedInstanceState); \n
+        setContentView(R.layout.activity_animation_folding_cell); \n \n
+
+        final  FoldingCell fc = findViewById(R.id.folding); \n
+
+        fc.setOnClickListener(new View.OnClickListener() { \n
+            @Override \n
+            public void onClick(View v) { \n
+                Toast.makeText(AnimationFoldingCell.this, "Toggled..", Toast.LENGTH_SHORT).show(); \n
+                fc.toggle(false); \n \n
+            } \n
+        }); \n \n
+
+        } \n
+
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!--Explosion Animation-->
+    <string name="explosion_step1">
+    implementation \'tyrantgit:explosionfield:1.0.1\'   \n
+    </string>
+    <string name="explosion_step2">
+        ExplosionField explosionField = ExplosionField.attach2Window(this); \n
+        explosionField.explode(btnDemo);\n
+    </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+
+    <string name="sample">
+
+    </string>
+
+
+</resources>

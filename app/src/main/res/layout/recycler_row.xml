@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfileRow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:civ_border_color="@color/colorBlack"
+        app:civ_border_width="1dp"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/tvNameRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="16sp"
+        android:text="Name"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@+id/imgProfileRow"
+        android:layout_toStartOf="@id/tvJobRow"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/tvAgeRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:layout_below="@id/tvNameRow"
+        android:layout_toEndOf="@+id/imgProfileRow"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:id="@+id/tvJobRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Job"
+         />
+
+</RelativeLayout>

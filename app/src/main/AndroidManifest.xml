@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ali.learnandroid">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+
+    <application
+        android:name=".Application.App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ali.learnandroid.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/my_files" />
+        </provider>
+
+        <receiver android:name=".Activities.ExtrasSendSms$SmsReceiver"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name=
+                    "android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name=".Activities.Home"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.AlertDialogSimple"
+            android:label="Simple Alert Dialog" />
+        <activity
+            android:name=".Activities.AlertDialogWithCheckBoxes"
+            android:label="AlertDialog with Check Boxes" />
+        <activity
+            android:name=".Activities.AlertDialogWithEditText"
+            android:label="AlertDialog with EditText" />
+        <activity
+            android:name=".Activities.AlertDialogWithRadioButtons"
+            android:label="AlertDialog with Radio Button" />
+        <activity
+            android:name=".Activities.ToastMessageSimple"
+            android:label="Simple Toast Message" />
+        <activity
+            android:name=".Activities.ToastMessageColored"
+            android:label="Colored Toast Message" />
+        <activity
+            android:name=".Activities.ToastMessageCustom"
+            android:label="Custom Toast Message" />
+        <activity
+            android:name=".Activities.ToastMessageCustomPosition"
+            android:label="Custom Position Toast" />
+        <activity
+            android:name=".Activities.ToastMessageCustomImage"
+            android:label="Custom Image Toast" />
+        <activity
+            android:name=".Activities.SnackBarSimple"
+            android:label="Snackbar" />
+        <activity
+            android:name=".Activities.SnackBarAction"
+            android:label="Snackbar with Action" />
+        <activity
+            android:name=".Activities.AlertDialogWithImages"
+            android:label="Alert Dialog with Images" />
+        <activity
+            android:name=".Activities.ExtrasColors"
+            android:label="Colors" />
+        <activity
+            android:name=".Activities.ExtrasStrings"
+            android:label="Strings" />
+        <activity
+            android:name=".Activities.ExtrasGIF"
+            android:label="GIF" />
+        <activity
+            android:name=".Activities.PopUpMenuButtonImage"
+            android:label="Popup Menu Button\\Image" />
+        <activity
+            android:name=".Activities.PopUpMenuToolbar"
+            android:label="Popup Menu Toolbar" />
+        <activity
+            android:name=".Activities.ToolbarCollapsing"
+            android:label="Collapsing Toolbar" />
+        <activity
+            android:name=".Activities.PickerCameraImage"
+            android:label="Image using Camera" />
+        <activity
+            android:name=".Activities.PickerGalleryImage"
+            android:label="Image from Gallery" />
+        <activity
+            android:name=".Activities.PickerGalleryyFile"
+            android:label="File from Storage" />
+        <activity
+            android:name=".Activities.ToolbarRefresh"
+            android:label="Refresh Button Toolbar" />
+        <activity
+            android:name=".Activities.ToolbarSearch"
+            android:label="Search on Toolbar" />
+        <activity
+            android:name=".Activities.PickerTime"
+            android:label="Time Picker" />
+        <activity
+            android:name=".Activities.PickerDate"
+            android:label="Date Picker" />
+        <activity
+            android:name=".Activities.PickerColor"
+            android:label="Color Picker" />
+        <activity
+            android:name=".Activities.AsyncTaskPOST"
+            android:label="POST Method" />
+        <activity
+            android:name=".Activities.AsyncTaskGET"
+            android:label="GET Method" />
+        <activity
+            android:name=".Activities.AsyncTaskMultipart"
+            android:label="Multipart" />
+        <activity
+            android:name=".Activities.ExtrasGridView"
+            android:label="GridView"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activities.ExtrasChips"
+            android:label="Chips" />
+        <activity
+            android:name=".Activities.ExtrasRecyclerView"
+            android:label="RecyclerView" />
+        <activity
+            android:name=".Activities.ExtrasListView"
+            android:label="List View" />
+        <activity
+            android:name=".Activities.ExtrasViewPager"
+            android:label="View Pager" />
+        <activity
+            android:name=".Activities.ExtrasExpandableTextView"
+            android:label="Expandable TextView" />
+        <activity
+            android:name=".Activities.AnimationFoldingCell"
+            android:label="Folding Animation" />
+        <activity
+            android:name=".Activities.AnimationCustom"
+            android:label="Custom Animation" />
+        <activity
+            android:name=".Activities.AnimationLibrary"
+            android:label="Animation Library" />
+        <activity
+            android:name=".Activities.AnimationExplosion"
+            android:label="Explosion Animation" />
+        <activity android:name=".Activities.ExtrasSendSms"></activity>
+
+
+    </application>
+
+</manifest>

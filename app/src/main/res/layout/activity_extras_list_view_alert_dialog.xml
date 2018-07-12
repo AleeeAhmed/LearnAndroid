@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:padding="7dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ExtrasListView">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ListView is used to display data in a list."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_1"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvCodeLabel"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In xml file of Activity add ListView as in below image.."
+            android:layout_below="@+id/tvStep2"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeListViewStep2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvDescStep2"
+            android:src="@drawable/list_step1"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeListViewStep2"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Now, create a new xml resource file (recycler_row) as in below code .."
+            android:layout_below="@+id/tvStep3"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeListViewStep3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tvDescStep3"
+            android:src="@drawable/recycler_view_step3"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_3"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeListViewStep3"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Now, create a new java resource file (RowData), this is used to insert data into each row, as in below code.."
+            android:layout_below="@+id/tvStep4"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeListViewStep4"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvDescStep4"
+            android:src="@drawable/list_step3"
+            android:contentDescription="@string/app_name"
+            />
+
+        <TextView
+            android:id="@+id/tvStep5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_4"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeListViewStep4"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Then create a new java class (ListView Adapter). This class is used to insert data into recycler view.."
+            android:layout_below="@+id/tvStep5"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeListViewStep5"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/tvDescStep5"
+            android:src="@drawable/list_step4_"
+            android:contentDescription="@string/app_name"
+            />
+        <TextView
+            android:id="@+id/tvStep6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_5"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeListViewStep5"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finally in MainActivity you can do something like this to add data.."
+            android:layout_below="@+id/tvStep6"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeListViewStep6"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/tvDescStep6"
+            android:src="@drawable/list_step5"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <Button
+            android:id="@+id/btnDemoListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeListViewStep6"
+            android:layout_marginTop="17dp"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

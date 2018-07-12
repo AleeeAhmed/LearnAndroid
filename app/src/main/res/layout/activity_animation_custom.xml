@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:padding="11dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AnimationCustom">
+
+    <RelativeLayout
+        android:id="@+id/RL_CustomAnim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvDescLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animations are used to beautify your app."
+            android:layout_below="@+id/tvDescLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvDesc"
+            android:layout_marginTop="3dp"
+            />
+
+
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvJavaLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to apply Animations in .java??"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/ivXml"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivJava"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/tvJavaLabel"
+            android:src="@drawable/animations_apply"
+            android:contentDescription="@string/app_name"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+
+        <TextView
+            android:id="@+id/tvXmlLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to create Animations??"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/tvCodeLabel"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivXml"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvXmlLabel"
+            android:src="@drawable/animations_create"
+            android:contentDescription="@string/app_name"
+            />
+
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvFadeInLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fade In"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/ivJava"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivFadeIn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvFadeInLabel"
+            android:src="@drawable/animation_fade_in"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoFadeIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivFadeIn"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvFadeOutLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fade Out"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoFadeIn"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivFadeOut"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvFadeOutLabel"
+            android:src="@drawable/animation_fade_out"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoFadeOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivFadeOut"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvZoomInLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zoom In"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoFadeOut"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivZoomIn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvZoomInLabel"
+            android:src="@drawable/animations_zoom_in"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoZoomIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivZoomIn"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvZoomOutLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zoom Out"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoZoomIn"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivZoomOut"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvZoomOutLabel"
+            android:src="@drawable/animations_zoom_out"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoZoomOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivZoomOut"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvRotateLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotate"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoZoomOut"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivRotate"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvRotateLabel"
+            android:src="@drawable/animations_rotate"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoRotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivRotate"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvMoveLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Move"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoRotate"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivMove"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvMoveLabel"
+            android:src="@drawable/animations_move"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoMove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivMove"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvBounceLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bounce"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoMove"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivBounce"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvBounceLabel"
+            android:src="@drawable/animations_bounce"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoBounce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivBounce"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvSlideUpLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Slide Up"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoBounce"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivSlideUp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvSlideUpLabel"
+            android:src="@drawable/animations_slide_up"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoSlideUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivSlideUp"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvSlideDownLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Slide Down"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoSlideUp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivSlideDown"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvSlideDownLabel"
+            android:src="@drawable/animations_slide_down"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoSlideDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivSlideDown"
+            android:layout_marginTop="11dp"
+            />
+
+        <!--************************************************************-->
+        <!--************************************************************-->
+
+        <TextView
+            android:id="@+id/tvSequentialLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sequential"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/btnDemoSlideDown"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/ivSequential"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/tvSequentialLabel"
+            android:src="@drawable/animations_sequential"
+            android:contentDescription="@string/app_name"
+            />
+
+        <Button
+            android:id="@+id/btnDemoSequential"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivSequential"
+            android:layout_marginTop="11dp"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

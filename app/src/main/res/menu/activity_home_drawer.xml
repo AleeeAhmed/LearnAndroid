@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_alert_dialogs"
+            android:title="Alert Dialogs" />
+        <item
+            android:id="@+id/nav_toasts"
+            android:title="Toasts" />
+        <item
+            android:id="@+id/nav_snackbars"
+            android:title="Snackbar" />
+
+        <item
+            android:id="@+id/nav_fab"
+            android:title="FAB" />
+
+        <item
+            android:id="@+id/nav_async_task"
+            android:title="Background Task" />
+        <item
+            android:id="@+id/nav_extras"
+            android:title="Extras" />
+        <item
+            android:id="@+id/nav_pop_up_menu"
+            android:title="Pop up Menu" />
+
+        <item
+            android:id="@+id/nav_toolbar"
+            android:title="Toolbar" />
+
+        <item
+            android:id="@+id/nav_pickers"
+            android:title="Pickers" />
+
+        <item
+            android:id="@+id/nav_animations"
+            android:title="Animations" />
+
+        <item
+            android:id="@+id/nav_lists"
+            android:title="Lists" />
+
+
+    </group>
+
+    <item android:title="Application">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

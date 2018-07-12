@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="11dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.AnimationFoldingCell">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/RL_FoldingCell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tvFoldingInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* click on layout below to fold/unfold it."
+                />
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding"
+                android:layout_marginTop="11dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                folding-cell:animationDuration="4500"
+                folding-cell:backSideColor="@color/colorBlack"
+                folding-cell:cameraHeight="30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFoldingInfo">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvDescLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RecyclerView is used to display data in a list."
+                        android:layout_below="@+id/tvDescLabel"
+                        android:textColor="@color/colorBlack"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvCodeLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/tvDesc"
+                        android:layout_marginTop="3dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvStep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/step_1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/tvCodeLabel"
+                        android:layout_marginTop="3dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvDescStep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add this dependency in app level build.gradle"
+                        android:layout_below="@+id/tvStep1"
+                        android:textColor="@color/colorBlack"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivCodeRecyclerViewStep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/tvDescStep1"
+                        android:src="@drawable/recycler_view_step1"
+                        android:contentDescription="@string/app_name"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvStep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/step_2"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/ivCodeRecyclerViewStep1"
+                        android:layout_marginTop="3dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvDescStep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="In xml file of Activity add RecyclerView as in below image.."
+                        android:layout_below="@+id/tvStep2"
+                        android:textColor="@color/colorBlack"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivCodeRecyclerViewStep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/tvDescStep2"
+                        android:src="@drawable/recycler_view_step2"
+                        android:contentDescription="@string/app_name"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvStep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/step_3"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/ivCodeRecyclerViewStep2"
+                        android:layout_marginTop="3dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvDescStep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Now, create a new xml resource file (recycler_row) as in below code .."
+                        android:layout_below="@+id/tvStep3"
+                        android:textColor="@color/colorBlack"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivCodeRecyclerViewStep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/tvDescStep3"
+                        android:src="@drawable/recycler_view_step3_"
+                        android:contentDescription="@string/app_name"
+                        />
+
+                </RelativeLayout>
+
+
+                <include layout="@layout/fragment_lists" />
+
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LL_FoldingExplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Folding Animation is used to Fold large data and display the summary. when user clicks on summary it unfolds the all data."
+                android:textColor="@color/colorBlack"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/code"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_1"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add this to your app level build.gradle"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeFoldingAnimationStep1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/folding_anim_step1"
+                android:contentDescription="@string/app_name"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_2"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add add this to xml file"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeFoldingAnimationStep2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/folding_anim_step2"
+                android:contentDescription="@string/app_name"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_3"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add this in your OnCreate()."
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivCodeFoldingAnimationStep3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/folding_anim_step3"
+                android:contentDescription="@string/app_name"
+                />
+
+            <Button
+                android:id="@+id/btnDemoFoldingAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo"
+                android:textAllCaps="false"
+                android:padding="11dp"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_marginTop="17dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
