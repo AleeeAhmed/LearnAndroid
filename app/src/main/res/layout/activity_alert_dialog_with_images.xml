@@ -7,21 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".Activities.AlertDialogWithImages"
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     >
 
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlackTransparent"
+        android:padding="11dp"
+        >
 
         <TextView
             android:id="@+id/tvDescLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -31,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="Alert Dialog with Images are useful when you want to display image on fullscreen."
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
 
@@ -40,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvDesc"
             android:layout_marginTop="3dp"
@@ -51,7 +54,9 @@
             android:layout_height="250dp"
             android:layout_below="@+id/tvCodeLabel"
             android:src="@drawable/alert_dialog_with_images"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            android:layout_marginTop="7dp"
+            />
         <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoImagesAlertDialog"
             android:layout_width="match_parent"
@@ -63,7 +68,7 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivCodeImages"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="17dp"
 
             />
 

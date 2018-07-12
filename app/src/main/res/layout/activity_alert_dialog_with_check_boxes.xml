@@ -6,21 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.AlertDialogWithCheckBoxes"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     android:padding="11dp"
     >
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlackTransparent"
+        android:padding="11dp"
+        >
 
         <TextView
             android:id="@+id/tvDescLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Alert Dialog with check boxes provides you a functionality that you can choose multiple options i.e. you can choose options like which places you have visited last year.  "
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <TextView
@@ -38,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvDesc"
             android:layout_marginTop="3dp"
@@ -49,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/first_way"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvCodeLabel"
             android:layout_marginTop="3dp"
@@ -63,11 +66,12 @@
             android:layout_below="@+id/tvCodeFirstWayLabel"
             android:src="@drawable/alert_dialog_check_boxes_image"
             android:scaleType="fitXY"
+            android:layout_marginTop="7dp"
             android:contentDescription="@string/app_name"/>
 
 
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoCheckBoxesAlertDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,7 +82,7 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivCodeCheckBoxes"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="11dp"
 
             />
 
@@ -87,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/second_way"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/btnDemoCheckBoxesAlertDialog"
             android:layout_marginTop="7dp"
@@ -98,6 +102,7 @@
             android:id="@+id/ivCodeSecondCheckBoxes"
             android:layout_width="match_parent"
             android:layout_height="400dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvCodeSecondWayLabel"
             android:src="@drawable/alert_dialog_check_boxes_secondway_image_"
             android:scaleType="fitXY"
@@ -105,7 +110,7 @@
 
 
 
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoSecondCheckBoxesAlertDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,7 +121,7 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivCodeSecondCheckBoxes"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="11dp"
 
             />
 

@@ -7,20 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".Activities.AlertDialogWithRadioButtons"
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     >
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:background="@color/colorBlackTransparent"
+        >
 
         <TextView
             android:id="@+id/tvDescLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Alert Dialog with Radio Buttons are useful when you want to choose gender or options like this. "
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
 
@@ -39,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvDesc"
             android:layout_marginTop="3dp"
@@ -59,9 +62,12 @@
             android:id="@+id/ivCodeRadionButtons"
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvCodeLabel"
             android:src="@drawable/alert_dialog_radio_buttons_image_"
             android:scaleType="fitXY"/>
+
+
         <info.hoang8f.widget.FButton
             android:id="@+id/btnDemoCRadioButtonsAlertDialog"
             android:layout_width="match_parent"
@@ -73,7 +79,7 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivCodeRadionButtons"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="17dp"
 
             />
 

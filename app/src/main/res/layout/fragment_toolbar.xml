@@ -6,54 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.Frag_Toolbar"
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     >
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/btnCollapsingToolbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
+        android:layout_height="match_parent"
         android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginTop="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Collapsing Toolbar"
-        />
+        android:background="@color/colorBlackTransparent"
+        >
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnCollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Collapsing Toolbar"
+            />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/btnRefreshOnToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginTop="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Refresh Button Toolbar"
-        android:layout_below="@+id/btnCollapsingToolbar"
-        />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnRefreshOnToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Refresh Button Toolbar"
+            android:layout_below="@+id/btnCollapsingToolbar"
+            />
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/btnSearchOnToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:padding="11dp"
-        android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginTop="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:text="Search on Toolbar"
-        android:layout_below="@+id/btnRefreshOnToolbar"
-        />
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnSearchOnToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="11dp"
+            android:text="Search on Toolbar"
+            android:layout_below="@+id/btnRefreshOnToolbar"
+            />
 
+    </RelativeLayout>
 </RelativeLayout>

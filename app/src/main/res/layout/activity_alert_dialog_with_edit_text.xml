@@ -7,20 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".Activities.AlertDialogWithEditText"
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     >
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:background="@color/colorBlackTransparent"
+        >
 
         <TextView
             android:id="@+id/tvDescLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Alert dialog with EditText is useful when you want any activity to be opened with password. or when you want to change username, without going to new activity."
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <TextView
@@ -38,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvDesc"
             android:layout_marginTop="3dp"
@@ -48,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/first_way"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvCodeLabel"
             android:layout_marginTop="3dp"
@@ -60,6 +63,7 @@
             android:layout_below="@+id/tvFirstLabel"
             android:src="@drawable/alert_dialog_edittext_image"
             android:scaleType="fitXY"
+            android:layout_marginTop="7dp"
             android:contentDescription="@string/app_name"
             />
         <info.hoang8f.widget.FButton
@@ -73,7 +77,7 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivCodeEditText"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="11dp"
             />
 
         <TextView
@@ -81,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/second_way"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/btnDemoAlertDialogEditText"
             android:layout_marginTop="7dp"
@@ -93,6 +97,7 @@
             android:layout_below="@+id/tvSecondLabel"
             android:src="@drawable/alert_dialog_edittext2_image"
             android:scaleType="fitXY"
+            android:layout_marginTop="7dp"
             android:contentDescription="@string/app_name"
             />
         <info.hoang8f.widget.FButton
@@ -106,7 +111,7 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivCode2EditText"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="11dp"
             />
 
     </RelativeLayout>
