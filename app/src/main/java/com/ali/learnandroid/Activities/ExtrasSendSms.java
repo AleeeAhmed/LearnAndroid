@@ -30,10 +30,18 @@ public class ExtrasSendSms extends AppCompatActivity {
 
     Button btnDemo;
 
+
+    private void init() {
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_extras_send_sms);
+
+        init();
 
         btnSendSMS =  findViewById(R.id.btnSendSMS);
         tvPhoneNo =  findViewById(R.id.tvPhoneNo);
