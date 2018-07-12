@@ -1,5 +1,5 @@
 # LearnAndroid
-Learn Android is Anroid app built for biginners and advance developers to get good sample codes and cool libraries.
+Learn Android is Anroid app built for beginners and advance developers to get good sample codes and cool libraries.
 We have defined easy steps in it so any one can easily understand and use al these things. It saves time of searching on Google 
 because you get cool things in just a single app.
 
