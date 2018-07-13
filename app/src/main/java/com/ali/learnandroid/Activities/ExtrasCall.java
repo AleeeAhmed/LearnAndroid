@@ -11,11 +11,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.ali.learnandroid.R;
+import com.ali.learnandroid.Utils.CopyToClipBoard;
+import com.ali.learnandroid.Utils.ZoomImage;
 
 public class ExtrasCall extends AppCompatActivity {
 
@@ -24,13 +27,20 @@ public class ExtrasCall extends AppCompatActivity {
     LinearLayout llCall;
     RelativeLayout rlCall;
 
+    ImageView ivCodeStep1,ivCodeStep2,ivCodeStep3,ivCodeStep4;
 
     private void init() {
         etPhone = findViewById(R.id.etPhoneNoExtrasCall);
         btnCall = findViewById(R.id.btnCall);
         llCall = findViewById(R.id.LL_ExtrasCall);
+        rlCall = findViewById(R.id.RL_ExtrasCall);
 
+        ivCodeStep1 = findViewById(R.id.ivCodeCallStep1);
+        ivCodeStep2 = findViewById(R.id.ivCodeCallStep2);
+        ivCodeStep3 = findViewById(R.id.ivCodeCallStep3);
+        ivCodeStep4 = findViewById(R.id.ivCodeCallStep4);
 
+        btnDemo = findViewById(R.id.btnDemoCall);
     }
 
     @Override
@@ -41,6 +51,78 @@ public class ExtrasCall extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         init();
+
+
+        btnDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rlCall.setVisibility(View.GONE);
+                llCall.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //region ImageView Click Events...
+        ivCodeStep1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasCall.this, R.drawable.call_step1);
+            }
+        });
+        ivCodeStep1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasCall.this,
+                        getResources().getString(R.string.call_step1));
+                return true;
+            }
+        });
+
+        ivCodeStep2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasCall.this, R.drawable.call_step2);
+            }
+        });
+        ivCodeStep2.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasCall.this,
+                        getResources().getString(R.string.call_step2));
+                return true;
+            }
+        });
+
+        ivCodeStep3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasCall.this, R.drawable.call_step3);
+            }
+        });
+        ivCodeStep3.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasCall.this,
+                        getResources().getString(R.string.call_step3));
+                return true;
+            }
+        });
+
+        ivCodeStep4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasCall.this, R.drawable.call_step4);
+            }
+        });
+        ivCodeStep4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasCall.this,
+                        getResources().getString(R.string.call_step4));
+                return true;
+            }
+        });
+
+        //endregion
 
         //region Button call click event..
         btnCall.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +187,11 @@ public class ExtrasCall extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
+        if (llCall.getVisibility() == View.VISIBLE) {
+            llCall.setVisibility(View.GONE);
+            rlCall.setVisibility(View.VISIBLE);
+        } else {
+            finish();
+        }
     }
 }
