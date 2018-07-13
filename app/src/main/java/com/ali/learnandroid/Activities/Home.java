@@ -148,6 +148,8 @@ public class Home extends AppCompatActivity
             fragmentTransaction.replace(R.id.fl_Home, new Frag_Lists()).addToBackStack(null).commit();
         } else if (id == R.id.nav_about) {
             Toast.makeText(this, "under constrction..", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_exit) {
+            finishAffinity();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

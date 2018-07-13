@@ -2527,6 +2527,240 @@
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
+    <!--Send SMS-->
+    <string name="send_sms_step1">
+        <![CDATA[
+            <uses-permission android:name="android.permission.SEND_SMS"/> \n\n
+            <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+        ]]>
+    </string>
+    <string name="send_sms_step2">
+        <![CDATA[
+
+            <LinearLayout   \n
+                android:id="@+id/LL_ExtrasSendSMS"  \n
+                android:layout_width="match_parent"  \n
+                android:layout_height="wrap_content"  \n
+                android:orientation="vertical"  \n
+                android:visibility="gone"  \n
+                android:padding="11dp"  \n
+                android:background="@color/colorBlackTransparent"  \n
+                >  \n  \n
+                <EditText  \n
+                    android:id="@+id/tvPhoneNo"  \n
+                    android:layout_width="match_parent"  \n
+                    android:layout_height="wrap_content"  \n
+                    android:hint="Phone number of recipient"  \n
+                    android:inputType="phone"  \n
+                    android:textColor="@color/colorWhite"  \n
+                    android:textColorHint="@color/colorWhite"  \n
+                    />  \n  \n
+                <EditText  \n
+                    android:id="@+id/tvMessage"  \n
+                    android:layout_width="match_parent"  \n
+                    android:layout_height="wrap_content"  \n
+                    android:gravity="top"  \n
+                    android:hint="Type message.."  \n
+                    android:inputType="text"  \n
+                    android:maxHeight="150dp"  \n
+                    android:scrollbars="vertical"  \n
+                    android:textColorHint="@color/colorWhite"  \n
+                    android:textColor="@color/colorWhite"  \n
+                    />  \n  \n
+                <info.hoang8f.widget.FButton  \n
+                    android:id="@+id/btnSendSMS"  \n
+                    android:layout_width="fill_parent"  \n
+                    android:layout_height="wrap_content"  \n
+                    android:text="Send SMS"  \n
+                    android:textColor="@color/colorWhite"  \n
+                    android:textSize="15sp"  \n
+                    android:textStyle="bold"  \n
+                    android:layout_marginTop="11dp"  \n
+                    android:background="@color/colorBlack"  \n
+                    />  \n  \n
+
+            </LinearLayout>  \n
+
+        ]]>
+    </string>
+    <string name="send_sms_step3">
+
+    \@Override  \n
+    protected void onCreate(Bundle savedInstanceState) {  \n
+        super.onCreate(savedInstanceState);  \n
+        setContentView(R.layout.activity_extras_send_sms);  \n  \n
+
+        btnSendSMS =  findViewById(R.id.btnSendSMS);  \n
+        tvPhoneNo =  findViewById(R.id.tvPhoneNo);  \n
+        tvMessage =  findViewById(R.id.tvMessage);  \n  \n
+
+
+        btnSendSMS.setOnClickListener(new View.OnClickListener()
+        {  \n
+            public void onClick(View v)
+            {  \n  \n
+                String phoneNo = tvPhoneNo.getText().toString();  \n
+                String message = tvMessage.getText().toString();  \n
+                if (phoneNo.length() > 0 &amp;&amp; message.length() > 0) {  \n
+                    if (ActivityCompat.checkSelfPermission(ExtrasSendSms.this,  \n
+                            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {  \n  \n
+
+                        ActivityCompat.requestPermissions(  \n
+                                ExtrasSendSms.this,  \n
+                                new String[]{Manifest.permission.SEND_SMS, Manifest.permission.RECEIVE_SMS},  \n
+                                1);  \n  \n
+
+                    } else {  \n
+                        sendSMS(phoneNo, message);  \n
+                    }  \n
+                } else {  \n
+                    Toast.makeText(getBaseContext(),
+                            "Please enter both phone number and message.",
+                            Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            }  \n
+        });  \n
+    }  \n  \n
+
+        \@Override  \n
+        public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                               int[] grantResults) {  \n  \n
+            if(requestCode == 1)
+            {  \n
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                {  \n  \n
+                    String phoneNo = tvPhoneNo.getText().toString();  \n
+                    String message = tvMessage.getText().toString();  \n
+                    sendSMS(phoneNo,message);  \n  \n
+                }
+                else
+                {  \n
+                    Toast.makeText(ExtrasSendSms.this,
+                            "Permission denied.", Toast.LENGTH_SHORT).show();  \n
+                }  \n
+            }  \n
+        }  \n
+
+    </string>
+    <string name="send_sms_step4">
+        //---sends an SMS message to another device---  \n  \n
+        private void sendSMS(String phoneNumber, String message) {  \n
+            String SENT = "SMS_SENT";  \n
+            String DELIVERED = "SMS_DELIVERED";  \n  \n
+
+            PendingIntent sentPI = PendingIntent.getBroadcast(this, 0,
+                    new Intent(SENT), 0);  \n  \n
+
+            PendingIntent deliveredPI = PendingIntent.getBroadcast(this, 0,
+                    new Intent(DELIVERED), 0);  \n  \n
+
+            //---when the SMS has been sent---  \n
+            registerReceiver(new BroadcastReceiver(){  \n
+                @Override  \n
+                public void onReceive(Context arg0, Intent arg1) {  \n
+                    switch (getResultCode())
+                    {  \n
+                        case Activity.RESULT_OK:  \n
+                            Toast.makeText(getBaseContext(), "SMS sent",
+                                    Toast.LENGTH_SHORT).show();  \n
+                            break;  \n  \n
+                        case SmsManager.RESULT_ERROR_GENERIC_FAILURE:  \n
+                            Toast.makeText(getBaseContext(), "Generic failure",
+                                    Toast.LENGTH_SHORT).show();  \n  \n
+                            break;  \n
+                        case SmsManager.RESULT_ERROR_NO_SERVICE:  \n
+                            Toast.makeText(getBaseContext(), "No service",
+                                    Toast.LENGTH_SHORT).show();  \n
+                            break;  \n  \n
+                        case SmsManager.RESULT_ERROR_NULL_PDU:  \n
+                            Toast.makeText(getBaseContext(), "Null PDU",
+                                    Toast.LENGTH_SHORT).show();  \n
+                            break;  \n  \n
+                        case SmsManager.RESULT_ERROR_RADIO_OFF:  \n
+                            Toast.makeText(getBaseContext(), "Radio off",
+                                    Toast.LENGTH_SHORT).show();  \n
+                            break;  \n  \n
+                    }  \n
+                }  \n
+            }, new IntentFilter(SENT));  \n  \n
+
+            //---when the SMS has been delivered---  \n
+            registerReceiver(new BroadcastReceiver(){  \n
+                @Override  \n
+                public void onReceive(Context arg0, Intent arg1) {  \n
+                    switch (getResultCode())
+                    {  \n
+                        case Activity.RESULT_OK:  \n
+                            Toast.makeText(getBaseContext(), "SMS delivered",
+                                    Toast.LENGTH_SHORT).show();  \n
+                            break;  \n  \n
+                        case Activity.RESULT_CANCELED:  \n
+                            Toast.makeText(getBaseContext(), "SMS not delivered",
+                                    Toast.LENGTH_SHORT).show();  \n
+                            break;  \n  \n
+                    }  \n
+                }  \n
+            }, new IntentFilter(DELIVERED));  \n  \n
+
+            SmsManager sms = SmsManager.getDefault();  \n
+            sms.sendTextMessage(phoneNumber, null, message, sentPI, deliveredPI);  \n  \n
+        }  \n
+
+    </string>
+    <string name="send_sms_step4_">
+
+        //---sends an SMS message to another device---  \n
+        private void sendSMS(String phoneNumber, String message) {  \n
+            SmsManager sms = SmsManager.getDefault();
+            sms.sendTextMessage(phoneNumber, null, message, null, null);  \n  \n
+        }  \n
+
+    </string>
+    <string name="send_sms_step5">
+        <![CDATA[
+
+        <receiver android:name=".SmsReceiver"  \n
+            android:permission="android.permission.BROADCAST_SMS">  \n  \n
+            <intent-filter>  \n
+                <action android:name=
+                    "android.provider.Telephony.SMS_RECEIVED" />  \n  \n
+            </intent-filter>  \n
+        </receiver>  \n
+
+        ]]>
+    </string>
+    <string name="send_sms_step6">
+        <![CDATA[
+
+        //---receives an SMS message from another device---  \n
+        public class SmsReceiver extends BroadcastReceiver {  \n
+
+            @Override  \n
+            public void onReceive(Context context, Intent intent)
+            {  \n  \n
+                //---get the SMS message passed in---  \n
+                Bundle bundle = intent.getExtras();  \n
+                SmsMessage[] msgs;  \n
+                StringBuilder str = new StringBuilder();  \n
+                if (bundle != null)
+                {  \n
+                    //---retrieve the SMS message received---  \n
+                    Object[] pdus = (Object[]) bundle.get("pdus");  \n
+                    msgs = new SmsMessage[pdus.length];  \n
+                    for (int i=0; i<msgs.length; i++){  \n  \n
+                        msgs[i] = SmsMessage.createFromPdu((byte[])pdus[i]);  \n
+                        str.append("SMS from ").append(msgs[i].getOriginatingAddress());  \n
+                        str.append(" :");  \n
+                        str.append(msgs[i].getMessageBody());  \n
+                        str.append("n");  \n  \n
+                    }  \n
+                    //---display the new SMS message---  \n
+                    Toast.makeText(context, str.toString(), Toast.LENGTH_SHORT).show();  \n  \n
+                }  \n
+            }  \n
+        }  \n
+    ]]>
+    </string>
 
 
     <!--*****************************************************************************************************-->

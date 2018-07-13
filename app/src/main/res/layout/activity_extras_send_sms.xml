@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     android:padding="11dp"
     tools:context=".Activities.ExtrasSendSms">
 
@@ -15,6 +15,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="gone"
+        android:padding="11dp"
+        android:background="@color/colorBlackTransparent"
         >
         <EditText
             android:id="@+id/tvPhoneNo"
@@ -22,6 +24,8 @@
             android:layout_height="wrap_content"
             android:hint="Phone number of recipient"
             android:inputType="phone"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
             />
         <EditText
             android:id="@+id/tvMessage"
@@ -32,8 +36,10 @@
             android:inputType="text"
             android:maxHeight="150dp"
             android:scrollbars="vertical"
+            android:textColorHint="@color/colorWhite"
+            android:textColor="@color/colorWhite"
             />
-        <Button
+        <info.hoang8f.widget.FButton
             android:id="@+id/btnSendSMS"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -50,19 +56,22 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="visible"
         >
 
         <RelativeLayout
             android:id="@+id/RL_ExtrasSendSMS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="11dp"
+            android:background="@color/colorBlackTransparent">
 
             <TextView
                 android:id="@+id/tvDescLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 />
 
@@ -72,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:text="You can send/receive sms in your app."
                 android:layout_below="@+id/tvDescLabel"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 />
 
             <TextView
@@ -80,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/code"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/tvDesc"
                 android:layout_marginTop="3dp"
@@ -92,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/step_1"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/tvCodeLabel"
                 android:layout_marginTop="3dp"
@@ -105,7 +114,8 @@
                 android:layout_height="wrap_content"
                 android:text="Add these to your Manifest.xml file."
                 android:layout_below="@+id/tvStep1"
-                android:textColor="@color/colorBlack"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -114,6 +124,7 @@
                 android:layout_height="100dp"
                 android:layout_below="@+id/tvDescStep1"
                 android:src="@drawable/sms_step1"
+                android:layout_marginTop="7dp"
                 android:contentDescription="@string/app_name"
                 />
 
@@ -123,7 +134,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/step_2"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/ivCodeSendSmsStep1"
                 android:layout_marginTop="3dp"
@@ -136,7 +147,8 @@
                 android:layout_height="wrap_content"
                 android:text="In your xml create layout to send sms(you can also add phone no or messgae directly).."
                 android:layout_below="@+id/tvStep2"
-                android:textColor="@color/colorBlack"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -145,6 +157,7 @@
                 android:layout_height="220dp"
                 android:layout_below="@+id/tvDescStep2"
                 android:src="@drawable/sms_step2"
+                android:layout_marginTop="7dp"
                 android:contentDescription="@string/app_name"
                 />
 
@@ -154,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/step_3"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/ivCodeSendSmsStep2"
                 android:layout_marginTop="3dp"
@@ -167,7 +180,8 @@
                 android:layout_height="wrap_content"
                 android:text="In your Java File you can check for SMS permission and call SendSms() to send sms."
                 android:layout_below="@+id/tvStep3"
-                android:textColor="@color/colorBlack"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -175,7 +189,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_below="@+id/tvDescStep3"
-                android:src="@drawable/sms_step3"
+                android:src="@drawable/sms_step3_"
+                android:layout_marginTop="7dp"
                 android:contentDescription="@string/app_name"
                 />
 
@@ -184,7 +199,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/step_4"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/ivCodeSendSmsStep3"
                 android:layout_marginTop="3dp"
@@ -197,7 +212,8 @@
                 android:layout_height="wrap_content"
                 android:text="You can send sms using this code. 2 codes are provided, if you need response either sms is sent or not. you can choose according to your need."
                 android:layout_below="@+id/tvStep4"
-                android:textColor="@color/colorBlack"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -206,6 +222,7 @@
                 android:layout_height="150dp"
                 android:layout_below="@+id/tvDescStep4_"
                 android:src="@drawable/sms_step4_1_"
+                android:layout_marginTop="7dp"
                 android:contentDescription="@string/app_name"
                 />
             <TextView
@@ -215,7 +232,7 @@
                 android:text="OR.."
                 android:textStyle="bold"
                 android:layout_below="@+id/ivCodeSendSmsStep4_"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -224,6 +241,7 @@
                 android:layout_height="150dp"
                 android:layout_below="@+id/tvDescStep4"
                 android:src="@drawable/sms_step4_2"
+                android:layout_marginTop="7dp"
                 android:contentDescription="@string/app_name"
                 />
 
@@ -232,7 +250,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/step_5"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/ivCodeSendSmsStep4"
                 android:layout_marginTop="3dp"
@@ -245,7 +263,8 @@
                 android:layout_height="wrap_content"
                 android:text="If you need to receive sms in you app, you have to add \'receiver\' in your Manifest.xml"
                 android:layout_below="@+id/tvStep5"
-                android:textColor="@color/colorBlack"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -254,6 +273,7 @@
                 android:layout_height="170dp"
                 android:layout_below="@+id/tvDescStep5"
                 android:src="@drawable/sms_step5"
+                android:layout_marginTop="7dp"
                 android:contentDescription="@string/app_name"
                 />
             <TextView
@@ -261,7 +281,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/step_6"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 android:layout_below="@+id/ivCodeSendSmsStep5"
                 android:layout_marginTop="3dp"
@@ -274,7 +294,8 @@
                 android:layout_height="wrap_content"
                 android:text="Finally after onCreate() you can add this code to receive sms."
                 android:layout_below="@+id/tvStep6"
-                android:textColor="@color/colorBlack"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorWhite"
                 />
 
             <ImageView
@@ -282,11 +303,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_below="@+id/tvDescStep6"
+                android:layout_marginTop="7dp"
                 android:src="@drawable/recycler_view_step6_"
                 android:contentDescription="@string/app_name"
                 />
 
-            <Button
+            <info.hoang8f.widget.FButton
                 android:id="@+id/btnDemoSendSms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -13,25 +13,47 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.ali.learnandroid.R;
+import com.ali.learnandroid.Utils.CopyToClipBoard;
+import com.ali.learnandroid.Utils.ZoomImage;
 
 public class ExtrasSendSms extends AppCompatActivity {
 
     Button btnSendSMS;
     EditText tvPhoneNo, tvMessage;
-    ImageView ivCodeStep1,ivCodeStep2,ivCodeStep3,ivCodeStep4,
-            ivCodeStep5,ivCodeStep6,ivCodeStep7;
-
+    RelativeLayout rlSendSMS;
+    LinearLayout llSendSMS;
+    ImageView ivCodeStep1,ivCodeStep2,ivCodeStep3,ivCodeStep4,ivCodeStep4_,
+            ivCodeStep5,ivCodeStep6;
     Button btnDemo;
 
 
     private void init() {
+        ivCodeStep1 = findViewById(R.id.ivCodeSendSmsStep1);
+        ivCodeStep2 = findViewById(R.id.ivCodeSendSmsStep2);
+        ivCodeStep3 = findViewById(R.id.ivCodeSendSmsStep3);
+        ivCodeStep4 = findViewById(R.id.ivCodeSendSmsStep4);
+        ivCodeStep4_ = findViewById(R.id.ivCodeSendSmsStep4_);
+        ivCodeStep5 = findViewById(R.id.ivCodeSendSmsStep5);
+        ivCodeStep6 = findViewById(R.id.ivCodeSendSmsStep6);
+
+        btnDemo = findViewById(R.id.btnDemoSendSms);
+
+        btnSendSMS =  findViewById(R.id.btnSendSMS);
+        tvPhoneNo =  findViewById(R.id.tvPhoneNo);
+        tvMessage =  findViewById(R.id.tvMessage);
+
+        rlSendSMS = findViewById(R.id.RL_ExtrasSendSMS);
+        llSendSMS = findViewById(R.id.LL_ExtrasSendSMS);
 
     }
 
@@ -43,10 +65,127 @@ public class ExtrasSendSms extends AppCompatActivity {
 
         init();
 
-        btnSendSMS =  findViewById(R.id.btnSendSMS);
-        tvPhoneNo =  findViewById(R.id.tvPhoneNo);
-        tvMessage =  findViewById(R.id.tvMessage);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        //region ImageView Click Events...
+        ivCodeStep1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step1);
+            }
+        });
+        ivCodeStep1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step1));
+                return true;
+            }
+        });
+
+        ivCodeStep2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step2);
+            }
+        });
+        ivCodeStep2.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step2));
+                return true;
+            }
+        });
+
+        ivCodeStep3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step3);
+            }
+        });
+        ivCodeStep3.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step3));
+                return true;
+            }
+        });
+
+        ivCodeStep4_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step4_1);
+            }
+        });
+        ivCodeStep4_.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step4));
+                return true;
+            }
+        });
+
+        ivCodeStep4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step4_2);
+            }
+        });
+        ivCodeStep4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step4_));
+                return true;
+            }
+        });
+
+        ivCodeStep5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step5);
+            }
+        });
+        ivCodeStep5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step5));
+                return true;
+            }
+        });
+
+        ivCodeStep6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step6);
+            }
+        });
+        ivCodeStep6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                CopyToClipBoard.Copy(ExtrasSendSms.this,
+                        getResources().getString(R.string.send_sms_step6));
+                return true;
+            }
+        });
+        //endregion
+
+
+        btnDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rlSendSMS.setVisibility(View.GONE);
+                llSendSMS.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+        //region Send SMS button click event...
         btnSendSMS.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
@@ -72,6 +211,7 @@ public class ExtrasSendSms extends AppCompatActivity {
                 }
             }
         });
+        //endregion
     }
 
     //---sends an SMS message to another device---
@@ -185,6 +325,25 @@ public class ExtrasSendSms extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (llSendSMS.getVisibility() == View.VISIBLE) {
+            llSendSMS.setVisibility(View.GONE);
+            rlSendSMS.setVisibility(View.VISIBLE);
+        } else {
+            finish();
+        }
+    }
 }
 
 

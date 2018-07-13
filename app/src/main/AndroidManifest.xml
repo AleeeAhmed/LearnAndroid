@@ -23,6 +23,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.ali.learnandroid.provider"
@@ -54,7 +55,9 @@
         </activity>
         <activity
             android:name=".Activities.AlertDialogSimple"
-            android:label="Simple Alert Dialog" />
+            android:label="Simple Alert Dialog"
+            android:icon="@drawable/logo"
+            />
         <activity
             android:name=".Activities.AlertDialogWithCheckBoxes"
             android:label="AlertDialog with Check Boxes" />
@@ -170,7 +173,7 @@
         <activity
             android:name=".Activities.AnimationExplosion"
             android:label="Explosion Animation" />
-        <activity android:name=".Activities.ExtrasSendSms"></activity>
+        <activity android:name=".Activities.ExtrasSendSms" android:label="Send SMS"></activity>
 
 
     </application>
