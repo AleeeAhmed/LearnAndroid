@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:padding="11dp"
+    android:background="@drawable/back"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
-    android:padding="11dp"
-    tools:context=".Activities.ExtrasSendSms">
+    tools:context=".Activities.ExtrasCall">
+
 
 
     <LinearLayout
-        android:id="@+id/LL_ExtrasSendSMS"
+        android:id="@+id/LL_ExtrasCall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -19,31 +21,20 @@
         android:background="@color/colorBlackTransparent"
         >
         <EditText
-            android:id="@+id/etPhoneNoExtrasSendSMS"
+            android:id="@+id/etPhoneNoExtrasCall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone number of recipient"
+            android:hint="Enter phone number.."
             android:inputType="phone"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite"
             />
-        <EditText
-            android:id="@+id/etMessageExtrasSendSMS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:hint="Type message.."
-            android:inputType="text"
-            android:maxHeight="150dp"
-            android:scrollbars="vertical"
-            android:textColorHint="@color/colorWhite"
-            android:textColor="@color/colorWhite"
-            />
+
         <info.hoang8f.widget.FButton
-            android:id="@+id/btnSendSMS"
+            android:id="@+id/btnCall"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Send SMS"
+            android:text="Call"
             android:textColor="@color/colorWhite"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -53,10 +44,12 @@
 
     </LinearLayout>
 
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         >
 
         <RelativeLayout
@@ -326,5 +319,5 @@
 
     </ScrollView>
 
-</RelativeLayout>
 
+</RelativeLayout>

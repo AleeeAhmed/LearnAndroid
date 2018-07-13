@@ -2765,7 +2765,117 @@
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
+    <!--Make a Call-->
+    <string name="call_step1">
+        <![CDATA[
+            <uses-permission android:name="android.permission.CALL_PHONE"/>
+        ]]>
+    </string>
+    <string name="call_step2">
+        <![CDATA[
 
+            <LinearLayout \n
+                android:id="@+id/LL_ExtrasCall" \n
+                android:layout_width="match_parent" \n
+                android:layout_height="wrap_content" \n
+                android:orientation="vertical" \n
+                android:visibility="gone" \n
+                android:padding="11dp" \n
+                android:background="@color/colorBlackTransparent" \n
+                > \n \n
+                <EditText \n
+                    android:id="@+id/etPhoneNoExtrasCall" \n
+                    android:layout_width="match_parent" \n
+                    android:layout_height="wrap_content" \n
+                    android:hint="Enter phone number.." \n
+                    android:inputType="phone" \n
+                    android:textColor="@color/colorWhite" \n
+                    android:textColorHint="@color/colorWhite" \n
+                    /> \n \n
+
+                <info.hoang8f.widget.FButton \n
+                    android:id="@+id/btnCall" \n
+                    android:layout_width="fill_parent" \n
+                    android:layout_height="wrap_content" \n
+                    android:text="Call" \n
+                    android:textColor="@color/colorWhite" \n
+                    android:textSize="15sp" \n
+                    android:textStyle="bold" \n
+                    android:layout_marginTop="11dp" \n
+                    android:background="@color/colorBlack" \n
+                    /> \n \n
+
+            </LinearLayout> \n
+
+        ]]>
+    </string>
+    <string name="call_step3">
+
+
+        \@Override \n
+        protected void onCreate(Bundle savedInstanceState) { \n
+            super.onCreate(savedInstanceState); \n
+            setContentView(R.layout.activity_extras_call); \n \n
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true); \n
+
+            etPhone = findViewById(R.id.etPhoneNoExtrasCall); \n \n
+            btnCall = findViewById(R.id.btnCall); \n
+            llCall = findViewById(R.id.LL_ExtrasCall); \n
+
+            btnCall.setOnClickListener(new View.OnClickListener() { \n
+                @Override \n
+                public void onClick(View v) { \n \n
+                    String phoneNo = etPhone.getText().toString(); \n
+                    if (phoneNo.length() > 0 ) { \n
+                        if (ActivityCompat.checkSelfPermission(ExtrasCall.this,
+                                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) { \n
+
+                            ActivityCompat.requestPermissions(
+                                    ExtrasCall.this,
+                                    new String[]{Manifest.permission.CALL_PHONE},
+                                    11); \n
+
+                        } else { \n
+                            Call(phoneNo); \n
+                        }
+                    } else { \n
+                        Toast.makeText(ExtrasCall.this,
+                                "Please enter phone number.",
+                                Toast.LENGTH_SHORT).show(); \n \n
+                    } \n
+                } \n
+            }); \n
+        } \n \n \n
+
+        @Override
+        public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                               int[] grantResults) { \n
+            if(requestCode == 11) { \n \n
+
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED) { \n \n
+                    String phoneNo = etPhone.getText().toString(); \n
+                    Call(phoneNo); \n
+                } \n
+                else { \n
+                    Toast.makeText(ExtrasCall.this,
+                            "Permission denied.", Toast.LENGTH_SHORT).show(); \n \n
+                } \n
+            } \n
+        }
+ \n
+    </string>
+    <string name="call_step4">
+
+         private void Call(String phoneNo) { \n \n
+                Uri call = Uri.parse("tel:" + phoneNo); \n
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, call);  //just open the dialer \n
+                //Intent surf = new Intent(Intent.ACTION_CALL, call); // call automatically \n
+                startActivity(callIntent); \n
+            } \n \n
+
+
+    </string>
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->

@@ -9,11 +9,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
-
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:name=".Application.App"
@@ -23,7 +22,6 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.ali.learnandroid.provider"
@@ -34,14 +32,13 @@
                 android:resource="@xml/my_files" />
         </provider>
 
-        <receiver android:name=".Activities.ExtrasSendSms$SmsReceiver"
+        <receiver
+            android:name=".Activities.ExtrasSendSms$SmsReceiver"
             android:permission="android.permission.BROADCAST_SMS">
             <intent-filter>
-                <action android:name=
-                    "android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-
 
         <activity
             android:name=".Activities.Home"
@@ -55,9 +52,8 @@
         </activity>
         <activity
             android:name=".Activities.AlertDialogSimple"
-            android:label="Simple Alert Dialog"
             android:icon="@drawable/logo"
-            />
+            android:label="Simple Alert Dialog" />
         <activity
             android:name=".Activities.AlertDialogWithCheckBoxes"
             android:label="AlertDialog with Check Boxes" />
@@ -173,9 +169,10 @@
         <activity
             android:name=".Activities.AnimationExplosion"
             android:label="Explosion Animation" />
-        <activity android:name=".Activities.ExtrasSendSms" android:label="Send SMS"></activity>
-
-
+        <activity
+            android:name=".Activities.ExtrasSendSms"
+            android:label="Send SMS" />
+        <activity android:name=".Activities.ExtrasCall" android:label="Call"></activity>
     </application>
 
 </manifest>

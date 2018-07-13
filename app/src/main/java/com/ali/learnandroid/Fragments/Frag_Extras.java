@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.ali.learnandroid.Activities.ExtrasCall;
 import com.ali.learnandroid.Activities.ExtrasChips;
 import com.ali.learnandroid.Activities.ExtrasColors;
 import com.ali.learnandroid.Activities.ExtrasExpandableTextView;
@@ -91,7 +92,7 @@ public class Frag_Extras extends Fragment {
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "working on it,,", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), ExtrasCall.class));
             }
         });
         btnSendSMS.setOnClickListener(new View.OnClickListener() {

@@ -49,8 +49,8 @@ public class ExtrasSendSms extends AppCompatActivity {
         btnDemo = findViewById(R.id.btnDemoSendSms);
 
         btnSendSMS =  findViewById(R.id.btnSendSMS);
-        tvPhoneNo =  findViewById(R.id.tvPhoneNo);
-        tvMessage =  findViewById(R.id.tvMessage);
+        tvPhoneNo =  findViewById(R.id.etPhoneNoExtrasSendSMS);
+        tvMessage =  findViewById(R.id.etMessageExtrasSendSMS);
 
         rlSendSMS = findViewById(R.id.RL_ExtrasSendSMS);
         llSendSMS = findViewById(R.id.LL_ExtrasSendSMS);
@@ -194,7 +194,7 @@ public class ExtrasSendSms extends AppCompatActivity {
                 String message = tvMessage.getText().toString();
                 if (phoneNo.length() > 0 && message.length() > 0) {
                     if (ActivityCompat.checkSelfPermission(ExtrasSendSms.this,
-                            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                            Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
 
                         ActivityCompat.requestPermissions(
                                 ExtrasSendSms.this,
