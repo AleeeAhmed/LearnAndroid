@@ -1,6 +1,7 @@
 package com.ali.learnandroid.Activities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
@@ -146,6 +147,13 @@ public class Home extends AppCompatActivity
 
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fl_Home, new Frag_Lists()).addToBackStack(null).commit();
+        } else if (id == R.id.nav_share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Add your Google Play App Link here");
+            sendIntent.setType("text/plain");
+            //sendIntent.setType("image/*");
+            startActivity(sendIntent);
         } else if (id == R.id.nav_about) {
             Toast.makeText(this, "under constrction..", Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_exit) {
