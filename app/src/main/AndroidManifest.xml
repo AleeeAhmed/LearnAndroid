@@ -11,8 +11,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".Application.App"
@@ -172,7 +171,10 @@
         <activity
             android:name=".Activities.ExtrasSendSms"
             android:label="Send SMS" />
-        <activity android:name=".Activities.ExtrasCall" android:label="Call"></activity>
+        <activity
+            android:name=".Activities.ExtrasCall"
+            android:label="Call" />
+        <activity android:name=".Activities.ToastMessageLibrary" android:label="Fancy Toasts"></activity>
     </application>
 
 </manifest>

@@ -581,7 +581,60 @@
 
     ]]>
     </string>
+    <string name="toast_library_step1">
+        maven { url "https://jitpack.io" } \n\n
+    </string>
+    <string name="toast_library_step2">
+            //Toast library \n
+            implementation \'com.github.GrenderG:Toasty:1.3.0\' \n\n
+    </string>
+    <string name="toast_library_step3">
 
+            //Error Toast message  \n
+            Toasty.error(getApplicationContext(), "Error Toast.", Toast.LENGTH_SHORT, true).show(); \n \n
+
+            //Success Toast Message \n
+            Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show(); \n \n \n
+
+            //Info based Toast message \n
+            Toasty.info(getApplicationContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show(); \n \n \n
+
+            //Warning Toast \n
+            Toasty.warning(getApplicationContext(), "Beware of the dog.", Toast.LENGTH_SHORT, true).show(); \n \n \n
+
+            //Normal Toast without any Icon \n
+            Toasty.normal(getApplicationContext(), "Normal toast w/o icon").show(); \n \n \n
+
+            //Normal Toast with an Icon \n
+            Toasty.normal(getApplicationContext(), "Normal toast w/ icon", R.drawable.chrome).show(); \n \n \n
+
+            //Custom Toast message \n
+            Toasty.custom(getApplicationContext(), \n
+                    "I'm a custom Toast Message", \n
+                    getResources().getDrawable(R.drawable.ic_launcher_background), \n
+                    getResources().getColor(R.color.colorAccent), \n
+                    2000, // 2 seconds \n
+                    true, \n
+                    true).show(); \n \n
+
+    </string>
+    <string name="toast_library_step4">
+
+        Toasty.Config.getInstance()  \n
+                .setErrorColor(getResources().getColor(android.R.color.holo_red_dark)) // optional \n
+                .setInfoColor(getResources().getColor(android.R.color.holo_orange_light)) // optional \n
+                .setSuccessColor(getResources().getColor(android.R.color.holo_green_dark)) // optional \n
+                .setWarningColor(getResources().getColor(android.R.color.holo_orange_dark)) // optional \n
+                .setTextColor(getResources().getColor(android.R.color.black)) // optional \n
+                .tintIcon(true) // optional (apply textColor also to the icon) \n
+                .setToastTypeface(Typeface.SANS_SERIF) // optional \n
+                .setTextSize(21) // optional \n
+                .apply(); // required \n \n \n
+
+        //You can reset the configuration by using reset() method: \n
+        Toasty.Config.reset(); \n \n \n
+
+    </string>
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
@@ -2876,6 +2929,15 @@
 
 
     </string>
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+    <!-- -->
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->

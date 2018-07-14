@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.ali.learnandroid.Activities.Home;
 import com.ali.learnandroid.Activities.ToastMessageColored;
+import com.ali.learnandroid.Activities.ToastMessageLibrary;
 import com.ali.learnandroid.Activities.ToastMessageSimple;
 import com.ali.learnandroid.R;
 import com.ali.learnandroid.Activities.ToastMessageCustom;
@@ -25,7 +26,7 @@ import com.ali.learnandroid.Activities.ToastMessageCustom;
 public class Frag_Toasts extends Fragment {
 
     View view;
-    Button btnSimpleToast,btnColoredToast, btnCustomToast;
+    Button btnSimpleToast,btnColoredToast, btnCustomToast, btntoastLib;
 
     public Frag_Toasts() {
         // Required empty public constructor
@@ -42,6 +43,7 @@ public class Frag_Toasts extends Fragment {
         btnSimpleToast = view.findViewById(R.id.btnSimpleToastMessage);
         btnColoredToast = view.findViewById(R.id.btnColoredToastMessage);
         btnCustomToast = view.findViewById(R.id.btnCustomToastMessage);
+        btntoastLib = view.findViewById(R.id.btnToastMessageLibrary);
 
         btnSimpleToast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +65,15 @@ public class Frag_Toasts extends Fragment {
                 startActivity(new Intent(getActivity(), ToastMessageCustom.class));
             }
         });
+
+        btntoastLib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ToastMessageLibrary.class));
+            }
+        });
+
+
 
         view.setFocusableInTouchMode(true);
         view.requestFocus();
