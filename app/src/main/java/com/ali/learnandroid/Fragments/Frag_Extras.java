@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.ali.learnandroid.Activities.ExtrasCall;
+import com.ali.learnandroid.Activities.ExtrasCardView;
 import com.ali.learnandroid.Activities.ExtrasChips;
 import com.ali.learnandroid.Activities.ExtrasColors;
 import com.ali.learnandroid.Activities.ExtrasExpandableTextView;
@@ -25,6 +26,8 @@ import com.ali.learnandroid.Activities.ExtrasViewPager;
 import com.ali.learnandroid.Activities.Home;
 import com.ali.learnandroid.R;
 
+import es.dmoral.toasty.Toasty;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -32,7 +35,9 @@ public class Frag_Extras extends Fragment {
 
     View view;
     RelativeLayout rlExtras;
-    Button btnColors , btnStrings, btnGIF, btnViewPager, btnChips, btnExpanable, btnCall, btnSendSMS;
+    Button btnColors , btnStrings, btnGIF, btnViewPager,
+            btnChips, btnExpanable, btnCall, btnSendSMS, btnCardView, btn;
+
     private Animation animation;
 
     public Frag_Extras() {
@@ -101,6 +106,18 @@ public class Frag_Extras extends Fragment {
                 startActivity(new Intent(getActivity(), ExtrasSendSms.class));
             }
         });
+        btnCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ExtrasCardView.class));
+            }
+        });
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toasty.normal(getActivity(), "Under Construction..!!").show();
+            }
+        });
 
         view.setFocusableInTouchMode(true);
         view.requestFocus();
@@ -133,6 +150,8 @@ public class Frag_Extras extends Fragment {
         btnExpanable = view.findViewById(R.id.btnExpandableTextView);
         btnCall = view.findViewById(R.id.btnCall);
         btnSendSMS = view.findViewById(R.id.btnSMS);
+        btnCardView= view.findViewById(R.id.btnCardView);
+        btn = view.findViewById(R.id.btn);
 
         animation = AnimationUtils.loadAnimation(getActivity(), R.anim.extras_move);
         rlExtras = view.findViewById(R.id.RL_Extras);

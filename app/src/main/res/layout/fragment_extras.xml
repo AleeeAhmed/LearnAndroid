@@ -124,6 +124,33 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btnCardView"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/btnCall"
+        android:layout_alignStart="@+id/btnColors"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text="Card View"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCardView"
+        android:layout_alignStart="@+id/btnStrings"
+        android:background="@color/colorBlack"
+        android:padding="11dp"
+        android:text=""
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
 </RelativeLayout>

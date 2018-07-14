@@ -174,7 +174,10 @@
         <activity
             android:name=".Activities.ExtrasCall"
             android:label="Call" />
-        <activity android:name=".Activities.ToastMessageLibrary" android:label="Fancy Toasts"></activity>
+        <activity
+            android:name=".Activities.ToastMessageLibrary"
+            android:label="Fancy Toasts" />
+        <activity android:name=".Activities.ExtrasCardView" android:label="Card View"></activity>
     </application>
 
 </manifest>

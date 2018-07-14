@@ -2932,7 +2932,59 @@
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
-    <!-- -->
+    <!--Card View -->
+    <string name="card_view_step1">
+    //CardView \n
+    implementation \'com.android.support:cardview-v7:27.1.1\' \n \n
+    </string>
+    <string name="card_view_step2">
+        <![CDATA[
+
+            <android.support.v7.widget.CardView     \n
+                android:id="@+id/cardNewMessage"  \n
+                android:layout_width="match_parent"  \n
+                android:layout_height="wrap_content"  \n
+                app:cardElevation="11dp"  \n
+                app:cardCornerRadius="3dp"  \n
+                app:cardBackgroundColor="@color/colorWhite"  \n
+                app:cardUseCompatPadding="false"  \n
+                app:cardPreventCornerOverlap="false"  \n
+                android:layout_marginTop="3dp"  \n
+                >  \n  \n
+
+                <RelativeLayout  \n
+                    android:layout_width="match_parent"  \n
+                    android:layout_height="wrap_content"  \n
+                    android:background="@color/colorWhite"  \n
+                    android:padding="11dp"  \n
+                    >  \n  \n
+
+                    <TextView  \n
+                        android:id="@+id/tvNewMessageLabel"  \n
+                        android:layout_width="wrap_content"  \n
+                        android:layout_height="wrap_content"  \n
+                        android:text="New Message:"  \n
+                        android:textStyle="bold"  \n
+                        android:textColor="@color/colorBlack"  \n
+                        />  \n  \n
+
+                    <TextView  \n
+                        android:id="@+id/tvNewMessage"  \n
+                        android:layout_width="wrap_content"  \n
+                        android:layout_height="wrap_content"  \n
+                        android:lineSpacingExtra="2dp"  \n
+                        android:text="you have received a new message."  \n
+                        android:layout_below="@+id/tvNewMessageLabel"  \n
+                        android:textColor="@color/colorBlack"  \n
+                        />  \n  \n
+
+                </RelativeLayout>  \n  \n
+  \n
+            </android.support.v7.widget.CardView>
+
+            ]]>
+    </string>
+
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
 
