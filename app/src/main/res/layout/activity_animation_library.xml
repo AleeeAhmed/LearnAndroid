@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +11,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:padding="11dp"
+        android:background="@color/colorBlackTransparent"
+        >
 
 
         <TextView
@@ -19,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -31,7 +34,7 @@
             android:text="You can add Animations to your app using this simple AndroidViewAnimations Library"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
@@ -55,10 +58,10 @@
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/ivAnimationLib"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="17dp"
             />
 
 
     </RelativeLayout>
 
-</ScrollView>
+</RelativeLayout>

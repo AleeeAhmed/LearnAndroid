@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     android:padding="11dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/back"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +12,10 @@
     <RelativeLayout
         android:id="@+id/RL_CustomAnim"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:background="@color/colorBlackTransparent"
+        >
 
 
         <TextView
@@ -20,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             />
 
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Animations are used to beautify your app."
             android:layout_below="@+id/tvDescLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <TextView
@@ -38,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:layout_below="@+id/tvDesc"
             android:layout_marginTop="3dp"
@@ -57,13 +60,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/ivXml"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivJava"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvJavaLabel"
             android:src="@drawable/animations_apply"
             android:contentDescription="@string/app_name"
@@ -81,13 +85,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvCodeLabel"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivXml"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvXmlLabel"
             android:src="@drawable/animations_create"
             android:contentDescription="@string/app_name"
@@ -105,13 +110,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/ivJava"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivFadeIn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvFadeInLabel"
             android:src="@drawable/animation_fade_in"
             android:contentDescription="@string/app_name"
@@ -142,13 +148,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoFadeIn"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivFadeOut"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvFadeOutLabel"
             android:src="@drawable/animation_fade_out"
             android:contentDescription="@string/app_name"
@@ -179,13 +186,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoFadeOut"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivZoomIn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvZoomInLabel"
             android:src="@drawable/animations_zoom_in"
             android:contentDescription="@string/app_name"
@@ -216,13 +224,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoZoomIn"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivZoomOut"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvZoomOutLabel"
             android:src="@drawable/animations_zoom_out"
             android:contentDescription="@string/app_name"
@@ -253,13 +262,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoZoomOut"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivRotate"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvRotateLabel"
             android:src="@drawable/animations_rotate"
             android:contentDescription="@string/app_name"
@@ -290,13 +300,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoRotate"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivMove"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvMoveLabel"
             android:src="@drawable/animations_move"
             android:contentDescription="@string/app_name"
@@ -327,13 +338,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoMove"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivBounce"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvBounceLabel"
             android:src="@drawable/animations_bounce"
             android:contentDescription="@string/app_name"
@@ -364,13 +376,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoBounce"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivSlideUp"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvSlideUpLabel"
             android:src="@drawable/animations_slide_up"
             android:contentDescription="@string/app_name"
@@ -401,13 +414,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoSlideUp"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivSlideDown"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvSlideDownLabel"
             android:src="@drawable/animations_slide_down"
             android:contentDescription="@string/app_name"
@@ -438,13 +452,14 @@
             android:textStyle="bold"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/btnDemoSlideDown"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             />
 
         <ImageView
             android:id="@+id/ivSequential"
             android:layout_width="match_parent"
             android:layout_height="180dp"
+            android:layout_marginTop="7dp"
             android:layout_below="@+id/tvSequentialLabel"
             android:src="@drawable/animations_sequential"
             android:contentDescription="@string/app_name"
