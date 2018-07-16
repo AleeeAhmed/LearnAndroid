@@ -15,11 +15,11 @@
 
 
         <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter"
-        />
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            />
         <ImageView
             android:id="@+id/shareButton"
             android:layout_width="35dp"
@@ -27,7 +27,21 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_margin="3dp"
+            android:padding="5dp"
             android:src="@drawable/share"
+            android:background="@color/colorBlackTransparent"
+            android:contentDescription="@string/app_name"
+            />
+        <ImageView
+            android:id="@+id/copyButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/shareButton"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:src="@drawable/copy"
+            android:background="@color/colorBlackTransparent"
             android:contentDescription="@string/app_name"
             />
 

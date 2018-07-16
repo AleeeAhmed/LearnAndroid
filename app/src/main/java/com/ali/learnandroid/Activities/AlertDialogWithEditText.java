@@ -60,7 +60,8 @@ public class AlertDialogWithEditText extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AlertDialogWithEditText.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AlertDialogWithEditText.this, R.drawable.alert_dialog_edittext_image);
+                    ZoomImage.show(AlertDialogWithEditText.this, R.drawable.alert_dialog_edittext_image,
+                            getResources().getString(R.string.edittext_alert_dialog_first));
                 }
             }
         });
@@ -122,7 +123,8 @@ public class AlertDialogWithEditText extends AppCompatActivity {
                 ActivityCompat.requestPermissions(AlertDialogWithEditText.this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
             } else {
-                    ZoomImage.show(AlertDialogWithEditText.this, R.drawable.alert_dialog_edittext2_image);
+                    ZoomImage.show(AlertDialogWithEditText.this, R.drawable.alert_dialog_edittext2_image,
+                            getResources().getString(R.string.edittext_alert_dialog_second));
                 }
             }
         });

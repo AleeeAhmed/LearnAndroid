@@ -56,7 +56,8 @@ public class ExtrasChips extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasChips.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasChips.this, R.drawable.extras_chips_step1);
+                    ZoomImage.show(ExtrasChips.this, R.drawable.extras_chips_step1,
+                            getResources().getString(R.string.chips_step1));
                 }
 
             }
@@ -71,7 +72,8 @@ public class ExtrasChips extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasChips.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasChips.this, R.drawable.extras_chips_step2);
+                    ZoomImage.show(ExtrasChips.this, R.drawable.extras_chips_step2,
+                            getResources().getString(R.string.chips_step2));
                 }
 
             }
@@ -86,7 +88,8 @@ public class ExtrasChips extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasChips.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasChips.this, R.drawable.extras_chips_step3);
+                    ZoomImage.show(ExtrasChips.this, R.drawable.extras_chips_step3,
+                            getResources().getString(R.string.chips_step3));
                 }
 
             }

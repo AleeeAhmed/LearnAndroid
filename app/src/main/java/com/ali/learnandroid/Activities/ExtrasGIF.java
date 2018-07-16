@@ -48,7 +48,8 @@ public class ExtrasGIF extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasGIF.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasGIF.this, R.drawable.gif_gradle);
+                    ZoomImage.show(ExtrasGIF.this, R.drawable.gif_gradle,
+                            getResources().getString(R.string.gif_step_1));
                 }
             }
         });
@@ -62,7 +63,8 @@ public class ExtrasGIF extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasGIF.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasGIF.this, R.drawable.gif_xml);
+                    ZoomImage.show(ExtrasGIF.this, R.drawable.gif_xml,
+                            getResources().getString(R.string.gif_step_2));
                 }
 
             }
@@ -77,7 +79,8 @@ public class ExtrasGIF extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasGIF.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasGIF.this, R.drawable.gif_java);
+                    ZoomImage.show(ExtrasGIF.this, R.drawable.gif_java,
+                            getResources().getString(R.string.gif_step_2));
                 }
 
             }

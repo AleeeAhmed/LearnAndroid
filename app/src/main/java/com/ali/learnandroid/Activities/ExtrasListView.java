@@ -77,7 +77,8 @@ public class ExtrasListView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasListView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step1);
+                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step1,
+                            getResources().getString(R.string.list_view_step2));
                 }
 
             }
@@ -100,7 +101,8 @@ public class ExtrasListView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasListView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasListView.this, R.drawable.recycler_view_step3);
+                    ZoomImage.show(ExtrasListView.this, R.drawable.recycler_view_step3,
+                            getResources().getString(R.string.recycler_view_step3));
                 }
 
             }
@@ -123,7 +125,8 @@ public class ExtrasListView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasListView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step3);
+                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step3,
+                            getResources().getString(R.string.list_view_step4));
                 }
 
             }
@@ -146,7 +149,8 @@ public class ExtrasListView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasListView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step4);
+                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step4,
+                            getResources().getString(R.string.list_view_step5));
                 }
 
             }
@@ -169,7 +173,8 @@ public class ExtrasListView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasListView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step5);
+                    ZoomImage.show(ExtrasListView.this, R.drawable.list_step5,
+                            getResources().getString(R.string.list_view_step6));
                 }
             }
         });

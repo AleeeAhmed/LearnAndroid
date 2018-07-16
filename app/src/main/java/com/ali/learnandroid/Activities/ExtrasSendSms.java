@@ -86,7 +86,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step1);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step1,
+                            getResources().getString(R.string.send_sms_step1));
                 }
 
             }
@@ -109,7 +110,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step2);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step2,
+                            getResources().getString(R.string.send_sms_step2));
                 }
 
             }
@@ -132,7 +134,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step3);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step3,
+                            getResources().getString(R.string.send_sms_step3));
                 }
 
             }
@@ -155,7 +158,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step4_1);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step4_1,
+                            getResources().getString(R.string.send_sms_step4));
                 }
 
             }
@@ -178,7 +182,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step4_2);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step4_2,
+                            getResources().getString(R.string.send_sms_step4_));
                 }
             }
         });
@@ -200,7 +205,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step5);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step5,
+                            getResources().getString(R.string.send_sms_step5));
                 }
             }
         });
@@ -222,7 +228,8 @@ public class ExtrasSendSms extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasSendSms.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step6);
+                    ZoomImage.show(ExtrasSendSms.this, R.drawable.sms_step6,
+                            getResources().getString(R.string.send_sms_step6));
                 }
             }
         });

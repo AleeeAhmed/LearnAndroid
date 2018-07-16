@@ -61,7 +61,8 @@ public class PickerTime extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerTime.this, R.drawable.time_picker_step1);
+                    ZoomImage.show(PickerTime.this, R.drawable.time_picker_step1,
+                            getResources().getString(R.string.pick_time_step1));
                 }
 
             }
@@ -85,7 +86,8 @@ public class PickerTime extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerTime.this, R.drawable.time_picker_step2);
+                    ZoomImage.show(PickerTime.this, R.drawable.time_picker_step2,
+                            getResources().getString(R.string.pick_time_step2));
                 }
 
             }

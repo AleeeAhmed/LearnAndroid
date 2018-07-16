@@ -67,7 +67,8 @@ public class PickerGalleryyFile extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step1);
+                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step1,
+                            getResources().getString(R.string.pick_file_step1));
                 }
 
             }
@@ -91,7 +92,8 @@ public class PickerGalleryyFile extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step2);
+                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step2,
+                            getResources().getString(R.string.pick_file_step2));
                 }
 
             }
@@ -115,7 +117,8 @@ public class PickerGalleryyFile extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step3);
+                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step3,
+                            getResources().getString(R.string.pick_file_step3));
                 }
             }
         });

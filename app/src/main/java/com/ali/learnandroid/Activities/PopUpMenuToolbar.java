@@ -75,7 +75,8 @@ public class PopUpMenuToolbar extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PopUpMenuToolbar.this, R.drawable.pop_up_menu_toolbar_java);
+                    ZoomImage.show(PopUpMenuToolbar.this, R.drawable.pop_up_menu_toolbar_java,
+                            getResources().getString(R.string.pop_up_menu_toolbar_java_string));
                 }
 
             }
@@ -99,7 +100,8 @@ public class PopUpMenuToolbar extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PopUpMenuToolbar.this, R.drawable.pop_up_menu_xml);
+                    ZoomImage.show(PopUpMenuToolbar.this, R.drawable.pop_up_menu_xml,
+                            getResources().getString(R.string.pop_up_menu_xml_string));
                 }
 
             }

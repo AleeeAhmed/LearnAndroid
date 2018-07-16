@@ -65,7 +65,8 @@ public class AnimationFoldingCell extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationFoldingCell.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationFoldingCell.this, R.drawable.folding_anim_step1);
+                    ZoomImage.show(AnimationFoldingCell.this, R.drawable.folding_anim_step1,
+                            getResources().getString(R.string.folding_step1));
                 }
             }
         });
@@ -87,7 +88,8 @@ public class AnimationFoldingCell extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationFoldingCell.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationFoldingCell.this, R.drawable.folding_anim_step2);
+                    ZoomImage.show(AnimationFoldingCell.this, R.drawable.folding_anim_step2,
+                            getResources().getString(R.string.folding_step2));
                 }
             }
         });
@@ -109,7 +111,8 @@ public class AnimationFoldingCell extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationFoldingCell.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationFoldingCell.this, R.drawable.folding_anim_step3);
+                    ZoomImage.show(AnimationFoldingCell.this, R.drawable.folding_anim_step3,
+                            getResources().getString(R.string.folding_step3));
                 }
             }
         });

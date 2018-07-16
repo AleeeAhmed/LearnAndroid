@@ -59,7 +59,8 @@ public class PickerCameraImage extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PickerCameraImage.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step1);
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step1,
+                            getResources().getString(R.string.pick_image_step1));
                 }
             }
         });
@@ -82,7 +83,8 @@ public class PickerCameraImage extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PickerCameraImage.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step2);
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step2,
+                            getResources().getString(R.string.pick_image_step2));
                 }
 
             }
@@ -106,7 +108,8 @@ public class PickerCameraImage extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PickerCameraImage.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step3);
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step3,
+                            getResources().getString(R.string.pick_image_step3));
                 }
 
             }
@@ -130,7 +133,8 @@ public class PickerCameraImage extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PickerCameraImage.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step4);
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step4,
+                            getResources().getString(R.string.pick_image_step4));
                 }
 
             }

@@ -80,7 +80,8 @@ public class PopUpMenuButtonImage extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PopUpMenuButtonImage.this, R.drawable.pop_up_menu_xml);
+                    ZoomImage.show(PopUpMenuButtonImage.this, R.drawable.pop_up_menu_xml,
+                            getResources().getString(R.string.pop_up_menu_xml_string));
                 }
 
             }
@@ -104,7 +105,8 @@ public class PopUpMenuButtonImage extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PopUpMenuButtonImage.this, R.drawable.pop_up_menu_java);
+                    ZoomImage.show(PopUpMenuButtonImage.this, R.drawable.pop_up_menu_java,
+                            getResources().getString(R.string.pop_up_menu_java_string));
                 }
 
             }

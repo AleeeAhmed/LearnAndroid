@@ -77,7 +77,8 @@ public class ExtrasCall extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasCall.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step1);
+                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step1,
+                            getResources().getString(R.string.call_step1));
                 }
 
             }
@@ -100,7 +101,8 @@ public class ExtrasCall extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasCall.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step2);
+                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step2,
+                            getResources().getString(R.string.call_step2));
                 }
 
             }
@@ -123,7 +125,8 @@ public class ExtrasCall extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasCall.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step3);
+                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step3,
+                            getResources().getString(R.string.call_step3));
             }
 
             }
@@ -146,7 +149,8 @@ public class ExtrasCall extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasCall.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step4);
+                    ZoomImage.show(ExtrasCall.this, R.drawable.call_step4,
+                            getResources().getString(R.string.call_step4));
                 }
 
             }

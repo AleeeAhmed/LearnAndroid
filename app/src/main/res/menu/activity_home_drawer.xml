@@ -55,7 +55,7 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:title="Share App" />
+                android:title="Share Learn Android" />
             <item
                 android:id="@+id/nav_about"
                 android:title="About" />

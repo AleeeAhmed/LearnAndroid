@@ -78,7 +78,8 @@ public class PickerColor extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PickerColor.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(PickerColor.this, R.drawable.color_picker_step1);
+                    ZoomImage.show(PickerColor.this, R.drawable.color_picker_step1,
+                            getResources().getString(R.string.pick_color_step1));
                 }
 
             }
@@ -102,7 +103,8 @@ public class PickerColor extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PickerColor.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(PickerColor.this, R.drawable.color_picker_step2);
+                    ZoomImage.show(PickerColor.this, R.drawable.color_picker_step2,
+                            getResources().getString(R.string.pick_color_step2));
                 }
             }
         });

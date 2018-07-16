@@ -47,7 +47,8 @@ public class ExtrasCardView extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
                     ZoomImage.show(ExtrasCardView.this,
-                            R.drawable.cardview_step1);
+                            R.drawable.cardview_step1,
+                            getResources().getString(R.string.card_view_step1));
                 }
             }
         });
@@ -71,7 +72,8 @@ public class ExtrasCardView extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
                     ZoomImage.show(ExtrasCardView.this,
-                        R.drawable.cardview_step2);
+                        R.drawable.cardview_step2,
+                            getResources().getString(R.string.card_view_step2));
                 }
             }
         });

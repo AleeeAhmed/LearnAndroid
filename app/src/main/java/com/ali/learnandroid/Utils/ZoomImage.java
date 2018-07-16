@@ -26,11 +26,12 @@ import es.dmoral.toasty.Toasty;
 
 public class ZoomImage {
 
-    public static void show(final Activity activity, final int image) {
+    public static void show(final Activity activity, final int image, final String code) {
         final AlertDialog.Builder mBuilder = new AlertDialog.Builder(activity);
         View mView = activity.getLayoutInflater().inflate(R.layout.image_zoom_dialog, null);
 
         ImageView share = mView.findViewById(R.id.shareButton);
+        ImageView copy = mView.findViewById(R.id.copyButton);
         PhotoView photoView = mView.findViewById(R.id.imageView);
         photoView.setImageResource(image);
 
@@ -52,6 +53,60 @@ public class ZoomImage {
                 } else {
                     shareFile(activity,image);
                 }
+            }
+        });
+
+        copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CopyToClipBoard.Copy(activity,code);
+            }
+        });
+
+        mBuilder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        final AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+    }
+
+    public static void show(final Activity activity, final int image) {
+        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(activity);
+        View mView = activity.getLayoutInflater().inflate(R.layout.image_zoom_dialog, null);
+
+        ImageView share = mView.findViewById(R.id.shareButton);
+        ImageView copy = mView.findViewById(R.id.copyButton);
+        PhotoView photoView = mView.findViewById(R.id.imageView);
+        photoView.setImageResource(image);
+
+
+        mBuilder.setView(mView);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(activity,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(activity,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                        Toasty.error(activity, "Please allow storage permission.", Toast.LENGTH_LONG, true).show();
+                    } else {
+                        ActivityCompat.requestPermissions(activity,
+                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                    }
+                } else {
+                    shareFile(activity,image);
+                }
+            }
+        });
+
+        copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity, R.string.nothing_here, Toast.LENGTH_SHORT).show();
             }
         });
 

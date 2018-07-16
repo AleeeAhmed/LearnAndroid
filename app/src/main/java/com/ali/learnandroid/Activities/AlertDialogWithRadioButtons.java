@@ -56,7 +56,8 @@ public class AlertDialogWithRadioButtons extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AlertDialogWithRadioButtons.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AlertDialogWithRadioButtons.this, R.drawable.alert_dialog_radio_buttons_image);
+                    ZoomImage.show(AlertDialogWithRadioButtons.this, R.drawable.alert_dialog_radio_buttons_image,
+                            getResources().getString(R.string.radio_buttons_alert_dialog));
                 }
             }
         });

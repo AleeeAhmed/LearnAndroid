@@ -95,7 +95,8 @@ public class ExtrasExpandableTextView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasExpandableTextView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasExpandableTextView.this, R.drawable.expandable_text_step1);
+                    ZoomImage.show(ExtrasExpandableTextView.this, R.drawable.expandable_text_step1,
+                            getResources().getString(R.string.expandable_textview_step1));
                 }
             }
         });
@@ -117,7 +118,8 @@ public class ExtrasExpandableTextView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasExpandableTextView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasExpandableTextView.this, R.drawable.expandable_text_step2);
+                    ZoomImage.show(ExtrasExpandableTextView.this, R.drawable.expandable_text_step2,
+                            getResources().getString(R.string.expandable_textview_step2));
                 }
 
             }
@@ -140,7 +142,8 @@ public class ExtrasExpandableTextView extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasExpandableTextView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasExpandableTextView.this, R.drawable.expandable_text_step3);
+                    ZoomImage.show(ExtrasExpandableTextView.this, R.drawable.expandable_text_step3,
+                            getResources().getString(R.string.expandable_textview_step3));
                 }
 
             }

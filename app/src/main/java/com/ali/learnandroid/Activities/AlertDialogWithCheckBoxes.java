@@ -59,7 +59,8 @@ public class AlertDialogWithCheckBoxes extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AlertDialogWithCheckBoxes.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AlertDialogWithCheckBoxes.this, R.drawable.alert_dialog_check_boxes_image);
+                    ZoomImage.show(AlertDialogWithCheckBoxes.this, R.drawable.alert_dialog_check_boxes_image,
+                            getResources().getString(R.string.check_box_alert_dialog_first));
                 }
             }
         });
@@ -123,7 +124,8 @@ public class AlertDialogWithCheckBoxes extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AlertDialogWithCheckBoxes.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AlertDialogWithCheckBoxes.this, R.drawable.alert_dialog_check_boxes_secondway_image);
+                    ZoomImage.show(AlertDialogWithCheckBoxes.this, R.drawable.alert_dialog_check_boxes_secondway_image,
+                            getResources().getString(R.string.check_box_alert_dialog_second));
                 }
             }
         });

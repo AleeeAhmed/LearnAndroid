@@ -57,7 +57,8 @@ public class AlertDialogSimple extends AppCompatActivity  {
                     ActivityCompat.requestPermissions(AlertDialogSimple.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AlertDialogSimple.this, R.drawable.alert_dialog_simple_image);
+                    ZoomImage.show(AlertDialogSimple.this, R.drawable.alert_dialog_simple_image,
+                            getResources().getString(R.string.simple_alert_dialog));
                 }
             }
         });

@@ -71,7 +71,8 @@ public class ExtrasViewPager extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasViewPager.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasViewPager.this, R.drawable.view_pager_step1);
+                    ZoomImage.show(ExtrasViewPager.this, R.drawable.view_pager_step1,
+                            getResources().getString(R.string.view_pager_step1));
                 }
             }
         });
@@ -93,7 +94,8 @@ public class ExtrasViewPager extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasViewPager.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasViewPager.this, R.drawable.view_pager_step2);
+                    ZoomImage.show(ExtrasViewPager.this, R.drawable.view_pager_step2,
+                            getResources().getString(R.string.view_pager_step2));
                 }
 
             }
@@ -116,7 +118,8 @@ public class ExtrasViewPager extends AppCompatActivity {
                     ActivityCompat.requestPermissions(ExtrasViewPager.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasViewPager.this, R.drawable.view_pager_step3);
+                    ZoomImage.show(ExtrasViewPager.this, R.drawable.view_pager_step3,
+                            getResources().getString(R.string.view_pager_step3));
                 }
 
             }

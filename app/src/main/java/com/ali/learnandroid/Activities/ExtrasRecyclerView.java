@@ -84,7 +84,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step1);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step1,
+                            getResources().getString(R.string.recycler_view_step1));
                 }
             }
         });
@@ -106,7 +107,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step2);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step2,
+                            getResources().getString(R.string.recycler_view_step2));
                 }
 
             }
@@ -129,7 +131,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step3);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step3,
+                            getResources().getString(R.string.recycler_view_step3));
                 }
 
             }
@@ -152,7 +155,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step4);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step4,
+                            getResources().getString(R.string.recycler_view_step4));
                 }
 
             }
@@ -175,7 +179,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step5);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step5,
+                            getResources().getString(R.string.recycler_view_step5));
                 }
 
             }
@@ -198,7 +203,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step6);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step6,
+                            getResources().getString(R.string.recycler_view_step6));
                 }
 
             }
@@ -221,7 +227,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step7);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step7,
+                            getResources().getString(R.string.recycler_view_step5));
                 }
 
             }
@@ -244,7 +251,8 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                     ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else {
-                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step8);
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step8,
+                            getResources().getString(R.string.recycler_view_step6));
                 }
 
             }

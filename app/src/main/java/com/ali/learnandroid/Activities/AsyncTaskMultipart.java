@@ -59,7 +59,8 @@ public class AsyncTaskMultipart extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskMultipart.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskMultipart.this, R.drawable.background_multipart_step1);
+                    ZoomImage.show(AsyncTaskMultipart.this, R.drawable.background_multipart_step1,
+                            getResources().getString(R.string.background_multipart_step1));
                 }
             }
         });
@@ -82,7 +83,8 @@ public class AsyncTaskMultipart extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskMultipart.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskMultipart.this, R.drawable.background_multipart_step2);
+                    ZoomImage.show(AsyncTaskMultipart.this, R.drawable.background_multipart_step2,
+                            getResources().getString(R.string.background_multipart_step2));
                 }
             }
         });

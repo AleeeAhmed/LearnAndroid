@@ -62,7 +62,8 @@ public class PickerDate extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerDate.this, R.drawable.date_picker_step1);
+                    ZoomImage.show(PickerDate.this, R.drawable.date_picker_step1,
+                            getResources().getString(R.string.pick_date_step1));
                 }
             }
         });
@@ -85,7 +86,8 @@ public class PickerDate extends AppCompatActivity {
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
-                    ZoomImage.show(PickerDate.this, R.drawable.date_picker_step2);
+                    ZoomImage.show(PickerDate.this, R.drawable.date_picker_step2,
+                            getResources().getString(R.string.pick_date_step2));
                 }
 
             }

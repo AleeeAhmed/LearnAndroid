@@ -48,7 +48,8 @@ public class AnimationLibrary extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationLibrary.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationLibrary.this, R.drawable.animations_lib);
+                    ZoomImage.show(AnimationLibrary.this, R.drawable.animations_lib,
+                            getResources().getString(R.string.animation_lib));
                 }
 
             }

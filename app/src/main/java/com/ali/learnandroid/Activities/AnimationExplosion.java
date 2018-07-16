@@ -59,7 +59,8 @@ public class AnimationExplosion extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationExplosion.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationExplosion.this, R.drawable.explosion_anim_step1);
+                    ZoomImage.show(AnimationExplosion.this, R.drawable.explosion_anim_step1,
+                            getResources().getString(R.string.explosion_step1));
                 }
 
             }
@@ -82,7 +83,8 @@ public class AnimationExplosion extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationExplosion.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationExplosion.this, R.drawable.explosion_anim_step2);
+                    ZoomImage.show(AnimationExplosion.this, R.drawable.explosion_anim_step2,
+                            getResources().getString(R.string.explosion_step2));
                 }
             }
         });

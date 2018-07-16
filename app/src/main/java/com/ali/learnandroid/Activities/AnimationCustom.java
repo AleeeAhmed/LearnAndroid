@@ -109,7 +109,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_apply);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_apply,
+                            getResources().getString(R.string.animation_apply));
                 }
 
             }
@@ -154,7 +155,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_in);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_in,
+                            getResources().getString(R.string.animation_fade_in));
                 }
 
             }
@@ -177,7 +179,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_out);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_out,
+                            getResources().getString(R.string.animation_fade_out));
                 }
 
             }
@@ -200,7 +203,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_in);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_in,
+                            getResources().getString(R.string.animation_zoom_in));
                 }
 
             }
@@ -223,7 +227,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_out);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_out,
+                            getResources().getString(R.string.animation_zoom_out));
                 }
 
             }
@@ -246,7 +251,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_up);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_up,
+                            getResources().getString(R.string.animation_slide_up));
                 }
 
             }
@@ -269,7 +275,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_down);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_down,
+                            getResources().getString(R.string.animation_slide_down));
                 }
 
             }
@@ -292,7 +299,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_bounce);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_bounce,
+                            getResources().getString(R.string.animation_bounce));
                 }
 
             }
@@ -315,7 +323,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_move);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_move,
+                            getResources().getString(R.string.animation_move));
                 }
 
             }
@@ -338,7 +347,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_rotate);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_rotate,
+                            getResources().getString(R.string.animation_rotate));
                 }
 
             }
@@ -361,7 +371,8 @@ public class AnimationCustom extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AnimationCustom.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_sequential);
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_sequential,
+                            getResources().getString(R.string.animation_sequential));
                 }
             }
         });
