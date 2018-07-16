@@ -3,10 +3,11 @@ package com.ali.learnandroid.Activities;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -102,7 +103,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivJava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_apply);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_apply);
+                }
+
             }
         });
         ivJava.setOnLongClickListener(new View.OnLongClickListener() {
@@ -117,7 +126,14 @@ public class AnimationCustom extends AppCompatActivity {
         ivXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_create_z);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                ActivityCompat.requestPermissions(AnimationCustom.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+            } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_create_z);
+            }
             }
         });
         ivXml.setOnLongClickListener(new View.OnLongClickListener() {
@@ -132,7 +148,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivFadeIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_in);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_in);
+                }
+
             }
         });
         ivFadeIn.setOnLongClickListener(new View.OnLongClickListener() {
@@ -147,7 +171,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivFadeOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_out);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animation_fade_out);
+                }
+
             }
         });
         ivFadeOut.setOnLongClickListener(new View.OnLongClickListener() {
@@ -162,7 +194,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivZoomIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_in);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_in);
+                }
+
             }
         });
         ivZoomIn.setOnLongClickListener(new View.OnLongClickListener() {
@@ -177,7 +217,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivZoomOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_out);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_zoom_out);
+                }
+
             }
         });
         ivZoomOut.setOnLongClickListener(new View.OnLongClickListener() {
@@ -192,7 +240,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivSlideUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_up);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_up);
+                }
+
             }
         });
         ivSlideUp.setOnLongClickListener(new View.OnLongClickListener() {
@@ -207,7 +263,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivSlideDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_down);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_slide_down);
+                }
+
             }
         });
         ivSlideDown.setOnLongClickListener(new View.OnLongClickListener() {
@@ -222,7 +286,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivBounce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_bounce);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_bounce);
+                }
+
             }
         });
         ivBounce.setOnLongClickListener(new View.OnLongClickListener() {
@@ -237,7 +309,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivMove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_move);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_move);
+                }
+
             }
         });
         ivMove.setOnLongClickListener(new View.OnLongClickListener() {
@@ -252,7 +332,15 @@ public class AnimationCustom extends AppCompatActivity {
         ivRotate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_rotate);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_rotate);
+                }
+
             }
         });
         ivRotate.setOnLongClickListener(new View.OnLongClickListener() {
@@ -267,7 +355,14 @@ public class AnimationCustom extends AppCompatActivity {
         ivSequential.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(AnimationCustom.this, R.drawable.animations_sequential);
+                if (ContextCompat.checkSelfPermission(AnimationCustom.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(AnimationCustom.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+                } else {
+                    ZoomImage.show(AnimationCustom.this, R.drawable.animations_sequential);
+                }
             }
         });
         ivSequential.setOnLongClickListener(new View.OnLongClickListener() {
@@ -418,15 +513,9 @@ public class AnimationCustom extends AppCompatActivity {
                             "Please allow Storage Permission to view and share images.",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toasty.error(getApplicationContext(),
-                            "You have to allow Storage Permission to view and share images.\n" +
-                                    "Goto Permissions and allow the Storage permission.",
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-                    intent.setData(uri);
-                    startActivity(intent);
+                    String message = "Storage Permission required."
+                            +"Goto Permissions and allow the Storage permission.";
+                    Alert_Dialog_Settings.showDialog(this,"Permission", message);
                 }
             }
         }

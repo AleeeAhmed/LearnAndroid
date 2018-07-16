@@ -4,7 +4,7 @@ import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -58,9 +58,8 @@ public class PickerDate extends AppCompatActivity {
             public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(getApplicationContext(),
                         Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
                     ActivityCompat.requestPermissions(PickerDate.this,
-                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PermissionGranter.Allow_Write_Storage);
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
 
                 } else {
                     ZoomImage.show(PickerDate.this, R.drawable.date_picker_step1);
@@ -80,7 +79,15 @@ public class PickerDate extends AppCompatActivity {
         ivCodeStep2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerDate.this, R.drawable.date_picker_step2);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(PickerDate.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(PickerDate.this, R.drawable.date_picker_step2);
+                }
+
             }
         });
 
@@ -115,15 +122,9 @@ public class PickerDate extends AppCompatActivity {
                             "Please allow Storage Permission to view and share images.",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toasty.error(getApplicationContext(),
-                            "You have to allow Storage Permission to view and share images.\n" +
-                                    "Goto Permissions and allow the Storage permission.",
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-                    intent.setData(uri);
-                    startActivity(intent);
+                    String message = "Storage Permission required."
+                            +"Goto Permissions and allow the Storage permission.";
+                    Alert_Dialog_Settings.showDialog(this,"Permission", message);
                 }
             }
         }

@@ -2196,7 +2196,7 @@
 <![CDATA[
 
         import android.content.Context; \n
-        import android.net.Uri; \n
+        import com.ali.learnandroid.Utils.Alert_Dialog_Settings; \n
         import android.view.LayoutInflater; \n
         import android.view.View; \n
         import android.view.ViewGroup; \n

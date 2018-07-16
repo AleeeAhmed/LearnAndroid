@@ -4,10 +4,11 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -77,7 +78,14 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step1);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step1);
+                }
             }
         });
         ivCodeStep1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -92,7 +100,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step2);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step2);
+                }
+
             }
         });
         ivCodeStep2.setOnLongClickListener(new View.OnLongClickListener() {
@@ -107,7 +123,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step3);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step3);
+                }
+
             }
         });
         ivCodeStep3.setOnLongClickListener(new View.OnLongClickListener() {
@@ -122,7 +146,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step4);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step4);
+                }
+
             }
         });
         ivCodeStep4.setOnLongClickListener(new View.OnLongClickListener() {
@@ -137,7 +169,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step5);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step5);
+                }
+
             }
         });
         ivCodeStep5.setOnLongClickListener(new View.OnLongClickListener() {
@@ -152,7 +192,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step6);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step6);
+                }
+
             }
         });
         ivCodeStep6.setOnLongClickListener(new View.OnLongClickListener() {
@@ -167,7 +215,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step7);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step7);
+                }
+
             }
         });
         ivCodeStep7.setOnLongClickListener(new View.OnLongClickListener() {
@@ -182,7 +238,15 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
         ivCodeStep8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step8);
+                if (ContextCompat.checkSelfPermission(ExtrasRecyclerView.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(ExtrasRecyclerView.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(ExtrasRecyclerView.this, R.drawable.recycler_view_step8);
+                }
+
             }
         });
         ivCodeStep8.setOnLongClickListener(new View.OnLongClickListener() {
@@ -200,7 +264,6 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                 showDialog();
             }
         });
-
 
     }
 
@@ -255,15 +318,9 @@ public class ExtrasRecyclerView extends AppCompatActivity implements MyAdapterEx
                             "Please allow Storage Permission to view and share images.",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toasty.error(getApplicationContext(),
-                            "You have to allow Storage Permission to view and share images.\n" +
-                                    "Goto Permissions and allow the Storage permission.",
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-                    intent.setData(uri);
-                    startActivity(intent);
+                    String message = "Storage Permission required."
+                            +"Goto Permissions and allow the Storage permission.";
+                    Alert_Dialog_Settings.showDialog(this,"Permission", message);
                 }
             }
         }

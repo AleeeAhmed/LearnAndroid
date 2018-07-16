@@ -5,11 +5,12 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
 import android.os.AsyncTask;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,7 +47,14 @@ public class ToolbarRefresh extends AppCompatActivity {
         ivCodeStep1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ToolbarRefresh.this, R.drawable.popup_butn_menu_gif_images);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(ToolbarRefresh.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(ToolbarRefresh.this, R.drawable.popup_butn_menu_gif_images);
+                }
             }
         });
         ivCodeStep1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -62,7 +70,15 @@ public class ToolbarRefresh extends AppCompatActivity {
         ivCodeStep2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ToolbarRefresh.this, R.drawable.toolbar_refresh_step1);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(ToolbarRefresh.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(ToolbarRefresh.this, R.drawable.toolbar_refresh_step1);
+                }
+
             }
         });
         ivCodeStep2.setOnLongClickListener(new View.OnLongClickListener() {
@@ -77,7 +93,15 @@ public class ToolbarRefresh extends AppCompatActivity {
         ivCodeStep3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ToolbarRefresh.this, R.drawable.toolbar_refresh_step2);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(ToolbarRefresh.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(ToolbarRefresh.this, R.drawable.toolbar_refresh_step2);
+                }
+
             }
         });
         ivCodeStep3.setOnLongClickListener(new View.OnLongClickListener() {
@@ -92,7 +116,15 @@ public class ToolbarRefresh extends AppCompatActivity {
         ivCodeStep4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(ToolbarRefresh.this, R.drawable.toolbar_refresh_step3);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(ToolbarRefresh.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(ToolbarRefresh.this, R.drawable.toolbar_refresh_step3);
+                }
+
             }
         });
         ivCodeStep4.setOnLongClickListener(new View.OnLongClickListener() {
@@ -123,7 +155,7 @@ public class ToolbarRefresh extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-                case R.id.menu_refresh:
+            case R.id.menu_refresh:
                 Toast.makeText(this, "Refreshing..", Toast.LENGTH_SHORT).show();
                 menuItem = item;
                 menuItem.setActionView(R.layout.sample_progress_bar);
@@ -180,15 +212,9 @@ public class ToolbarRefresh extends AppCompatActivity {
                             "Please allow Storage Permission to view and share images.",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toasty.error(getApplicationContext(),
-                            "You have to allow Storage Permission to view and share images.\n" +
-                                    "Goto Permissions and allow the Storage permission.",
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-                    intent.setData(uri);
-                    startActivity(intent);
+                    String message = "Storage Permission required."
+                            +"Goto Permissions and allow the Storage permission.";
+                    Alert_Dialog_Settings.showDialog(this,"Permission", message);
                 }
             }
         }

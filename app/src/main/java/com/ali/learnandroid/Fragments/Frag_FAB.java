@@ -6,13 +6,16 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
+
+import com.ali.learnandroid.Activities.ToolbarSearch;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,7 +76,14 @@ public class Frag_FAB extends Fragment {
         ivCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(getActivity(), R.drawable.fab_code);
+                if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(getActivity(), R.drawable.fab_code);
+                }
             }
         });
 
@@ -146,15 +156,9 @@ public class Frag_FAB extends Fragment {
                             "Please allow Storage Permission to view and share images.",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toasty.error(getActivity(),
-                            "You have to allow Storage Permission to view and share images.\n" +
-                                    "Goto Permissions and allow the Storage permission.",
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getActivity().getPackageName(), null);
-                    intent.setData(uri);
-                    getActivity().startActivity(intent);
+                    String message = "Storage Permission required."
+                            +"Goto Permissions and allow the Storage permission.";
+                    Alert_Dialog_Settings.showDialog(getActivity(),"Permission", message);
                 }
             }
         }

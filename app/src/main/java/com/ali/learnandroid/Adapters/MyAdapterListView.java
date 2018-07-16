@@ -1,6 +1,8 @@
 package com.ali.learnandroid.Adapters;
 
 import android.content.Context;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
+
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;

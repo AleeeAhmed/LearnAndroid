@@ -3,6 +3,8 @@ package com.ali.learnandroid.Activities;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
+
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
@@ -59,7 +61,15 @@ public class PickerGalleryyFile extends AppCompatActivity {
         ivStep1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step1);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(PickerGalleryyFile.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step1);
+                }
+
             }
         });
 
@@ -75,7 +85,15 @@ public class PickerGalleryyFile extends AppCompatActivity {
         ivStep2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step2);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(PickerGalleryyFile.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step2);
+                }
+
             }
         });
 
@@ -91,7 +109,14 @@ public class PickerGalleryyFile extends AppCompatActivity {
         ivStep3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step3);
+                if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(PickerGalleryyFile.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+
+                } else {
+                    ZoomImage.show(PickerGalleryyFile.this, R.drawable.file_picker_step3);
+                }
             }
         });
 
@@ -147,7 +172,7 @@ public class PickerGalleryyFile extends AppCompatActivity {
                         intent.setData(uri);
                         startActivity(intent);
                     }
-            }}
+                }}
             case 100: {
                 if (grantResults.length > 0 &&
                         grantResults[0] == PackageManager.PERMISSION_GRANTED) {

@@ -5,11 +5,14 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,7 +53,14 @@ public class PickerCameraImage extends AppCompatActivity {
         ivStep1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step1);
+                if (ContextCompat.checkSelfPermission(PickerCameraImage.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(PickerCameraImage.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step1);
+                }
             }
         });
 
@@ -66,7 +76,15 @@ public class PickerCameraImage extends AppCompatActivity {
         ivStep2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step2);
+                if (ContextCompat.checkSelfPermission(PickerCameraImage.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(PickerCameraImage.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step2);
+                }
+
             }
         });
 
@@ -82,7 +100,15 @@ public class PickerCameraImage extends AppCompatActivity {
         ivStep3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step3);
+                if (ContextCompat.checkSelfPermission(PickerCameraImage.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(PickerCameraImage.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step3);
+                }
+
             }
         });
 
@@ -98,7 +124,15 @@ public class PickerCameraImage extends AppCompatActivity {
         ivStep4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step4);
+                if (ContextCompat.checkSelfPermission(PickerCameraImage.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(PickerCameraImage.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                } else {
+                    ZoomImage.show(PickerCameraImage.this, R.drawable.image_picker_step4);
+                }
+
             }
         });
 
@@ -147,6 +181,7 @@ public class PickerCameraImage extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull
+
             String[] permissions, @NonNull int[] grantResults) {
 
         if (requestCode == 100) {
@@ -165,15 +200,9 @@ public class PickerCameraImage extends AppCompatActivity {
                             "Please allow Storage Permission to view and share images.",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toasty.error(getApplicationContext(),
-                            "You have to allow Storage Permission to view and share images.\n" +
-                                    "Goto Permissions and allow the Storage permission.",
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-                    intent.setData(uri);
-                    startActivity(intent);
+                    String message = "Storage Permission required."
+                            +"Goto Permissions and allow the Storage permission.";
+                    Alert_Dialog_Settings.showDialog(this,"Permission", message);
                 }
             }
         }
