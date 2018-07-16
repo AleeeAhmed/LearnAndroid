@@ -3,7 +3,9 @@ package com.ali.learnandroid.Activities;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
@@ -24,9 +26,11 @@ import com.nbsp.materialfilepicker.MaterialFilePicker;
 import com.nbsp.materialfilepicker.ui.FilePickerActivity;
 import com.snatik.storage.Storage;
 
+import es.dmoral.toasty.Toasty;
+
 public class PickerGalleryyFile extends AppCompatActivity {
 
-    private final int PERMISSIONS_REQUEST_CODE = 100;
+    private final int PERMISSIONS_REQUEST_CODE = 1000;
     private final int FILE_PICKER_REQUEST_CODE = 200;
     Button btnDemo;
     ImageView ivStep1,ivStep2, ivStep3;
@@ -106,7 +110,7 @@ public class PickerGalleryyFile extends AppCompatActivity {
     private void checkPermissionsAndOpenFilePicker() {
         String permission = Manifest.permission.READ_EXTERNAL_STORAGE;
         if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
+            if (!ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
                 Toast.makeText(this, "Allow external storage reading", Toast.LENGTH_SHORT).show();
             } else {
                 ActivityCompat.requestPermissions(this, new String[]{permission}, PERMISSIONS_REQUEST_CODE);
@@ -124,8 +128,52 @@ public class PickerGalleryyFile extends AppCompatActivity {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     openFilePicker();
-                } else {
-                    Toast.makeText(this, "Allow external storage reading", Toast.LENGTH_SHORT).show();
+                }  else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(PickerGalleryyFile.this,
+                            Manifest.permission.READ_EXTERNAL_STORAGE)) {
+
+                        Toasty.warning(getApplicationContext(),
+                                "Please allow Storage Permission to pick file.",
+                                Toast.LENGTH_LONG).show();
+                    } else {
+                        Toasty.error(getApplicationContext(),
+                                "You have to allow Storage Permission to pick file.\n" +
+                                        "Goto Permissions and allow the Storage permission.",
+                                Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent();
+                        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package", getPackageName(), null);
+                        intent.setData(uri);
+                        startActivity(intent);
+                    }
+            }}
+            case 100: {
+                if (grantResults.length > 0 &&
+                        grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    Toasty.success(this, "Permission allowed." +
+                            "You can now view and share images. Thank you.", Toast.LENGTH_SHORT).show();
+
+                } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(PickerGalleryyFile.this,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+                        Toasty.warning(getApplicationContext(),
+                                "Please allow Storage Permission to view and share images.",
+                                Toast.LENGTH_LONG).show();
+                    } else {
+                        Toasty.error(getApplicationContext(),
+                                "You have to allow Storage Permission to view and share images.\n" +
+                                        "Goto Permissions and allow the Storage permission.",
+                                Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent();
+                        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package", getPackageName(), null);
+                        intent.setData(uri);
+                        startActivity(intent);
+                    }
                 }
             }
         }

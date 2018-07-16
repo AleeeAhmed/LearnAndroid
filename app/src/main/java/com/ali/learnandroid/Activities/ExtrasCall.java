@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ import android.widget.Toast;
 import com.ali.learnandroid.R;
 import com.ali.learnandroid.Utils.CopyToClipBoard;
 import com.ali.learnandroid.Utils.ZoomImage;
+
+import es.dmoral.toasty.Toasty;
 
 public class ExtrasCall extends AppCompatActivity {
 
@@ -167,12 +171,56 @@ public class ExtrasCall extends AppCompatActivity {
             if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 String phoneNo = etPhone.getText().toString();
                 Call(phoneNo);
-            }
-            else {
-                Toast.makeText(ExtrasCall.this,
-                        "Permission denied.", Toast.LENGTH_SHORT).show();
+            }else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale(ExtrasCall.this,
+                        Manifest.permission.CALL_PHONE)) {
+
+                    Toasty.warning(getApplicationContext(),
+                            "Please allow Call Permission make a call.",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Toasty.error(getApplicationContext(),
+                            "You have to allow Call Permission to make a call.\n" +
+                                    "Goto Permissions and allow the Call permission.",
+                            Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    Uri uri = Uri.fromParts("package", getPackageName(), null);
+                    intent.setData(uri);
+                    startActivity(intent);
+                }
             }
         }
+        if (requestCode == 100) {
+            if (grantResults.length > 0 &&
+                    grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                Toasty.success(this, "Permission allowed." +
+                        "You can now view and share images. Thank you.", Toast.LENGTH_SHORT).show();
+
+            } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale(ExtrasCall.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+                    Toasty.warning(getApplicationContext(),
+                            "Please allow Storage Permission to view and share images.",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Toasty.error(getApplicationContext(),
+                            "You have to allow Storage Permission to view and share images.\n" +
+                                    "Goto Permissions and allow the Storage permission.",
+                            Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    Uri uri = Uri.fromParts("package", getPackageName(), null);
+                    intent.setData(uri);
+                    startActivity(intent);
+                }
+            }
+        }
+
     }
 
 
@@ -194,4 +242,5 @@ public class ExtrasCall extends AppCompatActivity {
             finish();
         }
     }
+
 }

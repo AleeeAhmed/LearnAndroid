@@ -8,6 +8,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +28,8 @@ import android.widget.Toast;
 import com.ali.learnandroid.R;
 import com.ali.learnandroid.Utils.CopyToClipBoard;
 import com.ali.learnandroid.Utils.ZoomImage;
+
+import es.dmoral.toasty.Toasty;
 
 public class ExtrasSendSms extends AppCompatActivity {
 
@@ -316,11 +321,53 @@ public class ExtrasSendSms extends AppCompatActivity {
                 String phoneNo = tvPhoneNo.getText().toString();
                 String message = tvMessage.getText().toString();
                 sendSMS(phoneNo,message);
+            } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale(ExtrasSendSms.this,
+                        Manifest.permission.SEND_SMS)) {
+                    Toasty.warning(getApplicationContext(),
+                            "Please allow SMS permission send and receive SMS.",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Toasty.error(getApplicationContext(),
+                            "You have to allow SMS permission to send and receive SMS.\n" +
+                                    "Goto Permissions and allow the SMS permission.",
+                            Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    Uri uri = Uri.fromParts("package", getPackageName(), null);
+                    intent.setData(uri);
+                    startActivity(intent);
+                }
             }
-            else
-            {
-                Toast.makeText(ExtrasSendSms.this,
-                        "Permission denied.", Toast.LENGTH_SHORT).show();
+        }
+
+        if (requestCode == 100) {
+            if (grantResults.length > 0 &&
+                    grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                Toasty.success(this, "Permission allowed." +
+                        "You can now view and share images. Thank you.", Toast.LENGTH_SHORT).show();
+
+            } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale(ExtrasSendSms.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+                    Toasty.warning(getApplicationContext(),
+                            "Please allow Storage Permission to view and share images.",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Toasty.error(getApplicationContext(),
+                            "You have to allow Storage Permission to view and share images.\n" +
+                                    "Goto Permissions and allow the Storage permission.",
+                            Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    Uri uri = Uri.fromParts("package", getPackageName(), null);
+                    intent.setData(uri);
+                    startActivity(intent);
+                }
             }
         }
     }
