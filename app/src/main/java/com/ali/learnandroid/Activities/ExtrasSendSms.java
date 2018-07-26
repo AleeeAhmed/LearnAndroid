@@ -346,7 +346,7 @@ public class ExtrasSendSms extends AppCompatActivity {
     }
 
     //---receives an SMS message from another device---
-    public class SmsReceiver extends BroadcastReceiver {
+    public static class SmsReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent)

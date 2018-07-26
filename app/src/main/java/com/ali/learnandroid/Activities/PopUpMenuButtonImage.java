@@ -1,10 +1,9 @@
 package com.ali.learnandroid.Activities;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
-import android.provider.Settings;
+
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -129,7 +128,7 @@ public class PopUpMenuButtonImage extends AppCompatActivity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getItemId() == R.id.changePassword) {
+                        if (item.getItemId() == R.id.change_password) {
                             Toast.makeText(PopUpMenuButtonImage.this,
                                     "Change Password Clicked..", Toast.LENGTH_SHORT).show();
                             return true;

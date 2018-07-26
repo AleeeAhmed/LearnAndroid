@@ -1,10 +1,9 @@
 package com.ali.learnandroid.Activities;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import com.ali.learnandroid.Utils.Alert_Dialog_Settings;
-import android.provider.Settings;
+
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -129,7 +128,7 @@ public class PopUpMenuToolbar extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        if (id == R.id.changePassword) {
+        if (id == R.id.change_password) {
             Toast.makeText(this, "Change Password Clicked..", Toast.LENGTH_SHORT).show();
             return true;
         }

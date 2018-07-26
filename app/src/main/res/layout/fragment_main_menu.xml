@@ -20,7 +20,7 @@
         <ScrollView
             android:id="@+id/rr"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:visibility="visible"
             android:padding="11dp"
@@ -226,8 +226,8 @@
 
             </RelativeLayout>
         </ScrollView>
-    </RelativeLayout>
 
+    </RelativeLayout>
 
     <android.support.v7.widget.CardView
         android:id="@+id/cvMainMenu"
@@ -264,6 +264,5 @@
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
-
 
 </RelativeLayout>

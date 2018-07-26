@@ -1,7 +1,6 @@
 package com.ali.learnandroid.Fragments;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -18,8 +17,6 @@ import android.widget.Toast;
 
 import com.ali.learnandroid.R;
 import com.ali.learnandroid.Utils.ExitDialog;
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 
 
 /**
@@ -86,9 +83,9 @@ public class Frag_MainMenu extends Fragment {
         //applying animation on all buttons
         for (Button button : allButtons) {
             button.startAnimation(animZoomInRotate);
-/*            YoYo.with(Techniques.FadeInLeft)
-                    .duration(3100)
-                    .playOn(button);*/
+    /*            YoYo.with(Techniques.FadeInLeft)
+                        .duration(3100)
+                        .playOn(button);*/
         }
 
 
@@ -326,8 +323,8 @@ public class Frag_MainMenu extends Fragment {
         animZoomInRotate = AnimationUtils.loadAnimation(getActivity(),R.anim.zoom_in_rotate);
         animMove = AnimationUtils.loadAnimation(getActivity(),R.anim.move);
         animBounce = AnimationUtils.loadAnimation(getActivity(),R.anim.bounce);
-        animMainMenu1 = AnimationUtils.loadAnimation(getActivity(),R.anim.main_menu_anim1);
-        animMainMenu2 = AnimationUtils.loadAnimation(getActivity(),R.anim.main_menu_anim2);
+        animMainMenu1 = AnimationUtils.loadAnimation(getActivity(),R.anim.main_menu_anim_one);
+        animMainMenu2 = AnimationUtils.loadAnimation(getActivity(),R.anim.main_menu_anim_two);
 
     }
 
