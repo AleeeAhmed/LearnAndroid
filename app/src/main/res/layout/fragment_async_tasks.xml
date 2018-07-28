@@ -77,6 +77,20 @@
             android:layout_marginTop="17dp"
             />
 
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnRetrofitLibrary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retrofit"
+            android:textAllCaps="false"
+            android:padding="11dp"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/btnAsyncTaskMultipart"
+            android:layout_marginTop="17dp"
+            />
+
     </RelativeLayout>
 
 </RelativeLayout>

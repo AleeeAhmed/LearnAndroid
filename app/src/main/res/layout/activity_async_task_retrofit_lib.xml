@@ -7,10 +7,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.AsyncTaskPOST">
+    tools:context=".Activities.AsyncTaskRetrofitLib">
+
+
 
     <RelativeLayout
-        android:id="@+id/RL_AsyncTasksPOST"
+        android:id="@+id/RL_AsyncTasksRetrofit"
         android:padding="11dp"
         android:background="@color/colorBlackTransparent"
         android:layout_width="match_parent"
@@ -30,7 +32,7 @@
             android:id="@+id/tvDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="POST method is used to send results to server."
+            android:text="Retrofit Library is best when you want to upload or retrieve data from server."
             android:layout_below="@+id/tvDescLabel"
             android:textColor="@color/colorWhite"
             />
@@ -63,19 +65,19 @@
             android:id="@+id/tvDescStep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="In below image you can see the methods involved during this process."
+            android:text="Add these dependencies to your app level build.gradle."
             android:layout_below="@+id/tvStep1"
             android:layout_marginTop="3dp"
             android:textColor="@color/colorWhite"
             />
 
         <ImageView
-            android:id="@+id/ivCodeAsyncTaskPostStep1"
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep1"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="80dp"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvDescStep1"
-            android:src="@drawable/background_post_step1"
+            android:src="@drawable/retrofit_step1"
             android:contentDescription="@string/app_name"
             />
 
@@ -87,7 +89,7 @@
             android:text="@string/step_2"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_below="@+id/ivCodeAsyncTaskPostStep1"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep1"
             android:layout_marginTop="3dp"
             />
 
@@ -96,19 +98,19 @@
             android:id="@+id/tvDescStep2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="We have created an interface so that we implement it in MainClass to get back results."
+            android:text="Create a new java class and paste below code. To create an instance of Retrofit."
             android:layout_below="@+id/tvStep2"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="3dp"
             />
 
         <ImageView
-            android:id="@+id/ivCodeAsyncTaskPostStep2"
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep2"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvDescStep2"
-            android:src="@drawable/background_post_step2"
+            android:src="@drawable/retrofit_step2"
             android:contentDescription="@string/app_name"
             />
 
@@ -120,7 +122,7 @@
             android:text="@string/step_3"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_below="@+id/ivCodeAsyncTaskPostStep2"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep2"
             android:layout_marginTop="3dp"
             />
 
@@ -129,19 +131,19 @@
             android:id="@+id/tvDescStep3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="doInBackground method do the main thing, this method runs in a background and do the job."
+            android:text="Create an interface and paste this code. All the methods used from uploading/ receiving data from server are here.."
             android:layout_below="@+id/tvStep3"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="3dp"
             />
 
         <ImageView
-            android:id="@+id/ivCodeAsyncTaskPostStep3"
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep3"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="100dp"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvDescStep3"
-            android:src="@drawable/background_post_step3"
+            android:src="@drawable/retrofit_step3"
             android:contentDescription="@string/app_name"
             />
 
@@ -149,11 +151,12 @@
             android:id="@+id/tvStep4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/step_4"
+            android:text="POST - lets post some data to server."
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_below="@+id/ivCodeAsyncTaskPostStep3"
-            android:layout_marginTop="3dp"
+            android:textSize="17sp"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep3"
+            android:layout_marginTop="11dp"
             />
 
 
@@ -161,19 +164,31 @@
             android:id="@+id/tvDescStep4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="onPostExecute method is called when doInBackground method has completed its work. It is used to send results back to MainClass."
             android:layout_below="@+id/tvStep4"
+            android:textStyle="bold"
+            android:text="@string/step_4"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="7dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep4_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create a new class. this class holds variables and  get methods. these will be used to upload data to server and recieve response from server"
+            android:layout_below="@+id/tvDescStep4"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="3dp"
             />
 
         <ImageView
-            android:id="@+id/ivCodeAsyncTaskPostStep4"
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep4"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="7dp"
-            android:layout_below="@+id/tvDescStep4"
-            android:src="@drawable/background_post_step4"
+            android:layout_below="@+id/tvDescStep4_"
+            android:src="@drawable/retrofit_step4"
             android:contentDescription="@string/app_name"
             />
 
@@ -184,7 +199,7 @@
             android:text="@string/step_5"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_below="@+id/ivCodeAsyncTaskPostStep4"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep4"
             android:layout_marginTop="3dp"
             />
 
@@ -193,18 +208,18 @@
             android:id="@+id/tvDescStep5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="In .java class do like this."
+            android:text="Call this method in your java class to upload data and fetch response."
             android:layout_below="@+id/tvStep5"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="3dp"
             />
 
         <ImageView
-            android:id="@+id/ivCodeAsyncTaskPostStep5"
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep5"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_below="@+id/tvDescStep5"
-            android:src="@drawable/background_post_step5_"
+            android:src="@drawable/retrofit_step5"
             android:contentDescription="@string/app_name"
             android:layout_marginTop="7dp"
             />
@@ -213,51 +228,114 @@
             android:id="@+id/tvStep6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Full Code of BackgroundProcessPOST."
+            android:text="GET - used to fetch data from server in json."
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_below="@+id/ivCodeAsyncTaskPostStep5"
-            android:layout_marginTop="3dp"
+            android:textSize="17sp"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep5"
+            android:layout_marginTop="11dp"
             />
 
+
+        <TextView
+            android:id="@+id/tvStep6_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_6"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvStep6"
+            android:layout_marginTop="7dp"
+            />
 
         <TextView
             android:id="@+id/tvDescStep6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create the new java class and paste the code."
-            android:layout_below="@+id/tvStep6"
+            android:text="Create a new class.  this class holds variables and  get methods. these will be used to retrieve data from server and then show it in a list"
+            android:layout_below="@+id/tvStep6_"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="3dp"
             />
 
         <ImageView
-            android:id="@+id/ivCodeAsyncTaskPostStep6"
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep6"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_below="@+id/tvDescStep6"
-            android:src="@drawable/background_post_step6_"
+            android:src="@drawable/retrofit_step6"
             android:contentDescription="@string/app_name"
             android:layout_marginTop="7dp"
             />
 
 
-        <info.hoang8f.widget.FButton
-            android:id="@+id/btnCopyCodeAsyncTaskPost"
+        <TextView
+            android:id="@+id/tvStep7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Copy Code"
-            android:textAllCaps="false"
-            android:padding="11dp"
-            android:background="@color/colorBlack"
+            android:text="@string/step_7"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_below="@+id/ivCodeAsyncTaskPostStep6"
-            android:layout_marginTop="17dp"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep6"
+            android:layout_marginTop="3dp"
             />
 
 
+        <TextView
+            android:id="@+id/tvDescStep7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create the new java class extend it with BaseAdapter. Adapter will be used to display data in a RecyclerView "
+            android:layout_below="@+id/tvStep7"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="3dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep7"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep7"
+            android:src="@drawable/retrofit_step7"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="7dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvStep8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step_8"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_below="@+id/ivCodeAsyncTaskRetrofitStep7"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvDescStep8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In onCreate, paste this code to get data from server."
+            android:layout_below="@+id/tvStep8"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="3dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivCodeAsyncTaskRetrofitStep8"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvDescStep8"
+            android:src="@drawable/retrofit_step8"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="7dp"
+            />
+
     </RelativeLayout>
+
 
 
 </ScrollView>

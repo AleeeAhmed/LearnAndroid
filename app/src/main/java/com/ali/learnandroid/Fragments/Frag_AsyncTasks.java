@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.ali.learnandroid.Activities.AsyncTaskGET;
 import com.ali.learnandroid.Activities.AsyncTaskMultipart;
 import com.ali.learnandroid.Activities.AsyncTaskPOST;
+import com.ali.learnandroid.Activities.AsyncTaskRetrofitLib;
 import com.ali.learnandroid.Activities.Home;
 import com.ali.learnandroid.R;
 
@@ -27,7 +28,7 @@ import com.ali.learnandroid.R;
 public class Frag_AsyncTasks extends Fragment {
 
     View view;
-    Button btnPost, btnGet, btnMultipart;
+    Button btnPost, btnGet, btnMultipart, btnRetrofit;
     RelativeLayout rlAsyncTask;
     Animation animBounce, animSlideUp;
 
@@ -50,6 +51,7 @@ public class Frag_AsyncTasks extends Fragment {
         btnPost = view.findViewById(R.id.btnAsyncTaskPost);
         btnGet = view.findViewById(R.id.btnAsyncTaskGet);
         btnMultipart = view.findViewById(R.id.btnAsyncTaskMultipart);
+        btnRetrofit = view.findViewById(R.id.btnRetrofitLibrary);
         rlAsyncTask = view.findViewById(R.id.RL_AsyncTasks);
 
         animBounce = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce);
@@ -91,6 +93,19 @@ public class Frag_AsyncTasks extends Fragment {
                     @Override
                     public void run() {
                         startActivity(new Intent(getActivity(), AsyncTaskMultipart.class));
+                    }
+                }, 1100);
+                rlAsyncTask.startAnimation(animSlideUp);
+            }
+        });
+
+        btnRetrofit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(getActivity(), AsyncTaskRetrofitLib.class));
                     }
                 }, 1100);
                 rlAsyncTask.startAnimation(animSlideUp);

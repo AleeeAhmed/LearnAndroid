@@ -177,7 +177,10 @@
         <activity
             android:name=".Activities.ToastMessageLibrary"
             android:label="Fancy Toasts" />
-        <activity android:name=".Activities.ExtrasCardView" android:label="Card View"></activity>
+        <activity
+            android:name=".Activities.ExtrasCardView"
+            android:label="Card View" />
+        <activity android:name=".Activities.AsyncTaskRetrofitLib"></activity>
     </application>
 
 </manifest>

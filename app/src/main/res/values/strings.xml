@@ -2987,6 +2987,262 @@
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
+    <!--Retrofit Library-->
+    <string name="retrofit_step1">
+
+        //Retrofit ()  \n
+        implementation \'com.google.code.gson:gson:2.8.2\' \n
+        implementation \'com.squareup.retrofit2:retrofit:2.4.0\' \n
+        implementation \'com.squareup.retrofit2:converter-gson:2.4.0\' \nc
+
+    </string>
+    <string name="retrofit_step2">
+
+        public class RetrofitClient { \n \n
+        public static Retrofit getApi() { \n \n
+            return new Retrofit.Builder() \n
+                    .baseUrl("http://192.168.1.76/firebase_database/") \n
+                    .addConverterFactory(GsonConverterFactory.create()) \n
+                    .build(); \n \n
+        } \n
+    } \n
+
+    </string>
+    <string name="retrofit_step3">
+        <![CDATA[
+            public interface ApiInterface { \n \n
+
+            @FormUrlEncoded \n
+            @POST("uploadToken.php?") \n
+            Call<UploadToken> uploadToken(@Field("imei") String imei, \n
+                                          @Field("deviceName") String deviceName, \n
+                                          @Field("deviceToken") String deviceToken); \n \n
+
+            @GET("db.json") \n
+            Call<ArrayList<Row>> getPhotos(); \n \n
+
+        } \n
+
+        ]]>
+    </string>
+    <string name="retrofit_step4">
+
+        import com.google.gson.annotations.SerializedName; \n \n
+
+        public class UploadToken { \n \n
+
+            @SerializedName("imei") \n
+            private String imei; \n
+            @SerializedName("deviceToken") \n
+            private String deviceToken; \n
+            @SerializedName("deviceName") \n
+            private String deviceName; \n \n
+
+            @SerializedName("success") \n
+            private String success; \n
+            @SerializedName("message") \n
+            private String message; \n \n
+
+
+            public UploadToken(String imei, String deviceToken, String deviceName) { \n
+                this.imei = imei; \n
+                this.deviceToken = deviceToken; \n
+                this.deviceName = deviceName; \n \n
+            } \n \n
+
+            public String getSuccess() { \n
+                return success; \n
+            } \n
+            public String getMessage() { \n
+                return message; \n
+            } \n \n
+
+            public String getImei() { \n
+                return imei; \n
+            } \n
+
+            public String getDeviceToken() { \n
+                return deviceToken; \n
+            } \n
+
+            public String getDeviceName() { \n
+                return deviceName; \n
+            } \n \n
+        } \n
+
+    </string>
+    <string name="retrofit_step5">
+        <![CDATA[
+            private void uploadToken() { \n
+                imei = telephonyManager.getDeviceId(); \n
+                deviceName = Build.MODEL; \n
+                ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class); \n
+                uploadToken = new UploadToken(imei, FirebaseInstanceId.getInstance().getToken(), deviceName); \n
+                Call<UploadToken> uploadTokenCall = apiInterface.uploadToken( \n
+                        uploadToken.getImei(), \n
+                        uploadToken.getDeviceName(), \n
+                        uploadToken.getDeviceToken()); \n \n
+
+                uploadTokenCall.enqueue(new Callback<UploadToken>() { \n
+                    @Override \n
+                    public void onResponse(Call<UploadToken> call, Response<UploadToken> response) { \n \n
+                        if (response.isSuccessful()) { \n \n
+                            if (response.body().getSuccess().equalsIgnoreCase("true")) { \n \n
+                                Toasty.success(Main.this,
+                                        response.body().getMessage(),
+                                        Toast.LENGTH_SHORT).show(); \n \n
+                            } else { \n
+                                Toasty.success(Main.this,
+                                        response.body().getMessage(),
+                                        Toast.LENGTH_SHORT).show(); \n \n
+                            }
+                        } else { \n \n
+                            Toasty.error(Main.this,
+                                    "Error => " + response.errorBody(), Toast.LENGTH_SHORT).show(); \n \n
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<UploadToken> call, Throwable t) {
+                        call.cancel(); \n
+                        Toasty.error(Main.this,
+                                "Error: "+ t.getLocalizedMessage(), Toast.LENGTH_SHORT).show(); \n \n
+                    } \n
+                }); \n
+            } \n
+
+        ]]>
+    </string>
+    <string name="retrofit_step6">
+
+        import com.google.gson.annotations.SerializedName; \n \n
+
+            public class Row { \n \n
+
+                @SerializedName("id") \n
+                private String Id; \n
+                @SerializedName("title") \n
+                private String Title; \n
+                @SerializedName("url") \n
+                private String ImgUrl; \n \n
+
+                public Row(String id, String title, String imgUrl) { \n
+                    Id = id; \n
+                    Title = title; \n
+                    ImgUrl = imgUrl; \n
+                } \n
+
+                public String getId() { \n
+                    return Id; \n
+                } \n
+
+                public String getTitle() { \n
+                    return Title; \n
+                } \n
+
+                public String getImgUrl() { \n
+                    return ImgUrl; \n
+                } \n \n
+
+
+            }
+    </string>
+    <string name="retrofit_step7">
+        <![CDATA[
+            public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder> { \n \n
+
+            public ArrayList<Row> arrayList; \n
+            private Context context; \n \n
+
+            AlbumAdapter(Context context, ArrayList<Row> arrayList) { \n
+                this.context = context; \n
+                this.arrayList = arrayList; \n
+            } \n
+
+            @NonNull \n
+            @Override \n
+            public AlbumViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { \n
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_albums, parent, false); \n
+                return new AlbumViewHolder(view); \n
+            } \n
+
+            @Override
+            public void onBindViewHolder(@NonNull AlbumViewHolder holder, int position) { \n
+                Picasso.get().load(arrayList.get(position).getImgUrl()) \n
+                        .placeholder(R.drawable.user).error(R.drawable.user).into(holder.imgUser); \n
+                holder.tvId.setText(arrayList.get(position).getId()); \n
+                holder.tvTitle.setText(arrayList.get(position).getTitle()); \n
+            } \n \n
+
+            @Override \n
+            public int getItemCount() { \n
+                return arrayList.size(); \n
+            } \n \n
+
+            class AlbumViewHolder extends RecyclerView.ViewHolder { \n
+                TextView tvId, tvTitle; \n \n
+                ImageView imgUser; \n \n
+
+                public AlbumViewHolder(final View itemView) { \n
+                    super(itemView); \n
+                    tvId = itemView.findViewById(R.id.tvId); \n
+                    tvTitle = itemView.findViewById(R.id.tvTitle); \n
+                    imgUser = itemView.findViewById(R.id.imgUser); \n \n
+
+                    itemView.setOnClickListener(new View.OnClickListener() { \n
+                        @Override \n
+                        public void onClick(View v) { \n
+                            Toast.makeText(context, arrayList.get(getAdapterPosition()).getTitle(), Toast.LENGTH_SHORT).show();
+                        \n \n }
+                    \n });
+                } \n
+            } \n
+        } \n
+
+         ]]>
+    </string>
+    <string name="retrofit_step8">
+         <![CDATA[
+            public class MainActivity extends AppCompatActivity { \n \n
+
+            RowAdapter myAdapter; \n
+            ArrayList<Row> dataList = new ArrayList<>(); \n
+            RecyclerView rvMain; \n \n
+
+            @Override \n
+            protected void onCreate(Bundle savedInstanceState) { \n
+                super.onCreate(savedInstanceState); \n
+                setContentView(R.layout.activity_main); \n \n
+
+                rvMain = findViewById(R.id.rvMain); \n \n
+
+                RetrofitInterface retrofitInterface = RetrofitClient.getApi().create(RetrofitInterface.class); \n
+                Call<ArrayList<Row>> photosDataCall = retrofitInterface.getPhotos(); \n
+                photosDataCall.enqueue(new Callback<ArrayList<Row>>() { \n
+                    @Override \n
+                    public void onResponse(Call<ArrayList<Row>> call, Response<ArrayList<Row>> response) { \n \n
+                        if (response.isSuccessful()) { \n
+                            dataList.clear(); \n
+                            dataList = response.body(); \n
+                            myAdapter = new RowAdapter(MainActivity.this, dataList); \n
+                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this); \n
+                            rvMain.setLayoutManager(layoutManager); \n
+                            rvMain.setItemAnimator(new DefaultItemAnimator()); \n
+                            rvMain.addItemDecoration(new DividerItemDecoration(MainActivity.this, LinearLayoutManager.VERTICAL));
+                            \n rvMain.setAdapter(myAdapter); \n
+                            myAdapter.notifyDataSetChanged(); \n
+                        } else { \n
+                            Toast.makeText(MainActivity.this, "Error: "+ response.errorBody(), Toast.LENGTH_SHORT).show();
+                         \n \n} \n
+                    } \n
+                    @Override \n
+                    public void onFailure(Call<ArrayList<Row>> call, Throwable t) { \n
+                        Toast.makeText(MainActivity.this, "Exception: "+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    \n} \n
+                }); \n
+            } \n
+
+            ]]>
+    </string>
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
