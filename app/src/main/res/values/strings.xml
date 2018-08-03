@@ -3246,26 +3246,70 @@
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
+    <!--Glide Image Loading Library-->
+    <string name="glide_step1">
+
+        //Glide image Library \n
+        implementation \'com.github.bumptech.glide:glide:4.7.1\' \n
+        annotationProcessor \'com.github.bumptech.glide:compiler:4.7.1\' \n \n
+
+    </string>
+    <string name="glide_step2">
+
+
+        ImageView imageView = findViewById(R.id.ivCode); \n \n
+
+        Glide \n
+                .with(context) \n
+                .load("www.google.com.pk/myImage.png") \n
+                .apply(new RequestOptions() \n
+                        .centerCrop() \n
+                        .fitCenter() \n
+                        .placeholder(R.drawable.ic_music_box) \n
+                        .error(R.drawable.flower)
+                ) \n
+                .into(imageView); \n \n
+
+
+    </string>
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
+
+
+    <!--*****************************************************************************************************-->
+    <!--*****************************************************************************************************-->
     <!--Picasso Image Loading Library-->
     <string name="picasso_step1">
-            //picasso image library
-            implementation 'com.squareup.picasso:picasso:2.71828'
+            //picasso image library \n
+            implementation 'com.squareup.picasso:picasso:2.71828' \n
     </string>
     <string name="picasso_step2">
-                Picasso.get()
-                //.load(R.drawable.tenor) // loading from drawable OR
-                //.load(new File("file:///android_asset/image.png")) //loading from storage path OR
-                .load("http://i.imgur.com/DvpvklR.png") //loading url image
-                .placeholder(R.drawable.custom_toast_image) // during loading this image will be set imageview
-                .error(R.drawable.logo) //if image is failed to load - this image is set to imageview
-                .resize(50, 50) //resize
-                .centerCrop()   // apply scaling OR
-                .fit()          //apply scaling OR
-                .centerInside() //scaling
-                .into(imageView);
-    </string>
-    <string name="picasso_step3">
 
+
+        ImageView imageView = findViewById(R.id.ivCode); \n \n
+
+        Picasso.get() \n
+                //.load(R.drawable.tenor) // loading from drawable OR \n
+                //.load(new File("file:///android_asset/image.png")) //loading from storage path OR \n
+                .load("http://i.imgur.com/DvpvklR.png") //loading url image \n
+                .placeholder(R.drawable.custom_toast_image) // during loading this image will be set imageview \n
+                .error(R.drawable.logo) //if image is failed to load - this image is set to imageview \n
+                .networkPolicy(NetworkPolicy.OFFLINE) //stores images for offline view \n
+                .resize(50, 50) //resize \n
+                .centerCrop()   // apply scaling OR \n
+                .fit()          //apply scaling OR \n
+                .centerInside() //scaling \n
+                //.into(imageView)  //OR \n
+                .into(imageView, new Callback() { \n
+                    @Override \n
+                    public void onSuccess() { \n \n
+                        //called when image is loaded successfully.. \n \n
+                    } \n \n
+                    @Override \n
+                    public void onError(Exception e) { \n \n
+                        //called when image is failed to be loaded into. \n \n
+                    } \n
+                }); \n
 
     </string>
     <!--*****************************************************************************************************-->
