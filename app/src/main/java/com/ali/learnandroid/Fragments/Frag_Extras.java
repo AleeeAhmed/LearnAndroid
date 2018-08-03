@@ -20,6 +20,8 @@ import com.ali.learnandroid.Activities.ExtrasChips;
 import com.ali.learnandroid.Activities.ExtrasColors;
 import com.ali.learnandroid.Activities.ExtrasExpandableTextView;
 import com.ali.learnandroid.Activities.ExtrasGIF;
+import com.ali.learnandroid.Activities.ExtrasGlide;
+import com.ali.learnandroid.Activities.ExtrasPicasso;
 import com.ali.learnandroid.Activities.ExtrasSendSms;
 import com.ali.learnandroid.Activities.ExtrasStrings;
 import com.ali.learnandroid.Activities.ExtrasViewPager;
@@ -36,7 +38,7 @@ public class Frag_Extras extends Fragment {
     View view;
     RelativeLayout rlExtras;
     Button btnColors , btnStrings, btnGIF, btnViewPager,
-            btnChips, btnExpanable, btnCall, btnSendSMS, btnCardView, btn;
+            btnChips, btnExpanable, btnCall, btnSendSMS, btnCardView, btnPicasso, btnGlide, btn;
 
     private Animation animation;
 
@@ -112,6 +114,18 @@ public class Frag_Extras extends Fragment {
                 startActivity(new Intent(getActivity(), ExtrasCardView.class));
             }
         });
+        btnPicasso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ExtrasPicasso.class));
+            }
+        });
+        btnGlide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ExtrasGlide.class));
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,7 +164,9 @@ public class Frag_Extras extends Fragment {
         btnExpanable = view.findViewById(R.id.btnExpandableTextView);
         btnCall = view.findViewById(R.id.btnCall);
         btnSendSMS = view.findViewById(R.id.btnSMS);
-        btnCardView= view.findViewById(R.id.btnCardView);
+        btnCardView = view.findViewById(R.id.btnCardView);
+        btnPicasso = view.findViewById(R.id.btnPicasso);
+        btnGlide = view.findViewById(R.id.btnGlide);
         btn = view.findViewById(R.id.btn);
 
         animation = AnimationUtils.loadAnimation(getActivity(), R.anim.extras_move);

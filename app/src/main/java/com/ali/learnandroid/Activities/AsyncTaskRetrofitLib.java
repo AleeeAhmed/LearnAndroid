@@ -73,7 +73,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step1);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step1,
+                            getResources().getString(R.string.retrofit_step1));
                 }
             }
         });
@@ -96,7 +97,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step2);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step2,
+                            getResources().getString(R.string.retrofit_step2));
                 }
             }
         });
@@ -119,7 +121,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step3);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step3,
+                            getResources().getString(R.string.retrofit_step3));
                 }
 
             }
@@ -143,7 +146,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step4);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step4,
+                            getResources().getString(R.string.retrofit_step4));
                 }
 
             }
@@ -167,7 +171,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step5);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step5,
+                            getResources().getString(R.string.retrofit_step5));
                 }
             }
         });
@@ -190,7 +195,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step6);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step6,
+                            getResources().getString(R.string.retrofit_step6));
                 }
             }
         });
@@ -214,7 +220,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step7);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step7,
+                            getResources().getString(R.string.retrofit_step7));
                 }
             }
         });
@@ -237,7 +244,8 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                     ActivityCompat.requestPermissions(AsyncTaskRetrofitLib.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
                 } else {
-                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step8);
+                    ZoomImage.show(AsyncTaskRetrofitLib.this, R.drawable.retrofit_step8,
+                            getResources().getString(R.string.retrofit_step8));
                 }
             }
         });

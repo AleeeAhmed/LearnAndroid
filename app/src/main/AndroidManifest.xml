@@ -180,7 +180,9 @@
         <activity
             android:name=".Activities.ExtrasCardView"
             android:label="Card View" />
-        <activity android:name=".Activities.AsyncTaskRetrofitLib"></activity>
+        <activity android:name=".Activities.AsyncTaskRetrofitLib" />
+        <activity android:name=".Activities.ExtrasPicasso" />
+        <activity android:name=".Activities.ExtrasGlide"></activity>
     </application>
 
 </manifest>

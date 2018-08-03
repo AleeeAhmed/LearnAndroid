@@ -3246,7 +3246,28 @@
 
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
+    <!--Picasso Image Loading Library-->
+    <string name="picasso_step1">
+            //picasso image library
+            implementation 'com.squareup.picasso:picasso:2.71828'
+    </string>
+    <string name="picasso_step2">
+                Picasso.get()
+                //.load(R.drawable.tenor) // loading from drawable OR
+                //.load(new File("file:///android_asset/image.png")) //loading from storage path OR
+                .load("http://i.imgur.com/DvpvklR.png") //loading url image
+                .placeholder(R.drawable.custom_toast_image) // during loading this image will be set imageview
+                .error(R.drawable.logo) //if image is failed to load - this image is set to imageview
+                .resize(50, 50) //resize
+                .centerCrop()   // apply scaling OR
+                .fit()          //apply scaling OR
+                .centerInside() //scaling
+                .into(imageView);
+    </string>
+    <string name="picasso_step3">
 
+
+    </string>
     <!--*****************************************************************************************************-->
     <!--*****************************************************************************************************-->
 
