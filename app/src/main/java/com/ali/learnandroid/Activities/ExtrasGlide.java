@@ -11,8 +11,7 @@ import com.ali.learnandroid.Utils.ZoomImage;
 
 
 public class ExtrasGlide extends AppCompatActivity {
-
-
+    
     ImageView ivCode1, ivCode2;
 
     @Override
