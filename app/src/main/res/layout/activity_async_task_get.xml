@@ -140,7 +140,7 @@
         <ImageView
             android:id="@+id/ivCodeAsyncTaskGetStep3"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvDescStep3"
             android:src="@drawable/background_get_step3"

@@ -158,7 +158,7 @@
         <ImageView
             android:id="@+id/ivCodeListViewStep5"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_below="@+id/tvDescStep5"
             android:src="@drawable/list_step4_"
             android:contentDescription="@string/app_name"
@@ -187,7 +187,7 @@
         <ImageView
             android:id="@+id/ivCodeListViewStep6"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_below="@+id/tvDescStep6"
             android:src="@drawable/list_step5"
             android:contentDescription="@string/app_name"

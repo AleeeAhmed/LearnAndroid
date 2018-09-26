@@ -295,8 +295,5 @@ public class AsyncTaskRetrofitLib extends AppCompatActivity {
                 }
             }
         }
-
     }
-
-
 }

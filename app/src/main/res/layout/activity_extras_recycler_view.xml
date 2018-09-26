@@ -190,7 +190,7 @@
         <ImageView
             android:id="@+id/ivCodeRecyclerViewStep5"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_below="@+id/tvDescStep5"
             android:src="@drawable/recycler_view_step5_"
             android:contentDescription="@string/app_name"
@@ -219,7 +219,7 @@
         <ImageView
             android:id="@+id/ivCodeRecyclerViewStep6"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_below="@+id/tvDescStep6"
             android:src="@drawable/recycler_view_step6_"
             android:contentDescription="@string/app_name"

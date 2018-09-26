@@ -138,7 +138,7 @@
         <ImageView
             android:id="@+id/ivCodeAsyncTaskPostStep3"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_marginTop="7dp"
             android:layout_below="@+id/tvDescStep3"
             android:src="@drawable/background_post_step3"

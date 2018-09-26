@@ -104,7 +104,7 @@
         <ImageView
             android:id="@+id/ivCodeChipsStep2"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
             android:layout_below="@+id/tvDescStep2"
             android:src="@drawable/extras_chips_step2"
             android:scaleType="fitXY"

@@ -20,6 +20,7 @@ import com.ali.learnandroid.Fragments.Frag_AsyncTasks;
 import com.ali.learnandroid.Fragments.Frag_Extras;
 import com.ali.learnandroid.Fragments.Frag_FAB;
 import com.ali.learnandroid.Fragments.Frag_Lists;
+import com.ali.learnandroid.Fragments.Frag_MainMenu_;
 import com.ali.learnandroid.Fragments.Frag_Pickers;
 import com.ali.learnandroid.Fragments.Frag_MainMenu;
 import com.ali.learnandroid.Fragments.Frag_PopUpMenu;
@@ -95,7 +96,7 @@ public class Home extends AppCompatActivity
         if (id == R.id.nav_home) {
 
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fl_Home, new Frag_MainMenu()).addToBackStack(null).commit();
+            fragmentTransaction.replace(R.id.fl_Home, new Frag_MainMenu_()).addToBackStack(null).commit();
 
         } else if (id == R.id.nav_alert_dialogs) {
 

@@ -270,7 +270,7 @@
             <ImageView
                 android:id="@+id/ivCodeSendSmsStep5"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="160dp"
                 android:layout_below="@+id/tvDescStep5"
                 android:src="@drawable/sms_step5"
                 android:layout_marginTop="7dp"
@@ -301,7 +301,7 @@
             <ImageView
                 android:id="@+id/ivCodeSendSmsStep6"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="160dp"
                 android:layout_below="@+id/tvDescStep6"
                 android:layout_marginTop="7dp"
                 android:src="@drawable/recycler_view_step6_"
